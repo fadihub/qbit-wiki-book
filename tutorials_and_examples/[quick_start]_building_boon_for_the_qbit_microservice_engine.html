@@ -1,0 +1,1105 @@
+<!DOCTYPE HTML>
+<html lang="en-US" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <title>[Quick Start] Building boon for the QBit microservice engine | Introduction to QBit - The microservice Library for Java</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 1.0.3">
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    
+    
+    
+    <link rel="next" href="../tutorials_and_examples/[quick_start]_building_a_todo_web_microservice_server_with_qbit.html" />
+    
+    
+    <link rel="prev" href="../tutorials_and_examples/[quick_start]_building_qbit_the_microservice_lib_for_java.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+<link rel="stylesheet" href="../gitbook/style.css">
+
+
+        
+    <div class="book"  data-level="1.2" data-basepath=".." data-revision="1426023905951">
+    
+
+<div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Type to search" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+    	
+    	
+    	
+
+        
+
+        
+    
+        
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                        <i class="fa fa-check"></i>
+                        
+                         Introduction
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="0.1" data-path="what_is_qbit.html">
+            
+                
+                    <a href="../what_is_qbit.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>0.1.</b>
+                        
+                         What is Qbit?
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="0.2" data-path="qbits_philosophy_and_inspiration.html">
+            
+                
+                    <a href="../qbits_philosophy_and_inspiration.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>0.2.</b>
+                        
+                         QBit&#39;s Philosophy and inspiration
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="0.3" data-path="does_it_work.html">
+            
+                
+                    <a href="../does_it_work.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>0.3.</b>
+                        
+                         Does it work?
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1" data-path="tutorials_and_examples/README.html">
+            
+                
+                    <a href="../tutorials_and_examples/README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                         Tutorials and Examples
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="1.1" data-path="tutorials_and_examples/[quick_start]_building_qbit_the_microservice_lib_for_java.html">
+            
+                
+                    <a href="../tutorials_and_examples/[quick_start]_building_qbit_the_microservice_lib_for_java.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                         [Quick Start] Building QBit the microservice lib for Java
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter active" data-level="1.2" data-path="tutorials_and_examples/[quick_start]_building_boon_for_the_qbit_microservice_engine.html">
+            
+                
+                    <a href="../tutorials_and_examples/[quick_start]_building_boon_for_the_qbit_microservice_engine.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                         [Quick Start] Building boon for the QBit microservice engine
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.3" data-path="tutorials_and_examples/[quick_start]_building_a_todo_web_microservice_server_with_qbit.html">
+            
+                
+                    <a href="../tutorials_and_examples/[quick_start]_building_a_todo_web_microservice_server_with_qbit.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                         [Quick Start] Building a TODO web microservice server with QBit
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.4" data-path="tutorials_and_examples/[quick_start]_building_a_todo_web_microservice_client_with_qbit.html">
+            
+                
+                    <a href="../tutorials_and_examples/[quick_start]_building_a_todo_web_microservice_client_with_qbit.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                         [Quick Start] Building a TODO web microservice client with QBit
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.5" data-path="tutorials_and_examples/[quick_start]_building_a_simple_rest_web_microservice_server_with_qbit.html">
+            
+                
+                    <a href="../tutorials_and_examples/[quick_start]_building_a_simple_rest_web_microservice_server_with_qbit.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.</b>
+                        
+                         [Quick Start] Building a simple Rest web microservice server with QBit
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.6" data-path="tutorials_and_examples/[rough_cut]_using_qbit_microservice_libs_rest_support_with_uri_params.html">
+            
+                
+                    <a href="../tutorials_and_examples/[rough_cut]_using_qbit_microservice_libs_rest_support_with_uri_params.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.</b>
+                        
+                         [Rough Cut] Using QBit microservice lib&#39;s REST support with URI Params
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.7" data-path="tutorials_and_examples/[quick_start]_working_with_inproc_microservices_within_qbit.html">
+            
+                
+                    <a href="../tutorials_and_examples/[quick_start]_working_with_inproc_microservices_within_qbit.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.7.</b>
+                        
+                         [Quick Start] Working with inproc MicroServices within QBit
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.8" data-path="tutorials_and_examples/[detailed_tutorial]_working_with_inproc_microservices_within_qbit.html">
+            
+                
+                    <a href="../tutorials_and_examples/[detailed_tutorial]_working_with_inproc_microservices_within_qbit.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.8.</b>
+                        
+                         [Detailed Tutorial] Working with inproc MicroServices within QBit.
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.9" data-path="tutorials_and_examples/[rough_cut]_working_with_inproc_microservices.html">
+            
+                
+                    <a href="../tutorials_and_examples/[rough_cut]_working_with_inproc_microservices.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.9.</b>
+                        
+                         [Rough Cut] Working with inproc MicroServices
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.10" data-path="tutorials_and_examples/[doc]_using_qbit_microservice_libs_httpclient_get,_post,_et_al,_json,_java_8_lambda.html">
+            
+                
+                    <a href="../tutorials_and_examples/[doc]_using_qbit_microservice_libs_httpclient_get,_post,_et_al,_json,_java_8_lambda.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.10.</b>
+                        
+                         [Doc] Using QBit microservice lib&#39;s HttpClient GET, POST, et al, JSON, Java 8 Lambda
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.11" data-path="tutorials_and_examples/[rough_cut]_working_with_event_bus_for_qbit_the_microservice_engine.html">
+            
+                
+                    <a href="../tutorials_and_examples/[rough_cut]_working_with_event_bus_for_qbit_the_microservice_engine.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.11.</b>
+                        
+                         [Rough Cut] Working with event bus for QBit the microservice engine
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.12" data-path="tutorials_and_examples/[rough_cut]_working_with_private_event_bus_for_inproc_microservices.html">
+            
+                
+                    <a href="../tutorials_and_examples/[rough_cut]_working_with_private_event_bus_for_inproc_microservices.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.12.</b>
+                        
+                         [Rough Cut] Working with private event bus for inproc microservices
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.13" data-path="tutorials_and_examples/[rough_cut]_working_with_strongly_typed_event_bus_proxies_for_qbit_java_microservice_lib.html">
+            
+                
+                    <a href="../tutorials_and_examples/[rough_cut]_working_with_strongly_typed_event_bus_proxies_for_qbit_java_microservice_lib.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.13.</b>
+                        
+                         [Rough Cut] Working with strongly typed event bus proxies for QBit Java Microservice lib
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.14" data-path="tutorials_and_examples/[doc]_qbit_java_microservice_lib_introducing_eventbus_replication_and_eventbus_connectors.html">
+            
+                
+                    <a href="../tutorials_and_examples/[doc]_qbit_java_microservice_lib_introducing_eventbus_replication_and_eventbus_connectors.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.14.</b>
+                        
+                         [Doc] QBit Java microservice lib introducing EventBus replication and EventBus connectors
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.15" data-path="tutorials_and_examples/[quick_start]_building_a_single_web_page_application_with_qbit.html">
+            
+                
+                    <a href="../tutorials_and_examples/[quick_start]_building_a_single_web_page_application_with_qbit.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.15.</b>
+                        
+                         [Quick Start] building a single web page application with QBit
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.16" data-path="tutorials_and_examples/[rough_cut]_delivering_up_single_page_applications_from_qbit_java_json_microservice_lib.html">
+            
+                
+                    <a href="../tutorials_and_examples/[rough_cut]_delivering_up_single_page_applications_from_qbit_java_json_microservice_lib.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.16.</b>
+                        
+                         [Rough Cut] Delivering up Single Page Applications from QBit Java JSON Microservice lib
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.17" data-path="tutorials_and_examples/[quick_start]_building_a_single_page_todo_list_application_with_qbit.html">
+            
+                
+                    <a href="../tutorials_and_examples/[quick_start]_building_a_single_page_todo_list_application_with_qbit.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.17.</b>
+                        
+                         [Quick Start] Building a single page; Todo List Application with QBit
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.18" data-path="tutorials_and_examples/[detailed_tutorial]_building_a_single_page_todo_list_application_with_qbit.html">
+            
+                
+                    <a href="../tutorials_and_examples/[detailed_tutorial]_building_a_single_page_todo_list_application_with_qbit.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.18.</b>
+                        
+                         [Detailed Tutorial] Building a single page; Todo List Application with QBit
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.19" data-path="tutorials_and_examples/[rough_cut]_using_qbit_microservice_lib_with_spring_boot.html">
+            
+                
+                    <a href="../tutorials_and_examples/[rough_cut]_using_qbit_microservice_lib_with_spring_boot.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.19.</b>
+                        
+                         [Rough Cut] Using QBit microservice lib with Spring Boot
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.20" data-path="tutorials_and_examples/[rough_cut]_working_with_system_manager_for_qbit_mircoservice_lib.html">
+            
+                
+                    <a href="../tutorials_and_examples/[rough_cut]_working_with_system_manager_for_qbit_mircoservice_lib.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.20.</b>
+                        
+                         [Rough Cut] Working with System Manager for QBit Mircoservice lib
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.21" data-path="tutorials_and_examples/[rough_cut]_qbit_microservices_using_service_workers_and_sharded_service_workers.html">
+            
+                
+                    <a href="../tutorials_and_examples/[rough_cut]_qbit_microservices_using_service_workers_and_sharded_service_workers.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.21.</b>
+                        
+                         [Rough Cut] QBit Microservices using Service Workers and sharded service workers
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.22" data-path="tutorials_and_examples/[rough_cut]_qbit_microservice_lib_working_with_callbacks.html">
+            
+                
+                    <a href="../tutorials_and_examples/[rough_cut]_qbit_microservice_lib_working_with_callbacks.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.22.</b>
+                        
+                         [Rough Cut] QBit Microservice Lib Working With CallBacks
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.23" data-path="tutorials_and_examples/[doc]_queue_callbacks_for_qbit_queue_based_services.html">
+            
+                
+                    <a href="../tutorials_and_examples/[doc]_queue_callbacks_for_qbit_queue_based_services.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.23.</b>
+                        
+                         [Doc] Queue Callbacks for QBit queue based services
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.24" data-path="tutorials_and_examples/[rough_cut]_qbit_java_microservice_lib_working_with_workers_sharded_and_pooled.html">
+            
+                
+                    <a href="../tutorials_and_examples/[rough_cut]_qbit_java_microservice_lib_working_with_workers_sharded_and_pooled.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.24.</b>
+                        
+                         [Rough Cut] QBit Java Microservice Lib Working With Workers Sharded and Pooled
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.25" data-path="tutorials_and_examples/[doc]_using_qbit_microservice_libs_websocket_support.html">
+            
+                
+                    <a href="../tutorials_and_examples/[doc]_using_qbit_microservice_libs_websocket_support.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.25.</b>
+                        
+                         [Doc] Using QBit microservice lib&#39;s WebSocket support
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.26" data-path="tutorials_and_examples/[doc]_qbit_microservice_java_lib_using_auto_flushing_client_proxies.html">
+            
+                
+                    <a href="../tutorials_and_examples/[doc]_qbit_microservice_java_lib_using_auto_flushing_client_proxies.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.26.</b>
+                        
+                         [Doc] QBit microservice Java lib Using auto flushing client proxies
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.27" data-path="tutorials_and_examples/[doc]_qbit_microservice_websocket_wire_protocol_draft_01___json_ascii_method_batching_rpc.html">
+            
+                
+                    <a href="../tutorials_and_examples/[doc]_qbit_microservice_websocket_wire_protocol_draft_01___json_ascii_method_batching_rpc.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.27.</b>
+                        
+                         [Doc] QBit Microservice WebSocket wire protocol draft 01   JSON ASCII method batching RPC
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.28" data-path="tutorials_and_examples/[doc]_qbit_java_microservice_lib_auto_flushing_service_queue_proxies.html">
+            
+                
+                    <a href="../tutorials_and_examples/[doc]_qbit_java_microservice_lib_auto_flushing_service_queue_proxies.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.28.</b>
+                        
+                         [Doc] QBit Java microservice lib auto flushing service queue proxies
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="2" data-path="qbit_roadmap/README.html">
+            
+                
+                    <a href="../qbit_roadmap/README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                         Qbit Roadmap
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="3" data-path="contact_us/README.html">
+            
+                
+                    <a href="../contact_us/README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                         Contact Us
+                    </a>
+                
+            
+            
+        </li>
+    
+
+
+        
+        <li class="divider"></li>
+        <li>
+            <a href="http://www.gitbook.io/" target="blank" class="gitbook-link">Published using GitBook</a>
+        </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search" aria-label="Toggle search"><i class="fa fa-search"></i></a>
+    
+    <div id="font-settings-wrapper" class="dropdown pull-left">
+        <a href="#" class="btn toggle-dropdown" aria-label="Toggle font settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="buttons">
+        <button type="button" id="reduce-font-size" class="button size-2">A</button>
+        <button type="button" id="enlarge-font-size" class="button size-2">A</button>
+    </div>
+
+    <div class="buttons font-family-list">
+        <button type="button" data-font="0" class="button">Serif</button>
+        <button type="button" data-font="1" class="button">Sans</button>
+    </div>
+
+    <div class="buttons color-theme-list">
+        <button type="button" id="color-theme-preview-0" class="button size-3" data-theme="0">White</button>
+        <button type="button" id="color-theme-preview-1" class="button size-3" data-theme="1">Sepia</button>
+        <button type="button" id="color-theme-preview-2" class="button size-3" data-theme="2">Night</button>
+    </div>
+</div>
+
+    </div>
+
+    <!-- Actions Right -->
+    
+    <div class="dropdown pull-right">
+        <a href="#" class="btn toggle-dropdown" aria-label="Toggle share dropdown"><i class="fa fa-share-alt"></i>
+        </a>
+        <div class="dropdown-menu font-settings dropdown-left">
+            <div class="dropdown-caret">
+                <span class="caret-outer"></span>
+                <span class="caret-inner"></span>
+            </div>
+            <div class="buttons">
+                <button type="button" data-sharing="twitter" class="button">Twitter</button>
+                <button type="button" data-sharing="google-plus" class="button">Google</button>
+                <button type="button" data-sharing="facebook" class="button">Facebook</button>
+                <button type="button" data-sharing="weibo" class="button">Weibo</button>
+                <button type="button" data-sharing="instapaper" class="button">Instapaper</button>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Share on Google Plus"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Share on Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Share on Twitter"><i class="fa fa-twitter"></i></a>
+    
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >Introduction to QBit - The microservice Library for Java</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-gitbook_1489">
+                    
+                        <h1 id="quick-start-building-boon-for-the-qbit-microservice-engine">[Quick Start] Building boon for the QBit microservice engine</h1>
+<h2 id="overview">Overview</h2>
+<p>Boon is not only a JSON parsing project. It is more than that, but JSON parsing is intrinsic to what Boon is all about. Boon is probably the fastest way to serialize and parse JSON in Java so far for your project. This parser was forked/merged into Groovy 2.3. The Boon and Groovy 2.3 JSON parsers are a lot faster than mainstream JSON parsers. Boon JSON is FAST! In addition it has a very easy to use, convention-based API. some of the things you can do with Boon:</p>
+<p>-Boon comes with helper methods that allow you to easily create lists, sets, maps, concurrent maps, sorted maps, sorted sets, etc. ( safeList, list, set, sortedSet, safeSet, safeSortedSet, etc...)</p>
+<p>-With boon You can index maps, lists, arrays, etc. using the idx operator.</p>
+<p>-Boon has the concept of universal operators similar to Python like len.</p>
+<p>-Boon can read in an entire file in one line of code.</p>
+<p>-And much more for more details please visit the articles located at the end of this wiki.</p>
+<h2 id="building-boon">Building Boon</h2>
+<p>This wiki will walk you through the process of building this very powerful java tool <code>Boon</code>.</p>
+<h2 id="what-you-will-build">what you will Build</h2>
+<p>You will build Boon on your machine using <a href="http://maven.apache.org/" target="_blank">maven. </a></p>
+<h2 id="how-to-complete-this-guide">How to complete this guide</h2>
+<p>In order to complete this guide successfully you will need the following installed on your machine:</p>
+<ul>
+<li>Maven; if you need help installing it, visit <a href="http://maven.apache.org/download.cgi#Installation" target="_blank">Installing Maven. </a></li>
+<li>Your favorite IDE or text editor (we recommend <a href="https://www.jetbrains.com/idea/" target="_blank">Intellig IDEA </a> latest version).</li>
+<li><a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank">JDK </a> 1.8 or later.</li>
+</ul>
+<p>Now that your machine is all ready let&#39;s get started:</p>
+<ul>
+<li><a href="https://github.com/fadihub/boon/archive/master.zip" target="_blank">Download Boon </a> and unzip the source repository for this guide, or clone it using Git with your terminal:</li>
+</ul>
+<pre><code class="lang-bash">git clone https://github.com/fadihub/boon.git
+</code></pre>
+<p>cd into <code>~/boon</code> then run the following:</p>
+<pre><code class="lang-bash">mvn clean install
+</code></pre>
+<p>This will take a minute especially if you are using maven for the first time.</p>
+<h4 id="pomxml-linsting">pom.xml Linsting</h4>
+<p>The pom.xml file is the core of a project&#39;s configuration in Maven. It is a single configuration file that contains the majority of information required to build a project in just the way you want.</p>
+<p><code>~/boon/pom.xml/</code></p>
+<pre><code class="lang-xml"><span class="hljs-pi">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">project</span> <span class="hljs-attribute">xmlns</span>=<span class="hljs-value">"http://maven.apache.org/POM/4.0.0"</span> <span class="hljs-attribute">xmlns:xsi</span>=<span class="hljs-value">"http://www.w3.org/2001/XMLSchema-instance"</span> <span class="hljs-attribute">xsi:schemaLocation</span>=<span class="hljs-value">"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">modelVersion</span>&gt;</span>4.0.0<span class="hljs-tag">&lt;/<span class="hljs-title">modelVersion</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">parent</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">groupId</span>&gt;</span>org.sonatype.oss<span class="hljs-tag">&lt;/<span class="hljs-title">groupId</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">artifactId</span>&gt;</span>oss-parent<span class="hljs-tag">&lt;/<span class="hljs-title">artifactId</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">version</span>&gt;</span>5<span class="hljs-tag">&lt;/<span class="hljs-title">version</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">parent</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">groupId</span>&gt;</span>io.fastjson<span class="hljs-tag">&lt;/<span class="hljs-title">groupId</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">artifactId</span>&gt;</span>boon-bundle<span class="hljs-tag">&lt;/<span class="hljs-title">artifactId</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">version</span>&gt;</span>0.31-SNAPSHOT<span class="hljs-tag">&lt;/<span class="hljs-title">version</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">packaging</span>&gt;</span>pom<span class="hljs-tag">&lt;/<span class="hljs-title">packaging</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">name</span>&gt;</span>Boon and subprojects<span class="hljs-tag">&lt;/<span class="hljs-title">name</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">description</span>&gt;</span>Boon Bundle<span class="hljs-tag">&lt;/<span class="hljs-title">description</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">url</span>&gt;</span>http://richardhightower.github.io/site/Boon<span class="hljs-tag">&lt;/<span class="hljs-title">url</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">licenses</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">license</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">name</span>&gt;</span>The Apache Software License, Version 2.0<span class="hljs-tag">&lt;/<span class="hljs-title">name</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">url</span>&gt;</span>http://www.apache.org/licenses/LICENSE-2.0.txt<span class="hljs-tag">&lt;/<span class="hljs-title">url</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">distribution</span>&gt;</span>repo<span class="hljs-tag">&lt;/<span class="hljs-title">distribution</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">license</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">licenses</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">scm</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">connection</span>&gt;</span>scm:git:https://github.com/boonproject/boon.git<span class="hljs-tag">&lt;/<span class="hljs-title">connection</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">developerConnection</span>&gt;</span>scm:git:https://github.com/boonproject/boon.git<span class="hljs-tag">&lt;/<span class="hljs-title">developerConnection</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">url</span>&gt;</span>https://github.com/boonproject/boon<span class="hljs-tag">&lt;/<span class="hljs-title">url</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">scm</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">developers</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">developer</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">id</span>&gt;</span>RichardHightower<span class="hljs-tag">&lt;/<span class="hljs-title">id</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">name</span>&gt;</span>Richard Hightower<span class="hljs-tag">&lt;/<span class="hljs-title">name</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">url</span>&gt;</span>https://github.com/RichardHightower<span class="hljs-tag">&lt;/<span class="hljs-title">url</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">developer</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">developers</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">modules</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">module</span>&gt;</span>boon<span class="hljs-tag">&lt;/<span class="hljs-title">module</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">module</span>&gt;</span>bnsf<span class="hljs-tag">&lt;/<span class="hljs-title">module</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">module</span>&gt;</span>etcd<span class="hljs-tag">&lt;/<span class="hljs-title">module</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">modules</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">properties</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">maven.compiler.source</span>&gt;</span>1.7<span class="hljs-tag">&lt;/<span class="hljs-title">maven.compiler.source</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">maven.compiler.target</span>&gt;</span>1.7<span class="hljs-tag">&lt;/<span class="hljs-title">maven.compiler.target</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">groovy.version</span>&gt;</span>2.3.2<span class="hljs-tag">&lt;/<span class="hljs-title">groovy.version</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">junit.version</span>&gt;</span>4.11<span class="hljs-tag">&lt;/<span class="hljs-title">junit.version</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">guava.version</span>&gt;</span>18.0<span class="hljs-tag">&lt;/<span class="hljs-title">guava.version</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">vertx.version</span>&gt;</span>2.1.2<span class="hljs-tag">&lt;/<span class="hljs-title">vertx.version</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">vertx-testtools.version</span>&gt;</span>2.0.3-final<span class="hljs-tag">&lt;/<span class="hljs-title">vertx-testtools.version</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">hamcrest.version</span>&gt;</span>1.3<span class="hljs-tag">&lt;/<span class="hljs-title">hamcrest.version</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">kryo.version</span>&gt;</span>2.23.0<span class="hljs-tag">&lt;/<span class="hljs-title">kryo.version</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">leveldb.version</span>&gt;</span>0.7<span class="hljs-tag">&lt;/<span class="hljs-title">leveldb.version</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">leveldbjni.version</span>&gt;</span>1.8<span class="hljs-tag">&lt;/<span class="hljs-title">leveldbjni.version</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">mongo-java-driver.version</span>&gt;</span>2.12.0<span class="hljs-tag">&lt;/<span class="hljs-title">mongo-java-driver.version</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">mysql-connector-java.version</span>&gt;</span>5.1.30<span class="hljs-tag">&lt;/<span class="hljs-title">mysql-connector-java.version</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">properties</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">dependencyManagement</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">dependencies</span>&gt;</span>
+            <span class="hljs-comment">&lt;!-- internal --&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">dependency</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">groupId</span>&gt;</span>io.fastjson<span class="hljs-tag">&lt;/<span class="hljs-title">groupId</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">artifactId</span>&gt;</span>boon<span class="hljs-tag">&lt;/<span class="hljs-title">artifactId</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">version</span>&gt;</span>${project.version}<span class="hljs-tag">&lt;/<span class="hljs-title">version</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">dependency</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">dependency</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">groupId</span>&gt;</span>io.fastjson<span class="hljs-tag">&lt;/<span class="hljs-title">groupId</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">artifactId</span>&gt;</span>qbit<span class="hljs-tag">&lt;/<span class="hljs-title">artifactId</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">version</span>&gt;</span>${project.version}<span class="hljs-tag">&lt;/<span class="hljs-title">version</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">dependency</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">dependency</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">groupId</span>&gt;</span>io.fastjson<span class="hljs-tag">&lt;/<span class="hljs-title">groupId</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">artifactId</span>&gt;</span>slumberdb-core<span class="hljs-tag">&lt;/<span class="hljs-title">artifactId</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">version</span>&gt;</span>${project.version}<span class="hljs-tag">&lt;/<span class="hljs-title">version</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">dependency</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">dependency</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">groupId</span>&gt;</span>io.fastjson<span class="hljs-tag">&lt;/<span class="hljs-title">groupId</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">artifactId</span>&gt;</span>slumberdb-service-model-common<span class="hljs-tag">&lt;/<span class="hljs-title">artifactId</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">version</span>&gt;</span>${project.version}<span class="hljs-tag">&lt;/<span class="hljs-title">version</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">dependency</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">dependency</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">groupId</span>&gt;</span>io.fastjson<span class="hljs-tag">&lt;/<span class="hljs-title">groupId</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">artifactId</span>&gt;</span>slumberdb-mysql<span class="hljs-tag">&lt;/<span class="hljs-title">artifactId</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">version</span>&gt;</span>${project.version}<span class="hljs-tag">&lt;/<span class="hljs-title">version</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">dependency</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">dependency</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">groupId</span>&gt;</span>io.fastjson<span class="hljs-tag">&lt;/<span class="hljs-title">groupId</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">artifactId</span>&gt;</span>slumberdb-leveldb<span class="hljs-tag">&lt;/<span class="hljs-title">artifactId</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">version</span>&gt;</span>${project.version}<span class="hljs-tag">&lt;/<span class="hljs-title">version</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">dependency</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">dependency</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">groupId</span>&gt;</span>io.fastjson<span class="hljs-tag">&lt;/<span class="hljs-title">groupId</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">artifactId</span>&gt;</span>slumberdb-service-client<span class="hljs-tag">&lt;/<span class="hljs-title">artifactId</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">version</span>&gt;</span>${project.version}<span class="hljs-tag">&lt;/<span class="hljs-title">version</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">dependency</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">dependency</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">groupId</span>&gt;</span>io.fastjson<span class="hljs-tag">&lt;/<span class="hljs-title">groupId</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">artifactId</span>&gt;</span>slumberdb-service-model<span class="hljs-tag">&lt;/<span class="hljs-title">artifactId</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">version</span>&gt;</span>${project.version}<span class="hljs-tag">&lt;/<span class="hljs-title">version</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">dependency</span>&gt;</span>
+
+            <span class="hljs-tag">&lt;<span class="hljs-title">dependency</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">groupId</span>&gt;</span>junit<span class="hljs-tag">&lt;/<span class="hljs-title">groupId</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">artifactId</span>&gt;</span>junit<span class="hljs-tag">&lt;/<span class="hljs-title">artifactId</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">version</span>&gt;</span>${junit.version}<span class="hljs-tag">&lt;/<span class="hljs-title">version</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">dependency</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">dependency</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">groupId</span>&gt;</span>org.codehaus.groovy<span class="hljs-tag">&lt;/<span class="hljs-title">groupId</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">artifactId</span>&gt;</span>groovy<span class="hljs-tag">&lt;/<span class="hljs-title">artifactId</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">version</span>&gt;</span>${groovy.version}<span class="hljs-tag">&lt;/<span class="hljs-title">version</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">dependency</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">dependency</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">groupId</span>&gt;</span>com.google.guava<span class="hljs-tag">&lt;/<span class="hljs-title">groupId</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">artifactId</span>&gt;</span>guava<span class="hljs-tag">&lt;/<span class="hljs-title">artifactId</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">version</span>&gt;</span>${guava.version}<span class="hljs-tag">&lt;/<span class="hljs-title">version</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">dependency</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">dependency</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">groupId</span>&gt;</span>io.vertx<span class="hljs-tag">&lt;/<span class="hljs-title">groupId</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">artifactId</span>&gt;</span>vertx-core<span class="hljs-tag">&lt;/<span class="hljs-title">artifactId</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">version</span>&gt;</span>${vertx.version}<span class="hljs-tag">&lt;/<span class="hljs-title">version</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">dependency</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">dependency</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">groupId</span>&gt;</span>io.vertx<span class="hljs-tag">&lt;/<span class="hljs-title">groupId</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">artifactId</span>&gt;</span>vertx-platform<span class="hljs-tag">&lt;/<span class="hljs-title">artifactId</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">version</span>&gt;</span>${vertx.version}<span class="hljs-tag">&lt;/<span class="hljs-title">version</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">dependency</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">dependency</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">groupId</span>&gt;</span>io.vertx<span class="hljs-tag">&lt;/<span class="hljs-title">groupId</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">artifactId</span>&gt;</span>vertx-hazelcast<span class="hljs-tag">&lt;/<span class="hljs-title">artifactId</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">version</span>&gt;</span>${vertx.version}<span class="hljs-tag">&lt;/<span class="hljs-title">version</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">dependency</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">dependency</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">groupId</span>&gt;</span>io.vertx<span class="hljs-tag">&lt;/<span class="hljs-title">groupId</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">artifactId</span>&gt;</span>testtools<span class="hljs-tag">&lt;/<span class="hljs-title">artifactId</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">version</span>&gt;</span>${vertx-testtools.version}<span class="hljs-tag">&lt;/<span class="hljs-title">version</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">dependency</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">dependency</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">groupId</span>&gt;</span>org.hamcrest<span class="hljs-tag">&lt;/<span class="hljs-title">groupId</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">artifactId</span>&gt;</span>hamcrest-all<span class="hljs-tag">&lt;/<span class="hljs-title">artifactId</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">version</span>&gt;</span>${hamcrest.version}<span class="hljs-tag">&lt;/<span class="hljs-title">version</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">dependency</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">dependency</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">groupId</span>&gt;</span>com.esotericsoftware.kryo<span class="hljs-tag">&lt;/<span class="hljs-title">groupId</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">artifactId</span>&gt;</span>kryo<span class="hljs-tag">&lt;/<span class="hljs-title">artifactId</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">version</span>&gt;</span>${kryo.version}<span class="hljs-tag">&lt;/<span class="hljs-title">version</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">dependency</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">dependency</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">groupId</span>&gt;</span>org.iq80.leveldb<span class="hljs-tag">&lt;/<span class="hljs-title">groupId</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">artifactId</span>&gt;</span>leveldb<span class="hljs-tag">&lt;/<span class="hljs-title">artifactId</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">version</span>&gt;</span>${leveldb.version}<span class="hljs-tag">&lt;/<span class="hljs-title">version</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">dependency</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">dependency</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">groupId</span>&gt;</span>org.fusesource.leveldbjni<span class="hljs-tag">&lt;/<span class="hljs-title">groupId</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">artifactId</span>&gt;</span>leveldbjni-all<span class="hljs-tag">&lt;/<span class="hljs-title">artifactId</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">version</span>&gt;</span>${leveldbjni.version}<span class="hljs-tag">&lt;/<span class="hljs-title">version</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">dependency</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">dependency</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">groupId</span>&gt;</span>org.mongodb<span class="hljs-tag">&lt;/<span class="hljs-title">groupId</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">artifactId</span>&gt;</span>mongo-java-driver<span class="hljs-tag">&lt;/<span class="hljs-title">artifactId</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">version</span>&gt;</span>${mongo-java-driver.version}<span class="hljs-tag">&lt;/<span class="hljs-title">version</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">dependency</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">dependency</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">groupId</span>&gt;</span>mysql<span class="hljs-tag">&lt;/<span class="hljs-title">groupId</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">artifactId</span>&gt;</span>mysql-connector-java<span class="hljs-tag">&lt;/<span class="hljs-title">artifactId</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">version</span>&gt;</span>${mysql-connector-java.version}<span class="hljs-tag">&lt;/<span class="hljs-title">version</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">dependency</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">dependencies</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">dependencyManagement</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">build</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">pluginManagement</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">plugins</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">plugin</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">artifactId</span>&gt;</span>maven-compiler-plugin<span class="hljs-tag">&lt;/<span class="hljs-title">artifactId</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">version</span>&gt;</span>3.1<span class="hljs-tag">&lt;/<span class="hljs-title">version</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-title">plugin</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">plugin</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">artifactId</span>&gt;</span>maven-source-plugin<span class="hljs-tag">&lt;/<span class="hljs-title">artifactId</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">version</span>&gt;</span>2.1.2<span class="hljs-tag">&lt;/<span class="hljs-title">version</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-title">plugin</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">plugin</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">artifactId</span>&gt;</span>maven-javadoc-plugin<span class="hljs-tag">&lt;/<span class="hljs-title">artifactId</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">version</span>&gt;</span>2.9.1<span class="hljs-tag">&lt;/<span class="hljs-title">version</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-title">plugin</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">plugin</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">artifactId</span>&gt;</span>maven-surefire-plugin<span class="hljs-tag">&lt;/<span class="hljs-title">artifactId</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">version</span>&gt;</span>2.17<span class="hljs-tag">&lt;/<span class="hljs-title">version</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-title">plugin</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">plugin</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">artifactId</span>&gt;</span>maven-surefire-report-plugin<span class="hljs-tag">&lt;/<span class="hljs-title">artifactId</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">version</span>&gt;</span>2.17<span class="hljs-tag">&lt;/<span class="hljs-title">version</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-title">plugin</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">plugin</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">artifactId</span>&gt;</span>maven-resources-plugin<span class="hljs-tag">&lt;/<span class="hljs-title">artifactId</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">version</span>&gt;</span>2.6<span class="hljs-tag">&lt;/<span class="hljs-title">version</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-title">plugin</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">plugin</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">artifactId</span>&gt;</span>maven.failsafe.plugin.version<span class="hljs-tag">&lt;/<span class="hljs-title">artifactId</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">version</span>&gt;</span>2.14<span class="hljs-tag">&lt;/<span class="hljs-title">version</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-title">plugin</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">plugin</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">artifactId</span>&gt;</span>maven-dependency-plugin<span class="hljs-tag">&lt;/<span class="hljs-title">artifactId</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">version</span>&gt;</span>2.7<span class="hljs-tag">&lt;/<span class="hljs-title">version</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-title">plugin</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">plugin</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">groupId</span>&gt;</span>io.vertx<span class="hljs-tag">&lt;/<span class="hljs-title">groupId</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">artifactId</span>&gt;</span>vertx-maven-plugin<span class="hljs-tag">&lt;/<span class="hljs-title">artifactId</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">version</span>&gt;</span>2.0.8-final<span class="hljs-tag">&lt;/<span class="hljs-title">version</span>&gt;</span>
+                    <span class="hljs-comment">&lt;!--
+                    You can specify extra config to the plugin as required here
+                    &lt;configuration&gt;
+                       &lt;configFile&gt;/path/to/MyVerticle.conf&lt;/configFile&gt;
+                       &lt;instances&gt;1&lt;/instances&gt;
+                       &lt;classpath&gt;src/main/resources/:src/test/resources/:target/classes/:target/test-classes/&lt;/classpath&gt;
+                    &lt;/configuration&gt;
+                    --&gt;</span>
+                    <span class="hljs-comment">&lt;!-- Make sure that the plugin uses the vert.x versions from this pom.xml not from its own pom.xml --&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">dependencies</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-title">dependency</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-title">groupId</span>&gt;</span>io.vertx<span class="hljs-tag">&lt;/<span class="hljs-title">groupId</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-title">artifactId</span>&gt;</span>vertx-platform<span class="hljs-tag">&lt;/<span class="hljs-title">artifactId</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-title">version</span>&gt;</span>${vertx.version}<span class="hljs-tag">&lt;/<span class="hljs-title">version</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-title">dependency</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-title">dependency</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-title">groupId</span>&gt;</span>io.vertx<span class="hljs-tag">&lt;/<span class="hljs-title">groupId</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-title">artifactId</span>&gt;</span>vertx-core<span class="hljs-tag">&lt;/<span class="hljs-title">artifactId</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-title">version</span>&gt;</span>${vertx.version}<span class="hljs-tag">&lt;/<span class="hljs-title">version</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-title">dependency</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-title">dependency</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-title">groupId</span>&gt;</span>io.vertx<span class="hljs-tag">&lt;/<span class="hljs-title">groupId</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-title">artifactId</span>&gt;</span>vertx-hazelcast<span class="hljs-tag">&lt;/<span class="hljs-title">artifactId</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-title">version</span>&gt;</span>${vertx.version}<span class="hljs-tag">&lt;/<span class="hljs-title">version</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-title">dependency</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-title">dependencies</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-title">plugin</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">plugins</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">pluginManagement</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-title">plugins</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">plugin</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">artifactId</span>&gt;</span>maven-source-plugin<span class="hljs-tag">&lt;/<span class="hljs-title">artifactId</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">executions</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">execution</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-title">id</span>&gt;</span>attach-sources<span class="hljs-tag">&lt;/<span class="hljs-title">id</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-title">goals</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-title">goal</span>&gt;</span>jar<span class="hljs-tag">&lt;/<span class="hljs-title">goal</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-title">goals</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-title">execution</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-title">executions</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">plugin</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">plugins</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">build</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">reporting</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">plugins</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">plugin</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">artifactId</span>&gt;</span>maven-javadoc-plugin<span class="hljs-tag">&lt;/<span class="hljs-title">artifactId</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">plugin</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">plugins</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">reporting</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">profiles</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">profile</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">id</span>&gt;</span>Windows<span class="hljs-tag">&lt;/<span class="hljs-title">id</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">activation</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">os</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">family</span>&gt;</span>Windows<span class="hljs-tag">&lt;/<span class="hljs-title">family</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">arch</span>&gt;</span>x86<span class="hljs-tag">&lt;/<span class="hljs-title">arch</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-title">os</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">activation</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">properties</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">skipTests</span>&gt;</span>true<span class="hljs-tag">&lt;/<span class="hljs-title">skipTests</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">properties</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">profile</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">profiles</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">dependencies</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">dependency</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">groupId</span>&gt;</span>junit<span class="hljs-tag">&lt;/<span class="hljs-title">groupId</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">artifactId</span>&gt;</span>junit<span class="hljs-tag">&lt;/<span class="hljs-title">artifactId</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">scope</span>&gt;</span>test<span class="hljs-tag">&lt;/<span class="hljs-title">scope</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">dependency</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">dependencies</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">project</span>&gt;</span>
+</code></pre>
+<p>Congrats now you have <code>Boon</code> installed on your machine.</p>
+<h2 id="why-use-boon">Why use Boon?</h2>
+<p>Easily read in files into lines or a giant string with one method call.
+Works with files, URLs, class-path, etc. Boon IO support will surprise you how easy it is.
+Boon has Slice notation for dealing with Strings, Lists, primitive arrays, Tree Maps, etc.
+If you are from Groovy land, Ruby land, Python land, and you have to use Java then Boon might give you some relief from API bloat.
+Boon lets Java be Java, but adds the missing productive APIs from Python, Ruby, and Groovy.</p>
+<h2 id="related-articles">Related Articles</h2>
+<ul>
+<li><a href="https://github.com/RichardHightower/boon/wiki" target="_blank">Boon Home</a></li>
+<li><a href="https://github.com/RichardHightower/boon/wiki/Boon&#39;s-Byte-Buffer-Builder" target="_blank">Java Boon Byte Buffer Builder</a></li>
+<li><a href="https://github.com/RichardHightower/boon/wiki/Boon-Slice-Notation" target="_blank">Java Boon Slice Notation</a></li>
+<li><a href="https://github.com/RichardHightower/boon/wiki/Sets-and-Slice-Notation-for-Java-Boon!" target="_blank">Java Boon Slice&#39;s work with TreeSets</a></li>
+<li><a href="https://github.com/RichardHightower/boon/wiki" target="_blank">Java Boon Description</a></li>
+<li><a href="https://github.com/RichardHightower/boon/wiki" target="_blank">Boon Source</a></li>
+<li><a href="http://rick-hightower.blogspot.com/2013/10/introducing-boon-for-java.html" target="_blank">Introducing Boon October 2013</a></li>
+<li><a href="http://rick-hightower.blogspot.com/2013/10/java-slice-notation-to-split-up-strings.html" target="_blank">Java Slice Notation</a></li>
+<li><a href="http://rick-hightower.blogspot.com/2013/11/what-if-java-collections-and-java.html" target="_blank">What if Java collections were easy to search and sort?</a></li>
+<li><a href="http://rick-hightower.blogspot.com/2013/11/stackoverflow-question-on-posting-http.html" target="_blank">Boon HTTP utils</a></li>
+<li><a href="http://rick-hightower.blogspot.com/2013/11/benchmark-for-json-parsing-boon-scores.html" target="_blank">Boon Java JSON parser Benchmarks or hell yeah JSON parsing is damn fast!</a></li>
+<li><a href="http://rick-hightower.blogspot.com/2013/12/boon-fastest-way-to-turn-json-into.html" target="_blank">Boon JSON parser is really damn fast! Part II</a></li>
+<li><a href="http://rick-hightower.blogspot.com/2013/12/here-we-go-again-latest-round-of.html" target="_blank">Boon JSON parser Round III now just not fast as but much faster than other Java JSON parsers</a></li>
+<li><a href="http://rick-hightower.blogspot.com/2013/12/worlds-fastest-json-parser.html" target="_blank">Boon World&#39;s fastest Java JSON parser Round IV from fast to blazing to rocket fuel aka Braggers going to brag</a></li>
+<li><a href="http://rick-hightower.blogspot.com/2013/12/jsonpath-decides-boon-is-fastest-way-to.html" target="_blank">Boon gets adopted by JSON Path as the default Java JSON parser</a></li>
+<li><a href="http://rick-hightower.blogspot.com/2013/12/boon-json-parser-seems-to-be-fastest.html" target="_blank">Boon graphics showing just how fast Boon JSON parsing is - about 50% to 200% faster than the graphs shown here now so wicked fast became wickeder - just got sick of making graphics</a></li>
+<li><a href="http://rick-hightower.blogspot.com/2014/01/boon-json-in-five-minutes-faster-json.html" target="_blank">10 minute guide to Boon JSON parsing after I added @JsonIgnore, @JsonProperty, @JsonView, @Exposes, etc.</a></li>
+<li><a href="http://rick-hightower.blogspot.com/2014/01/boon-jackson-discussion-between.html" target="_blank">Hightower speaks to the master of Java JSON parsing, the king of speed The COW TOWN CODER!</a></li>
+<li><a href="http://rick-hightower.blogspot.com/2014/02/boon-fromlist-frommap-and-fromjson.html" target="_blank">Boon provides easy Java objects from lists, from maps and from JSON.</a></li>
+</ul>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../tutorials_and_examples/[quick_start]_building_qbit_the_microservice_lib_for_java.html" class="navigation navigation-prev " aria-label="Previous page: [Quick Start] Building QBit the microservice lib for Java"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../tutorials_and_examples/[quick_start]_building_a_todo_web_microservice_server_with_qbit.html" class="navigation navigation-next " aria-label="Next page: [Quick Start] Building a TODO web microservice server with QBit"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="https://cdn.mathjax.org/mathjax/2.4-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-mathjax/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"fontSettings":{"theme":null,"family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

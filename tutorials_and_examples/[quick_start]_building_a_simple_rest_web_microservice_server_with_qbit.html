@@ -1,0 +1,911 @@
+<!DOCTYPE HTML>
+<html lang="en-US" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <title>[Quick Start] Building a simple Rest web microservice server with QBit | Introduction to QBit - The microservice Library for Java</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 1.0.3">
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    
+    
+    
+    <link rel="next" href="../tutorials_and_examples/[rough_cut]_using_qbit_microservice_libs_rest_support_with_uri_params.html" />
+    
+    
+    <link rel="prev" href="../tutorials_and_examples/[quick_start]_building_a_todo_web_microservice_client_with_qbit.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+<link rel="stylesheet" href="../gitbook/style.css">
+
+
+        
+    <div class="book"  data-level="1.5" data-basepath=".." data-revision="1426023905951">
+    
+
+<div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Type to search" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+    	
+    	
+    	
+
+        
+
+        
+    
+        
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                        <i class="fa fa-check"></i>
+                        
+                         Introduction
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="0.1" data-path="what_is_qbit.html">
+            
+                
+                    <a href="../what_is_qbit.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>0.1.</b>
+                        
+                         What is Qbit?
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="0.2" data-path="qbits_philosophy_and_inspiration.html">
+            
+                
+                    <a href="../qbits_philosophy_and_inspiration.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>0.2.</b>
+                        
+                         QBit&#39;s Philosophy and inspiration
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="0.3" data-path="does_it_work.html">
+            
+                
+                    <a href="../does_it_work.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>0.3.</b>
+                        
+                         Does it work?
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1" data-path="tutorials_and_examples/README.html">
+            
+                
+                    <a href="../tutorials_and_examples/README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                         Tutorials and Examples
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="1.1" data-path="tutorials_and_examples/[quick_start]_building_qbit_the_microservice_lib_for_java.html">
+            
+                
+                    <a href="../tutorials_and_examples/[quick_start]_building_qbit_the_microservice_lib_for_java.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                         [Quick Start] Building QBit the microservice lib for Java
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.2" data-path="tutorials_and_examples/[quick_start]_building_boon_for_the_qbit_microservice_engine.html">
+            
+                
+                    <a href="../tutorials_and_examples/[quick_start]_building_boon_for_the_qbit_microservice_engine.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                         [Quick Start] Building boon for the QBit microservice engine
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.3" data-path="tutorials_and_examples/[quick_start]_building_a_todo_web_microservice_server_with_qbit.html">
+            
+                
+                    <a href="../tutorials_and_examples/[quick_start]_building_a_todo_web_microservice_server_with_qbit.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                         [Quick Start] Building a TODO web microservice server with QBit
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.4" data-path="tutorials_and_examples/[quick_start]_building_a_todo_web_microservice_client_with_qbit.html">
+            
+                
+                    <a href="../tutorials_and_examples/[quick_start]_building_a_todo_web_microservice_client_with_qbit.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                         [Quick Start] Building a TODO web microservice client with QBit
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter active" data-level="1.5" data-path="tutorials_and_examples/[quick_start]_building_a_simple_rest_web_microservice_server_with_qbit.html">
+            
+                
+                    <a href="../tutorials_and_examples/[quick_start]_building_a_simple_rest_web_microservice_server_with_qbit.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.</b>
+                        
+                         [Quick Start] Building a simple Rest web microservice server with QBit
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.6" data-path="tutorials_and_examples/[rough_cut]_using_qbit_microservice_libs_rest_support_with_uri_params.html">
+            
+                
+                    <a href="../tutorials_and_examples/[rough_cut]_using_qbit_microservice_libs_rest_support_with_uri_params.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.</b>
+                        
+                         [Rough Cut] Using QBit microservice lib&#39;s REST support with URI Params
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.7" data-path="tutorials_and_examples/[quick_start]_working_with_inproc_microservices_within_qbit.html">
+            
+                
+                    <a href="../tutorials_and_examples/[quick_start]_working_with_inproc_microservices_within_qbit.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.7.</b>
+                        
+                         [Quick Start] Working with inproc MicroServices within QBit
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.8" data-path="tutorials_and_examples/[detailed_tutorial]_working_with_inproc_microservices_within_qbit.html">
+            
+                
+                    <a href="../tutorials_and_examples/[detailed_tutorial]_working_with_inproc_microservices_within_qbit.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.8.</b>
+                        
+                         [Detailed Tutorial] Working with inproc MicroServices within QBit.
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.9" data-path="tutorials_and_examples/[rough_cut]_working_with_inproc_microservices.html">
+            
+                
+                    <a href="../tutorials_and_examples/[rough_cut]_working_with_inproc_microservices.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.9.</b>
+                        
+                         [Rough Cut] Working with inproc MicroServices
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.10" data-path="tutorials_and_examples/[doc]_using_qbit_microservice_libs_httpclient_get,_post,_et_al,_json,_java_8_lambda.html">
+            
+                
+                    <a href="../tutorials_and_examples/[doc]_using_qbit_microservice_libs_httpclient_get,_post,_et_al,_json,_java_8_lambda.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.10.</b>
+                        
+                         [Doc] Using QBit microservice lib&#39;s HttpClient GET, POST, et al, JSON, Java 8 Lambda
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.11" data-path="tutorials_and_examples/[rough_cut]_working_with_event_bus_for_qbit_the_microservice_engine.html">
+            
+                
+                    <a href="../tutorials_and_examples/[rough_cut]_working_with_event_bus_for_qbit_the_microservice_engine.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.11.</b>
+                        
+                         [Rough Cut] Working with event bus for QBit the microservice engine
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.12" data-path="tutorials_and_examples/[rough_cut]_working_with_private_event_bus_for_inproc_microservices.html">
+            
+                
+                    <a href="../tutorials_and_examples/[rough_cut]_working_with_private_event_bus_for_inproc_microservices.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.12.</b>
+                        
+                         [Rough Cut] Working with private event bus for inproc microservices
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.13" data-path="tutorials_and_examples/[rough_cut]_working_with_strongly_typed_event_bus_proxies_for_qbit_java_microservice_lib.html">
+            
+                
+                    <a href="../tutorials_and_examples/[rough_cut]_working_with_strongly_typed_event_bus_proxies_for_qbit_java_microservice_lib.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.13.</b>
+                        
+                         [Rough Cut] Working with strongly typed event bus proxies for QBit Java Microservice lib
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.14" data-path="tutorials_and_examples/[doc]_qbit_java_microservice_lib_introducing_eventbus_replication_and_eventbus_connectors.html">
+            
+                
+                    <a href="../tutorials_and_examples/[doc]_qbit_java_microservice_lib_introducing_eventbus_replication_and_eventbus_connectors.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.14.</b>
+                        
+                         [Doc] QBit Java microservice lib introducing EventBus replication and EventBus connectors
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.15" data-path="tutorials_and_examples/[quick_start]_building_a_single_web_page_application_with_qbit.html">
+            
+                
+                    <a href="../tutorials_and_examples/[quick_start]_building_a_single_web_page_application_with_qbit.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.15.</b>
+                        
+                         [Quick Start] building a single web page application with QBit
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.16" data-path="tutorials_and_examples/[rough_cut]_delivering_up_single_page_applications_from_qbit_java_json_microservice_lib.html">
+            
+                
+                    <a href="../tutorials_and_examples/[rough_cut]_delivering_up_single_page_applications_from_qbit_java_json_microservice_lib.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.16.</b>
+                        
+                         [Rough Cut] Delivering up Single Page Applications from QBit Java JSON Microservice lib
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.17" data-path="tutorials_and_examples/[quick_start]_building_a_single_page_todo_list_application_with_qbit.html">
+            
+                
+                    <a href="../tutorials_and_examples/[quick_start]_building_a_single_page_todo_list_application_with_qbit.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.17.</b>
+                        
+                         [Quick Start] Building a single page; Todo List Application with QBit
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.18" data-path="tutorials_and_examples/[detailed_tutorial]_building_a_single_page_todo_list_application_with_qbit.html">
+            
+                
+                    <a href="../tutorials_and_examples/[detailed_tutorial]_building_a_single_page_todo_list_application_with_qbit.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.18.</b>
+                        
+                         [Detailed Tutorial] Building a single page; Todo List Application with QBit
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.19" data-path="tutorials_and_examples/[rough_cut]_using_qbit_microservice_lib_with_spring_boot.html">
+            
+                
+                    <a href="../tutorials_and_examples/[rough_cut]_using_qbit_microservice_lib_with_spring_boot.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.19.</b>
+                        
+                         [Rough Cut] Using QBit microservice lib with Spring Boot
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.20" data-path="tutorials_and_examples/[rough_cut]_working_with_system_manager_for_qbit_mircoservice_lib.html">
+            
+                
+                    <a href="../tutorials_and_examples/[rough_cut]_working_with_system_manager_for_qbit_mircoservice_lib.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.20.</b>
+                        
+                         [Rough Cut] Working with System Manager for QBit Mircoservice lib
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.21" data-path="tutorials_and_examples/[rough_cut]_qbit_microservices_using_service_workers_and_sharded_service_workers.html">
+            
+                
+                    <a href="../tutorials_and_examples/[rough_cut]_qbit_microservices_using_service_workers_and_sharded_service_workers.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.21.</b>
+                        
+                         [Rough Cut] QBit Microservices using Service Workers and sharded service workers
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.22" data-path="tutorials_and_examples/[rough_cut]_qbit_microservice_lib_working_with_callbacks.html">
+            
+                
+                    <a href="../tutorials_and_examples/[rough_cut]_qbit_microservice_lib_working_with_callbacks.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.22.</b>
+                        
+                         [Rough Cut] QBit Microservice Lib Working With CallBacks
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.23" data-path="tutorials_and_examples/[doc]_queue_callbacks_for_qbit_queue_based_services.html">
+            
+                
+                    <a href="../tutorials_and_examples/[doc]_queue_callbacks_for_qbit_queue_based_services.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.23.</b>
+                        
+                         [Doc] Queue Callbacks for QBit queue based services
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.24" data-path="tutorials_and_examples/[rough_cut]_qbit_java_microservice_lib_working_with_workers_sharded_and_pooled.html">
+            
+                
+                    <a href="../tutorials_and_examples/[rough_cut]_qbit_java_microservice_lib_working_with_workers_sharded_and_pooled.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.24.</b>
+                        
+                         [Rough Cut] QBit Java Microservice Lib Working With Workers Sharded and Pooled
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.25" data-path="tutorials_and_examples/[doc]_using_qbit_microservice_libs_websocket_support.html">
+            
+                
+                    <a href="../tutorials_and_examples/[doc]_using_qbit_microservice_libs_websocket_support.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.25.</b>
+                        
+                         [Doc] Using QBit microservice lib&#39;s WebSocket support
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.26" data-path="tutorials_and_examples/[doc]_qbit_microservice_java_lib_using_auto_flushing_client_proxies.html">
+            
+                
+                    <a href="../tutorials_and_examples/[doc]_qbit_microservice_java_lib_using_auto_flushing_client_proxies.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.26.</b>
+                        
+                         [Doc] QBit microservice Java lib Using auto flushing client proxies
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.27" data-path="tutorials_and_examples/[doc]_qbit_microservice_websocket_wire_protocol_draft_01___json_ascii_method_batching_rpc.html">
+            
+                
+                    <a href="../tutorials_and_examples/[doc]_qbit_microservice_websocket_wire_protocol_draft_01___json_ascii_method_batching_rpc.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.27.</b>
+                        
+                         [Doc] QBit Microservice WebSocket wire protocol draft 01   JSON ASCII method batching RPC
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.28" data-path="tutorials_and_examples/[doc]_qbit_java_microservice_lib_auto_flushing_service_queue_proxies.html">
+            
+                
+                    <a href="../tutorials_and_examples/[doc]_qbit_java_microservice_lib_auto_flushing_service_queue_proxies.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.28.</b>
+                        
+                         [Doc] QBit Java microservice lib auto flushing service queue proxies
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="2" data-path="qbit_roadmap/README.html">
+            
+                
+                    <a href="../qbit_roadmap/README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                         Qbit Roadmap
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="3" data-path="contact_us/README.html">
+            
+                
+                    <a href="../contact_us/README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                         Contact Us
+                    </a>
+                
+            
+            
+        </li>
+    
+
+
+        
+        <li class="divider"></li>
+        <li>
+            <a href="http://www.gitbook.io/" target="blank" class="gitbook-link">Published using GitBook</a>
+        </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search" aria-label="Toggle search"><i class="fa fa-search"></i></a>
+    
+    <div id="font-settings-wrapper" class="dropdown pull-left">
+        <a href="#" class="btn toggle-dropdown" aria-label="Toggle font settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="buttons">
+        <button type="button" id="reduce-font-size" class="button size-2">A</button>
+        <button type="button" id="enlarge-font-size" class="button size-2">A</button>
+    </div>
+
+    <div class="buttons font-family-list">
+        <button type="button" data-font="0" class="button">Serif</button>
+        <button type="button" data-font="1" class="button">Sans</button>
+    </div>
+
+    <div class="buttons color-theme-list">
+        <button type="button" id="color-theme-preview-0" class="button size-3" data-theme="0">White</button>
+        <button type="button" id="color-theme-preview-1" class="button size-3" data-theme="1">Sepia</button>
+        <button type="button" id="color-theme-preview-2" class="button size-3" data-theme="2">Night</button>
+    </div>
+</div>
+
+    </div>
+
+    <!-- Actions Right -->
+    
+    <div class="dropdown pull-right">
+        <a href="#" class="btn toggle-dropdown" aria-label="Toggle share dropdown"><i class="fa fa-share-alt"></i>
+        </a>
+        <div class="dropdown-menu font-settings dropdown-left">
+            <div class="dropdown-caret">
+                <span class="caret-outer"></span>
+                <span class="caret-inner"></span>
+            </div>
+            <div class="buttons">
+                <button type="button" data-sharing="twitter" class="button">Twitter</button>
+                <button type="button" data-sharing="google-plus" class="button">Google</button>
+                <button type="button" data-sharing="facebook" class="button">Facebook</button>
+                <button type="button" data-sharing="weibo" class="button">Weibo</button>
+                <button type="button" data-sharing="instapaper" class="button">Instapaper</button>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Share on Google Plus"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Share on Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Share on Twitter"><i class="fa fa-twitter"></i></a>
+    
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >Introduction to QBit - The microservice Library for Java</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-gitbook_1484">
+                    
+                        <h1 id="quick-start-building-a-simple-rest-web-microservice-server-with-qbit">[Quick Start] Building a simple Rest web microservice server with QBit</h1>
+<h2 id="overview">overview</h2>
+<p>WHAT IS REST? REST stands for Representational State Transfer. It relies on a stateless, client-server, cacheable communications protocol. In virtually all cases, the HTTP protocol is used.
+Restful applications use HTTP requests to post data (create and/or update), read data, and delete data. Thus, REST uses HTTP for all four CRUD (Create/Read/Update/Delete) operations.
+The World Wide Web itself is based on HTTP, can be viewed as a REST-based architecture.</p>
+<h2 id="building-a-simple-rest-web-service-server-with-qbit">Building a simple Rest web service server with QBit</h2>
+<p>This wiki will walk you through the process for building a simple Rest web server with QBit.</p>
+<h2 id="what-you-will-build">What you will build</h2>
+<p>You will build a service that will accept HTTP GET/POST (CREATE/READ) requests at:</p>
+<pre><code class="lang-bash">curl http://localhost:<span class="hljs-number">6060</span>/services/myservice/ping
+</code></pre>
+<p>when a ping is sent by a client, a response of a greeting and a confirmation that the server is working will be posted; the JSON greeting representation is as follows:</p>
+<pre><code class="lang-javascript">[<span class="hljs-string">"Hello; My REST server is working"</span>]
+</code></pre>
+<h2 id="how-to-complete-this-guide">How to complete this guide</h2>
+<p>In order to complete this example successfully you will need the following installed on your machine:</p>
+<ul>
+<li>Gradle; if you need help installing it, visit <a href="http://www.gradle.org/docs/current/userguide/installation.html" target="_blank">Installing Gradle. </a></li>
+<li>Your favorite IDE or text editor (we recommend <a href="https://www.jetbrains.com/idea/" target="_blank">Intellig IDEA </a> latest version).</li>
+<li><a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank">JDK </a> 1.8 or later.</li>
+<li>Build and install QBit on your machine click <a href="https://github.com/advantageous/qbit/wiki/%5BQuick-Start%5D-Building-QBit-the-microservice-lib-for-Java" target="_blank">Building QBit </a> for instrutions.</li>
+</ul>
+<p>Now that your machine is all ready let&#39;s get started:</p>
+<ul>
+<li><a href="https://github.com/fadihub/simple-rest-server/archive/master.zip" target="_blank">Download </a> and unzip the source repository for this guide, or clone it using Git:</li>
+</ul>
+<pre><code class="lang-bash">git clone https://github.com/fadihub/simple-rest-server.git
+</code></pre>
+<p>Once this is done you can <strong>test the service</strong>, let&#39;s first explain the process:</p>
+<p>This service will handle GET/POST requests. Once the client pings the server, a greeting  and a confirmation message will be posted at:</p>
+<pre><code class="lang-bash">curl http://localhost:<span class="hljs-number">6060</span>/services/myservice/ping
+</code></pre>
+<p>The content of the message is the following:</p>
+<pre><code class="lang-javascript">[<span class="hljs-string">"Hello: This REST server is working!"</span>]
+</code></pre>
+<h4 id="simplerestserver-listing">SimpleRestServer Listing</h4>
+<p><code>src/main/java/io.advantageous.qbit.examples/SimpleRestServer</code></p>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> io.advantageous.qbit.examples;
+
+<span class="hljs-keyword">import</span> io.advantageous.qbit.annotation.RequestMapping;
+<span class="hljs-keyword">import</span> io.advantageous.qbit.queue.QueueBuilder;
+<span class="hljs-keyword">import</span> io.advantageous.qbit.server.ServiceServer;
+<span class="hljs-keyword">import</span> io.advantageous.qbit.server.ServiceServerBuilder;
+<span class="hljs-keyword">import</span> org.boon.Boon;
+
+<span class="hljs-keyword">import</span> java.util.Collections;
+<span class="hljs-keyword">import</span> java.util.List;
+
+<span class="hljs-javadoc">/**
+ *
+
+ $ ./wrk -c 200 -d 10s http://localhost:6060/services/myservice/ping -H "X_USER_ID: RICK"  --timeout 100000s -t 8
+ Running 10s test @ http://localhost:6060/services/myservice/ping
+ 8 threads and 200 connections
+ Thread Stats   Avg      Stdev     Max   +/- Stdev
+ Latency     2.63ms  360.02us   4.41ms   68.14%
+ Req/Sec    10.17k     1.32k   12.89k    55.97%
+ 766450 requests in 10.00s, 76.75MB read
+ Requests/sec:  76651.84
+ Transfer/sec:      7.68MB
+
+ */</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SimpleRestServer</span> </span>{
+
+
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyService</span> </span>{
+
+        <span class="hljs-comment">/*
+        curl http://localhost:6060/services/myservice/ping -H "X_USER_ID: RICK"
+         */</span>
+        <span class="hljs-annotation">@RequestMapping</span>
+        <span class="hljs-function"><span class="hljs-keyword">public</span> List <span class="hljs-title">ping</span><span class="hljs-params">()</span> </span>{
+            <span class="hljs-keyword">return</span> Collections.singletonList(<span class="hljs-string">"Hello: This REST server is working!"</span>);
+        }
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String... args)</span> <span class="hljs-keyword">throws</span> Exception </span>{
+
+
+        <span class="hljs-keyword">final</span> ServiceServer serviceServer = <span class="hljs-keyword">new</span> ServiceServerBuilder().setPort(<span class="hljs-number">6060</span>).setQueueBuilder(
+                <span class="hljs-keyword">new</span> QueueBuilder().setLinkTransferQueue().setTryTransfer(<span class="hljs-keyword">true</span>).setBatchSize(<span class="hljs-number">10</span>).setPollWait(<span class="hljs-number">10</span>)
+        ).setNumberOfOutstandingRequests(<span class="hljs-number">1000000</span>).setTimeoutSeconds(<span class="hljs-number">40</span>)
+                .build();
+
+        serviceServer.initServices(<span class="hljs-keyword">new</span> MyService());
+        serviceServer.start();
+
+        Boon.gets();
+    }
+}
+</code></pre>
+<p> As you can see the code for this simple rest server is very straight forward, we are just creating the server and setting the port to 6060, and setting a few other parameters like PollWait etc.. will talk about these in later tutorials.</p>
+<h4 id="buildgradle-listing">build.gradle Listing</h4>
+<p><code>~/simple-rest-server/build.gradle</code></p>
+<pre><code class="lang-java">group = <span class="hljs-string">'io.advantageous.qbit.examples'</span>
+
+apply plugin: <span class="hljs-string">'idea'</span>
+apply plugin: <span class="hljs-string">'java'</span>
+apply plugin: <span class="hljs-string">'maven'</span>
+apply plugin: <span class="hljs-string">'application'</span>
+
+version = <span class="hljs-string">'0.1-SNAPSHOT'</span>
+
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
+
+
+sourceSets {
+    main {
+        java {
+            srcDir <span class="hljs-string">'src/main/java'</span>
+        }
+        resources {
+            srcDir <span class="hljs-string">'src/main/resources'</span>
+        }
+    }
+}
+
+
+mainClassName = <span class="hljs-string">"io.advantageous.qbit.examples.SimpleRestServer"</span>
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+
+
+dependencies {
+    compile group: <span class="hljs-string">'io.advantageous.qbit'</span>, name: <span class="hljs-string">'qbit-vertx'</span>, version: <span class="hljs-string">'0.5.2-SNAPSHOT'</span>
+    compile <span class="hljs-string">"org.slf4j:slf4j-api:[1.7,1.8)"</span>
+    compile <span class="hljs-string">'ch.qos.logback:logback-classic:1.1.2'</span>
+    testCompile group: <span class="hljs-string">'junit'</span>, name: <span class="hljs-string">'junit'</span>, version: <span class="hljs-string">'4.10'</span>
+}
+
+
+
+
+idea {
+    project {
+        jdkName = <span class="hljs-string">'1.8'</span>
+        languageLevel = <span class="hljs-string">'1.8'</span>
+    }
+}
+</code></pre>
+<p>This is where all the dependencies are set up for the <strong>simple-rest-server</strong> code.</p>
+<p>Now we are ready to test the localhost server.</p>
+<h2 id="test-the-service">Test The Service</h2>
+<p>With your terminal cd into <code>~/simple-rest-sever</code></p>
+<p>run <code>gradle clean build</code> then <code>gradle run</code> open up your favorite browser then visit <strong><a href="http://localhost:6060/services/myservice/ping" target="_blank">http://localhost:6060/services/myservice/ping</a></strong> or open up another terminal and type the following:</p>
+<pre><code class="lang-bash">curl http://localhost:<span class="hljs-number">6060</span>/services/myservice/ping
+</code></pre>
+<p>you should get this response:</p>
+<pre><code class="lang-javascript">[<span class="hljs-string">"Hello: This REST server is working!"</span>]
+</code></pre>
+<h2 id="summary">Summary</h2>
+<p>You have just built a simple REST server with QBit and tested it.</p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../tutorials_and_examples/[quick_start]_building_a_todo_web_microservice_client_with_qbit.html" class="navigation navigation-prev " aria-label="Previous page: [Quick Start] Building a TODO web microservice client with QBit"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../tutorials_and_examples/[rough_cut]_using_qbit_microservice_libs_rest_support_with_uri_params.html" class="navigation navigation-next " aria-label="Next page: [Rough Cut] Using QBit microservice lib&#39;s REST support with URI Params"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="https://cdn.mathjax.org/mathjax/2.4-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-mathjax/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"fontSettings":{"theme":null,"family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

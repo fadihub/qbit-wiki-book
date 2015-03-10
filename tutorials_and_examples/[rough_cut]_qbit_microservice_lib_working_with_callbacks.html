@@ -1,0 +1,1593 @@
+<!DOCTYPE HTML>
+<html lang="en-US" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <title>[Rough Cut] QBit Microservice Lib Working With CallBacks | Introduction to QBit - The microservice Library for Java</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 1.0.3">
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    
+    
+    
+    <link rel="next" href="../tutorials_and_examples/[doc]_queue_callbacks_for_qbit_queue_based_services.html" />
+    
+    
+    <link rel="prev" href="../tutorials_and_examples/[rough_cut]_qbit_microservices_using_service_workers_and_sharded_service_workers.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+<link rel="stylesheet" href="../gitbook/style.css">
+
+
+        
+    <div class="book"  data-level="1.22" data-basepath=".." data-revision="1426023905951">
+    
+
+<div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Type to search" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+    	
+    	
+    	
+
+        
+
+        
+    
+        
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                        <i class="fa fa-check"></i>
+                        
+                         Introduction
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="0.1" data-path="what_is_qbit.html">
+            
+                
+                    <a href="../what_is_qbit.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>0.1.</b>
+                        
+                         What is Qbit?
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="0.2" data-path="qbits_philosophy_and_inspiration.html">
+            
+                
+                    <a href="../qbits_philosophy_and_inspiration.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>0.2.</b>
+                        
+                         QBit&#39;s Philosophy and inspiration
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="0.3" data-path="does_it_work.html">
+            
+                
+                    <a href="../does_it_work.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>0.3.</b>
+                        
+                         Does it work?
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1" data-path="tutorials_and_examples/README.html">
+            
+                
+                    <a href="../tutorials_and_examples/README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                         Tutorials and Examples
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="1.1" data-path="tutorials_and_examples/[quick_start]_building_qbit_the_microservice_lib_for_java.html">
+            
+                
+                    <a href="../tutorials_and_examples/[quick_start]_building_qbit_the_microservice_lib_for_java.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                         [Quick Start] Building QBit the microservice lib for Java
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.2" data-path="tutorials_and_examples/[quick_start]_building_boon_for_the_qbit_microservice_engine.html">
+            
+                
+                    <a href="../tutorials_and_examples/[quick_start]_building_boon_for_the_qbit_microservice_engine.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                         [Quick Start] Building boon for the QBit microservice engine
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.3" data-path="tutorials_and_examples/[quick_start]_building_a_todo_web_microservice_server_with_qbit.html">
+            
+                
+                    <a href="../tutorials_and_examples/[quick_start]_building_a_todo_web_microservice_server_with_qbit.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                         [Quick Start] Building a TODO web microservice server with QBit
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.4" data-path="tutorials_and_examples/[quick_start]_building_a_todo_web_microservice_client_with_qbit.html">
+            
+                
+                    <a href="../tutorials_and_examples/[quick_start]_building_a_todo_web_microservice_client_with_qbit.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                         [Quick Start] Building a TODO web microservice client with QBit
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.5" data-path="tutorials_and_examples/[quick_start]_building_a_simple_rest_web_microservice_server_with_qbit.html">
+            
+                
+                    <a href="../tutorials_and_examples/[quick_start]_building_a_simple_rest_web_microservice_server_with_qbit.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.</b>
+                        
+                         [Quick Start] Building a simple Rest web microservice server with QBit
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.6" data-path="tutorials_and_examples/[rough_cut]_using_qbit_microservice_libs_rest_support_with_uri_params.html">
+            
+                
+                    <a href="../tutorials_and_examples/[rough_cut]_using_qbit_microservice_libs_rest_support_with_uri_params.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.</b>
+                        
+                         [Rough Cut] Using QBit microservice lib&#39;s REST support with URI Params
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.7" data-path="tutorials_and_examples/[quick_start]_working_with_inproc_microservices_within_qbit.html">
+            
+                
+                    <a href="../tutorials_and_examples/[quick_start]_working_with_inproc_microservices_within_qbit.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.7.</b>
+                        
+                         [Quick Start] Working with inproc MicroServices within QBit
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.8" data-path="tutorials_and_examples/[detailed_tutorial]_working_with_inproc_microservices_within_qbit.html">
+            
+                
+                    <a href="../tutorials_and_examples/[detailed_tutorial]_working_with_inproc_microservices_within_qbit.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.8.</b>
+                        
+                         [Detailed Tutorial] Working with inproc MicroServices within QBit.
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.9" data-path="tutorials_and_examples/[rough_cut]_working_with_inproc_microservices.html">
+            
+                
+                    <a href="../tutorials_and_examples/[rough_cut]_working_with_inproc_microservices.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.9.</b>
+                        
+                         [Rough Cut] Working with inproc MicroServices
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.10" data-path="tutorials_and_examples/[doc]_using_qbit_microservice_libs_httpclient_get,_post,_et_al,_json,_java_8_lambda.html">
+            
+                
+                    <a href="../tutorials_and_examples/[doc]_using_qbit_microservice_libs_httpclient_get,_post,_et_al,_json,_java_8_lambda.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.10.</b>
+                        
+                         [Doc] Using QBit microservice lib&#39;s HttpClient GET, POST, et al, JSON, Java 8 Lambda
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.11" data-path="tutorials_and_examples/[rough_cut]_working_with_event_bus_for_qbit_the_microservice_engine.html">
+            
+                
+                    <a href="../tutorials_and_examples/[rough_cut]_working_with_event_bus_for_qbit_the_microservice_engine.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.11.</b>
+                        
+                         [Rough Cut] Working with event bus for QBit the microservice engine
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.12" data-path="tutorials_and_examples/[rough_cut]_working_with_private_event_bus_for_inproc_microservices.html">
+            
+                
+                    <a href="../tutorials_and_examples/[rough_cut]_working_with_private_event_bus_for_inproc_microservices.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.12.</b>
+                        
+                         [Rough Cut] Working with private event bus for inproc microservices
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.13" data-path="tutorials_and_examples/[rough_cut]_working_with_strongly_typed_event_bus_proxies_for_qbit_java_microservice_lib.html">
+            
+                
+                    <a href="../tutorials_and_examples/[rough_cut]_working_with_strongly_typed_event_bus_proxies_for_qbit_java_microservice_lib.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.13.</b>
+                        
+                         [Rough Cut] Working with strongly typed event bus proxies for QBit Java Microservice lib
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.14" data-path="tutorials_and_examples/[doc]_qbit_java_microservice_lib_introducing_eventbus_replication_and_eventbus_connectors.html">
+            
+                
+                    <a href="../tutorials_and_examples/[doc]_qbit_java_microservice_lib_introducing_eventbus_replication_and_eventbus_connectors.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.14.</b>
+                        
+                         [Doc] QBit Java microservice lib introducing EventBus replication and EventBus connectors
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.15" data-path="tutorials_and_examples/[quick_start]_building_a_single_web_page_application_with_qbit.html">
+            
+                
+                    <a href="../tutorials_and_examples/[quick_start]_building_a_single_web_page_application_with_qbit.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.15.</b>
+                        
+                         [Quick Start] building a single web page application with QBit
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.16" data-path="tutorials_and_examples/[rough_cut]_delivering_up_single_page_applications_from_qbit_java_json_microservice_lib.html">
+            
+                
+                    <a href="../tutorials_and_examples/[rough_cut]_delivering_up_single_page_applications_from_qbit_java_json_microservice_lib.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.16.</b>
+                        
+                         [Rough Cut] Delivering up Single Page Applications from QBit Java JSON Microservice lib
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.17" data-path="tutorials_and_examples/[quick_start]_building_a_single_page_todo_list_application_with_qbit.html">
+            
+                
+                    <a href="../tutorials_and_examples/[quick_start]_building_a_single_page_todo_list_application_with_qbit.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.17.</b>
+                        
+                         [Quick Start] Building a single page; Todo List Application with QBit
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.18" data-path="tutorials_and_examples/[detailed_tutorial]_building_a_single_page_todo_list_application_with_qbit.html">
+            
+                
+                    <a href="../tutorials_and_examples/[detailed_tutorial]_building_a_single_page_todo_list_application_with_qbit.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.18.</b>
+                        
+                         [Detailed Tutorial] Building a single page; Todo List Application with QBit
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.19" data-path="tutorials_and_examples/[rough_cut]_using_qbit_microservice_lib_with_spring_boot.html">
+            
+                
+                    <a href="../tutorials_and_examples/[rough_cut]_using_qbit_microservice_lib_with_spring_boot.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.19.</b>
+                        
+                         [Rough Cut] Using QBit microservice lib with Spring Boot
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.20" data-path="tutorials_and_examples/[rough_cut]_working_with_system_manager_for_qbit_mircoservice_lib.html">
+            
+                
+                    <a href="../tutorials_and_examples/[rough_cut]_working_with_system_manager_for_qbit_mircoservice_lib.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.20.</b>
+                        
+                         [Rough Cut] Working with System Manager for QBit Mircoservice lib
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.21" data-path="tutorials_and_examples/[rough_cut]_qbit_microservices_using_service_workers_and_sharded_service_workers.html">
+            
+                
+                    <a href="../tutorials_and_examples/[rough_cut]_qbit_microservices_using_service_workers_and_sharded_service_workers.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.21.</b>
+                        
+                         [Rough Cut] QBit Microservices using Service Workers and sharded service workers
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter active" data-level="1.22" data-path="tutorials_and_examples/[rough_cut]_qbit_microservice_lib_working_with_callbacks.html">
+            
+                
+                    <a href="../tutorials_and_examples/[rough_cut]_qbit_microservice_lib_working_with_callbacks.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.22.</b>
+                        
+                         [Rough Cut] QBit Microservice Lib Working With CallBacks
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.23" data-path="tutorials_and_examples/[doc]_queue_callbacks_for_qbit_queue_based_services.html">
+            
+                
+                    <a href="../tutorials_and_examples/[doc]_queue_callbacks_for_qbit_queue_based_services.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.23.</b>
+                        
+                         [Doc] Queue Callbacks for QBit queue based services
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.24" data-path="tutorials_and_examples/[rough_cut]_qbit_java_microservice_lib_working_with_workers_sharded_and_pooled.html">
+            
+                
+                    <a href="../tutorials_and_examples/[rough_cut]_qbit_java_microservice_lib_working_with_workers_sharded_and_pooled.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.24.</b>
+                        
+                         [Rough Cut] QBit Java Microservice Lib Working With Workers Sharded and Pooled
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.25" data-path="tutorials_and_examples/[doc]_using_qbit_microservice_libs_websocket_support.html">
+            
+                
+                    <a href="../tutorials_and_examples/[doc]_using_qbit_microservice_libs_websocket_support.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.25.</b>
+                        
+                         [Doc] Using QBit microservice lib&#39;s WebSocket support
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.26" data-path="tutorials_and_examples/[doc]_qbit_microservice_java_lib_using_auto_flushing_client_proxies.html">
+            
+                
+                    <a href="../tutorials_and_examples/[doc]_qbit_microservice_java_lib_using_auto_flushing_client_proxies.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.26.</b>
+                        
+                         [Doc] QBit microservice Java lib Using auto flushing client proxies
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.27" data-path="tutorials_and_examples/[doc]_qbit_microservice_websocket_wire_protocol_draft_01___json_ascii_method_batching_rpc.html">
+            
+                
+                    <a href="../tutorials_and_examples/[doc]_qbit_microservice_websocket_wire_protocol_draft_01___json_ascii_method_batching_rpc.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.27.</b>
+                        
+                         [Doc] QBit Microservice WebSocket wire protocol draft 01   JSON ASCII method batching RPC
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.28" data-path="tutorials_and_examples/[doc]_qbit_java_microservice_lib_auto_flushing_service_queue_proxies.html">
+            
+                
+                    <a href="../tutorials_and_examples/[doc]_qbit_java_microservice_lib_auto_flushing_service_queue_proxies.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.28.</b>
+                        
+                         [Doc] QBit Java microservice lib auto flushing service queue proxies
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="2" data-path="qbit_roadmap/README.html">
+            
+                
+                    <a href="../qbit_roadmap/README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                         Qbit Roadmap
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="3" data-path="contact_us/README.html">
+            
+                
+                    <a href="../contact_us/README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                         Contact Us
+                    </a>
+                
+            
+            
+        </li>
+    
+
+
+        
+        <li class="divider"></li>
+        <li>
+            <a href="http://www.gitbook.io/" target="blank" class="gitbook-link">Published using GitBook</a>
+        </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search" aria-label="Toggle search"><i class="fa fa-search"></i></a>
+    
+    <div id="font-settings-wrapper" class="dropdown pull-left">
+        <a href="#" class="btn toggle-dropdown" aria-label="Toggle font settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="buttons">
+        <button type="button" id="reduce-font-size" class="button size-2">A</button>
+        <button type="button" id="enlarge-font-size" class="button size-2">A</button>
+    </div>
+
+    <div class="buttons font-family-list">
+        <button type="button" data-font="0" class="button">Serif</button>
+        <button type="button" data-font="1" class="button">Sans</button>
+    </div>
+
+    <div class="buttons color-theme-list">
+        <button type="button" id="color-theme-preview-0" class="button size-3" data-theme="0">White</button>
+        <button type="button" id="color-theme-preview-1" class="button size-3" data-theme="1">Sepia</button>
+        <button type="button" id="color-theme-preview-2" class="button size-3" data-theme="2">Night</button>
+    </div>
+</div>
+
+    </div>
+
+    <!-- Actions Right -->
+    
+    <div class="dropdown pull-right">
+        <a href="#" class="btn toggle-dropdown" aria-label="Toggle share dropdown"><i class="fa fa-share-alt"></i>
+        </a>
+        <div class="dropdown-menu font-settings dropdown-left">
+            <div class="dropdown-caret">
+                <span class="caret-outer"></span>
+                <span class="caret-inner"></span>
+            </div>
+            <div class="buttons">
+                <button type="button" data-sharing="twitter" class="button">Twitter</button>
+                <button type="button" data-sharing="google-plus" class="button">Google</button>
+                <button type="button" data-sharing="facebook" class="button">Facebook</button>
+                <button type="button" data-sharing="weibo" class="button">Weibo</button>
+                <button type="button" data-sharing="instapaper" class="button">Instapaper</button>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Share on Google Plus"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Share on Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Share on Twitter"><i class="fa fa-twitter"></i></a>
+    
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >Introduction to QBit - The microservice Library for Java</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-gitbook_1494">
+                    
+                        <h1 id="rough-cut-qbit-microservice-lib-working-with-callbacks">[Rough Cut] QBit Microservice Lib Working With CallBacks</h1>
+<h2 id="callbacks">CallBacks</h2>
+<p>To really grasp QBit, one must grasp the concepts of a CallBack.</p>
+<p>A CallBack is a way to get an async response in QBit.</p>
+<p>You call a service method and it calls you back.</p>
+<p>There is really no magic. Ok there is some, but we will start magic
+free and explain things as they come.</p>
+<h2 id="imagining-an-app---cpu-bound-and-io-bound">Imagining an app - CPU Bound and IO Bound</h2>
+<p>For this example, we are going to imagine a larger app.
+This app will be a recommendation engine.
+Think of Cupid.com or DatesRUs.com or iTunes match or NetFlix suggestions or Amazon.com
+&quot;Customers who bought this also bought these other fine products&quot;.</p>
+<p>Now we are not building a real recommendation engine although QBit
+has been used for similar things.</p>
+<p>The trick with an example is to keep the concepts clear enough without
+getting too much clutter with a real world implementation so it can be followed.</p>
+<p><code>RecommendationService</code> is our CPU intensive service.
+will be the recommendation engine. It our hypothetical example
+<code>RecommendationService</code> is very CPU intensive. It has to iterate through products and user data
+and pick a match. It is a classic N+1. In our example, we do all of this real time based on the
+latest user activity, to the last second. What page did that just view? What product did they just bookmark?
+What product did they buy? What product did their friends buy? What product are people in their same demographic
+buying now. This is real time analytics. This does not mean that there is not machine learning or Hadoop batch
+jobs churning data some where. But the churned data is mixed with the data science, pre-chewed caches and counters,
+and up to the second user activity to make a decision based on data in memory and historic data (blended).
+<code>RecommendationService</code> is the tip of the ice-burg, but it is brute force, exhaustive and fast.</p>
+<p><code>UserDataService</code> is our heavy IO service.
+As much as we would like to, we do know which <code>RecommendationService</code> node a user might land on we can&#39;t if
+we are truly elastic. Are they using an XBox on the west coast, an iPhone in Hawaii, when/how will they hit our recommendation
+engine who knows.  <code>UserDataService</code> manages editing, backup, and syncing user data.
+<code>UserDataService</code> keeps most users in-memory and also manages replicating and storing user data.</p>
+<p>This is what I want you to think about when I am talking about
+<code>UserDataService</code> and <code>RecommendationService</code>.</p>
+<p><code>UserDataService</code> IO bound.
+<code>RecommendationService</code> CPU bound.</p>
+<p>In this tutorial we will cover CallBacks. In a later tutorial we will cover sharding CPU bound services.
+In another tutorial we will cover using Service pools to handle IO bound services.</p>
+<p>QBit provides some magic to make some of this stuff easier, but unless you learn why/what/how things are being done
+the magic will not help you. It will just confuse you. Thus, we will walk through it in baby steps.</p>
+<h2 id="starting-out-with-a-very-simple-recommendation-service">Starting out with a very simple Recommendation service</h2>
+<p>A recommendation service has an interface, where others can call methods, and an implementation.</p>
+<p>To make this clear in this tutorial we will name things <code>XXXServiceClient</code> for the client interface
+and we will name things <code>XXXService</code> for the implementation but this is in no way a recommendation for
+naming but a device for clarity of thought for the tutorial. A more normative approach will clearly be
+<code>XXXService</code> for the client and <code>XXXServiceImpl</code> for the implementation or whatever naming convention
+that you prefer.</p>
+<h4 id="recommendationservice-client-interface">RecommendationService client interface</h4>
+<pre><code class="lang-java">
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">RecommendationServiceClient</span> </span>{
+
+
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">recommend</span><span class="hljs-params">(<span class="hljs-keyword">final</span> Callback&lt;List&lt;Recommendation&gt;&gt; recommendationsCallback,
+                          <span class="hljs-keyword">final</span> String userName)</span></span>;
+}
+</code></pre>
+<p>Client interfaces always return void. If you want to be called back, you specify a Callback as the first argument.</p>
+<p>A callback is just a Java 8 consumer with an additional method <code>onError</code> to pass exceptions back to the client
+code that invoked the service.</p>
+<h4 id="callback">Callback</h4>
+<pre><code class="lang-java">
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">Callback</span> &lt;<span class="hljs-title">T</span>&gt; <span class="hljs-keyword">extends</span> <span class="hljs-title">java</span>.<span class="hljs-title">util</span>.<span class="hljs-title">function</span>.<span class="hljs-title">Consumer</span>&lt;<span class="hljs-title">T</span>&gt; </span>{
+    <span class="hljs-function"><span class="hljs-keyword">default</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onError</span><span class="hljs-params">(java.lang.Throwable error)</span> </span>{ <span class="hljs-comment">/* compiled code */</span> }
+}
+</code></pre>
+<p>A Java 8 Consumer class has an accept(<T>) method so a Callback adds an onError which uses the new
+Java 8 syntax to create a default implementation that just logs the exception so if the exception
+is truly exceptional, and all you plan on doing is logging it, then you don&#39;t have to do anything.</p>
+<p>The client interface is your interface to calling the service. Calling methods on the client interface
+enqueues those method calls onto the service queue for the service. You create a client interface
+from a ServiceQueue as follows:</p>
+<h4 id="creating-a-client-proxy-from-a-service-queue">Creating a client proxy from a service queue</h4>
+<pre><code class="lang-java">
+
+        ServiceQueue recommendationServiceQueue = ...
+
+        <span class="hljs-javadoc">/** Create the client interface from the recommendationServiceQueue. */</span>
+        RecommendationServiceClient recommendationServiceClient =
+                recommendationServiceQueue.createProxy(RecommendationServiceClient.class);
+</code></pre>
+<p>The <code>ServiceQueue</code> manages threads/queues for a <code>Service</code> implementation so the service can be thread
+safe and fast.</p>
+<p>The first version of the <code>RecommendationService</code>, we are going to keep really simple and some services can
+always be this simple. At this point <code>RecommendationService</code> is just a POJO. Later we will stretch the definition
+of POJO and annotated methods and use lambdas, and more, but for now, let&#39;s keep it simple.</p>
+<h4 id="simple-implementation-of-recommendationservice">Simple implementation of RecommendationService</h4>
+<pre><code class="lang-java">
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">RecommendationService</span> </span>{
+
+
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> SimpleCache&lt;String, User&gt; users =
+            <span class="hljs-keyword">new</span> SimpleCache&lt;&gt;(<span class="hljs-number">10</span>_000);
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> List&lt;Recommendation&gt; <span class="hljs-title">recommend</span><span class="hljs-params">(<span class="hljs-keyword">final</span> String userName)</span> </span>{
+        User user = users.get(userName);
+        <span class="hljs-keyword">if</span> (user == <span class="hljs-keyword">null</span>) {
+            user = loadUser(userName);
+        }
+        <span class="hljs-function"><span class="hljs-keyword">return</span> <span class="hljs-title">runRulesEngineAgainstUser</span><span class="hljs-params">(user)</span></span>;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> User <span class="hljs-title">loadUser</span><span class="hljs-params">(String userName)</span> </span>{
+        ...
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> List&lt;Recommendation&gt; <span class="hljs-title">runRulesEngineAgainstUser</span><span class="hljs-params">(<span class="hljs-keyword">final</span> User user)</span> </span>{
+        ...
+    }
+</code></pre>
+<p>Remember this is an example so <code>loadUser</code> and <code>runRulesEngineAgainstUser</code> are stubbed with simple
+implementations but pretend they are not.</p>
+<p>Let&#39;s pretend <code>loadUser</code> has to look in a local cache, and if the user is not found, look in an off-heap cache
+and if not found it must ask for the user from the UserService which must check its caches and perhaps fallback
+to loading the user data from a database or from other services.</p>
+<p>In other words, <code>loadUser</code> can potentially block on IO.</p>
+<p>The way we have written this now, we are blocking on user load. This is bad for most apps, but worse for
+Actor, Active Object and Reactive libs and frameworks. When you block, you are blocking the thread that
+is handling all of the messages, events, method calls for this service (and if using a ServiceBundle
+described later you are even blocking others service.)</p>
+<p>Is this always bad? Well it is a big red flag. If you were getting a lot of cache hits and your traffic
+was bursty but consistent and you cache did not time out often then this would not be the end of the world.
+But for almost all applications of microservice this is a bad thing.</p>
+<p>Before we fix it let&#39;s finish showing using our service client proxy.</p>
+<h4 id="client-using-a-callback-to-call-service---creating-the-callback">Client using a callback to call service - Creating the callback</h4>
+<pre><code class="lang-java">
+
+        Callback&lt;List&lt;Recommendation&gt;&gt; callback = <span class="hljs-keyword">new</span> Callback&lt;List&lt;Recommendation&gt;&gt;() {
+            <span class="hljs-annotation">@Override</span>
+            <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">accept</span><span class="hljs-params">(List&lt;Recommendation&gt; recommendations)</span> </span>{
+                System.out.println(<span class="hljs-string">"recommendations "</span> + recommendations);
+            }
+
+            <span class="hljs-annotation">@Override</span>
+            <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onError</span><span class="hljs-params">(Throwable error)</span> </span>{
+                error.printStackTrace();
+            }
+        };
+</code></pre>
+<p>The above uses the more verbose pre Java 8 style of inner classes. We create an
+anonymous inner class which implements the Callback interface, and then we use this
+to call the</p>
+<h4 id="client-using-a-callback-to-call-service---using-the-callback">Client using a callback to call service - Using the callback</h4>
+<pre><code class="lang-java">
+        recommendationServiceClient.recommend(callback, <span class="hljs-string">"Rick"</span>);
+</code></pre>
+<p>Now when we call the <code>recommendationServiceClient</code> if the callback succeeds we get a
+an <code>accept</code> call, and if it fails we get an <code>onError</code> call. We call it on one thread, and
+it calls us back on another thread when it finishes.</p>
+<pre><code class="lang-output">recommendations
+       [Recommendation{recommendation=&#39;Take a walk&#39;},
+        Recommendation{recommendation=&#39;Read a book&#39;},
+        Recommendation{recommendation=&#39;Love more, complain less&#39;}]
+</code></pre>
+<p>Well we can&#39;t do an example using Java 8 and not use the lambda expression.</p>
+<h4 id="client-using-a-callback-to-call-service---using-a-lambda-that-creates-the-callback">Client using a callback to call service - Using a lambda that creates the callback</h4>
+<pre><code class="lang-java">
+        recommendationServiceClient.recommend(recommendations -&gt; {
+            System.out.println(<span class="hljs-string">"recommendations "</span> + recommendations);
+        }, <span class="hljs-string">"Rick"</span>);
+</code></pre>
+<p>Now since it is a one liner, we don&#39;t really need the brackets in the lambda.</p>
+<h4 id="client-using-a-callback-to-call-service---lambda-no-brackets">Client using a callback to call service - lambda no brackets</h4>
+<pre><code class="lang-java">
+        recommendationServiceClient.recommend(recommendations -&gt;
+            System.out.println(<span class="hljs-string">"recommendations "</span> + recommendations), <span class="hljs-string">"Rick"</span>);
+</code></pre>
+<p>Getting jiggy with it:</p>
+<h4 id="client-using-a-callback-to-call-a-service---using-a-java-method-expression-just-because">Client using a callback to call a service - using a Java method expression just because.</h4>
+<pre><code class="lang-java">
+        <span class="hljs-keyword">import</span> <span class="hljs-keyword">static</span> java.lang.System.out;
+
+        recommendationServiceClient.recommend(out::println, <span class="hljs-string">"Rick"</span>);
+</code></pre>
+<p>So what was the point of the last few examples. I am trying to show that QBit does in fact support Java 8
+style lambda / method expression syntax, but with a warning lambda expressions are not always the
+easiest way to write code that is easy to comprehend. I will often show the non-lambda approach because it
+is easier to understand and explain. The other caveat, lambda nested calling other lambdas using no bodies,
+ method expressions that then call other lambdas using no bodies and method expression that are deeply nested
+ are not very readable.
+Until Josh Bloch gets off his tush and writes a Java 8 lambda guy that Java programmers will put under their
+pillow and worship like the missing star wars trilogy books, tread lightly with lambdas. Use them.</p>
+<p>Don&#39;t deeply nest lambdas 8 levels. Just don&#39;t.
+You can easily write code that no one including yourself understands.
+Break things out into methods that describe what you are doing at least every three levels. :)</p>
+<p>That said, let&#39;s get a bunch of user recommendations at once using Java 8 lambdas (do as I say not as I do).</p>
+<h4 id="client-using-a-callback-to-call-a-service---lambdas-gone-wild">Client using a callback to call a service - Lambdas gone wild</h4>
+<pre><code class="lang-java">        List&lt;String&gt; userNames = Lists.list(<span class="hljs-string">"Bob"</span>, <span class="hljs-string">"Joe"</span>, <span class="hljs-string">"Scott"</span>, <span class="hljs-string">"William"</span>);
+
+        userNames.forEach( userName-&gt;
+                recommendationServiceClient.recommend(recommendations -&gt; {
+                    System.out.println(<span class="hljs-string">"Recommendations for: "</span> + userName);
+                    recommendations.forEach(recommendation-&gt;
+                            System.out.println(<span class="hljs-string">"\t"</span> + recommendation));
+                }, userName)
+        );
+</code></pre>
+<p>Now when we run our program we get:</p>
+<pre><code class="lang-output">
+Recommendations for: Bob
+    Recommendation{recommendation=&#39;Take a walk&#39;}
+    Recommendation{recommendation=&#39;Read a book&#39;}
+    Recommendation{recommendation=&#39;Love more, complain less&#39;}
+Recommendations for: Joe
+    Recommendation{recommendation=&#39;Take a walk&#39;}
+    Recommendation{recommendation=&#39;Read a book&#39;}
+    Recommendation{recommendation=&#39;Love more, complain less&#39;}
+Recommendations for: Scott
+    Recommendation{recommendation=&#39;Take a walk&#39;}
+    Recommendation{recommendation=&#39;Read a book&#39;}
+    Recommendation{recommendation=&#39;Love more, complain less&#39;}
+Recommendations for: William
+    Recommendation{recommendation=&#39;Take a walk&#39;}
+    Recommendation{recommendation=&#39;Read a book&#39;}
+    Recommendation{recommendation=&#39;Love more, complain less&#39;}
+</code></pre>
+<h2 id="qbit-microserivce---micro-batching">QBit microserivce - micro batching</h2>
+<p>QBit tries to send many method calls at one time. Periodically, you need to tell QBit to flush what you have
+done so far. Every time you tell it to flush, you are sending all of the methods you called from the last time
+you flushed. There are ways to get QBit to auto-flush, which we will cover later.
+Imagine a REST tier calling your service and you have 20 threads handling the REST tier and the REST tier is
+handling 100K requests per second, and it is a rules engine that can only handle 200K recommendations a second
+in a tight loop. Instead of each thread enqueue each call everytime it gets a request, it can send method
+calls in batches of 10, 100, or 1,000 or even 10K requests per batch.
+The bigger the batch the less time doing thread hand-off and less synchronizing queue internals across multiple threads.</p>
+<p>When you use a QBit queue, you can specify a batch size.
+When the queue gets requests beyond this amount, it will batch them. You can also periodically, flush the methods
+when you feel its appropriate like after a related unit of work.
+This is microbatching and QBit supports it at its core. Among other optimization that we will cover over time.</p>
+<p>Therefore periodically (unless you setup auto flush or a batch size of 1), you need to flush your method call
+queue.</p>
+<h4 id="client-using-a-callback-to-call-a-service---dont-forget-to-flush-and-put-the-lid-down">Client using a callback to call a service - Don&#39;t forget to flush and put the lid down</h4>
+<pre><code class="lang-java">
+        List&lt;String&gt; userNames = Lists.list(<span class="hljs-string">"Bob"</span>, <span class="hljs-string">"Joe"</span>, <span class="hljs-string">"Scott"</span>, <span class="hljs-string">"William"</span>);
+
+        userNames.forEach( userName-&gt;
+                recommendationServiceClient.recommend(recommendations -&gt; {
+                    System.out.println(<span class="hljs-string">"Recommendations for: "</span> + userName);
+                    recommendations.forEach(recommendation-&gt;
+                            System.out.println(<span class="hljs-string">"\t"</span> + recommendation));
+                }, userName)
+        );
+
+
+
+        flushServiceProxy(recommendationServiceClient);
+</code></pre>
+<h2 id="code-so-far---simple-client-call-back-full-example">Code so far - Simple client call back full example</h2>
+<h4 id="domain-object">Domain object</h4>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> io.advantageous.qbit.example;
+
+<span class="hljs-comment">/* Domain object. */</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">User</span> </span>{
+
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> String userName;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">User</span><span class="hljs-params">(String userName)</span></span>{
+        <span class="hljs-keyword">this</span>.userName = userName;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getUserName</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> userName;
+    }
+
+}
+</code></pre>
+<h4 id="recommendationservice">RecommendationService</h4>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> io.advantageous.qbit.example;
+
+
+<span class="hljs-keyword">import</span> org.boon.Lists;
+<span class="hljs-keyword">import</span> org.boon.cache.SimpleCache;
+<span class="hljs-keyword">import</span> java.util.List;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">RecommendationService</span> </span>{
+
+
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> SimpleCache&lt;String, User&gt; users =
+            <span class="hljs-keyword">new</span> SimpleCache&lt;&gt;(<span class="hljs-number">10</span>_000);
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> List&lt;Recommendation&gt; <span class="hljs-title">recommend</span><span class="hljs-params">(<span class="hljs-keyword">final</span> String userName)</span> </span>{
+        System.out.println(<span class="hljs-string">"recommend called"</span>);
+        User user = users.get(userName);
+        <span class="hljs-keyword">if</span> (user == <span class="hljs-keyword">null</span>) {
+            user = loadUser(userName);
+        }
+        <span class="hljs-function"><span class="hljs-keyword">return</span> <span class="hljs-title">runRulesEngineAgainstUser</span><span class="hljs-params">(user)</span></span>;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> User <span class="hljs-title">loadUser</span><span class="hljs-params">(String userName)</span> </span>{
+        <span class="hljs-function"><span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-title">User</span><span class="hljs-params">(<span class="hljs-string">"bob"</span>)</span></span>; <span class="hljs-comment">//stubbed out... next example will use UserService</span>
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> List&lt;Recommendation&gt; <span class="hljs-title">runRulesEngineAgainstUser</span><span class="hljs-params">(<span class="hljs-keyword">final</span> User user)</span> </span>{
+
+        <span class="hljs-keyword">return</span> Lists.list(<span class="hljs-keyword">new</span> Recommendation(<span class="hljs-string">"Take a walk"</span>), <span class="hljs-keyword">new</span> Recommendation(<span class="hljs-string">"Read a book"</span>),
+                <span class="hljs-keyword">new</span> Recommendation(<span class="hljs-string">"Love more, complain less"</span>));
+    }
+
+
+}
+</code></pre>
+<h4 id="client-interface">Client interface</h4>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> io.advantageous.qbit.example;
+
+<span class="hljs-keyword">import</span> io.advantageous.qbit.service.Callback;
+
+<span class="hljs-keyword">import</span> java.util.List;
+
+<span class="hljs-javadoc">/**
+ *<span class="hljs-javadoctag"> @author</span>  rhightower
+ * on 2/20/15.
+ */</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">RecommendationServiceClient</span> </span>{
+
+
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">recommend</span><span class="hljs-params">(<span class="hljs-keyword">final</span> Callback&lt;List&lt;Recommendation&gt;&gt; recommendationsCallback,
+                          <span class="hljs-keyword">final</span> String userName)</span></span>;
+}
+</code></pre>
+<h4 id="main-method-to-run-the-service">Main method to run the service</h4>
+<pre><code class="lang-java">
+<span class="hljs-keyword">package</span> io.advantageous.qbit.example;
+
+<span class="hljs-keyword">import</span> io.advantageous.qbit.QBit;
+<span class="hljs-keyword">import</span> io.advantageous.qbit.service.Callback;
+<span class="hljs-keyword">import</span> io.advantageous.qbit.service.ServiceProxyUtils;
+<span class="hljs-keyword">import</span> io.advantageous.qbit.service.ServiceQueue;
+<span class="hljs-keyword">import</span> org.boon.Lists;
+<span class="hljs-keyword">import</span> org.boon.core.Sys;
+
+<span class="hljs-keyword">import</span> <span class="hljs-keyword">static</span> io.advantageous.qbit.service.ServiceProxyUtils.flushServiceProxy;
+<span class="hljs-keyword">import</span> <span class="hljs-keyword">static</span> java.lang.System.out;
+
+<span class="hljs-keyword">import</span> java.util.List;
+
+<span class="hljs-keyword">import</span> <span class="hljs-keyword">static</span> io.advantageous.qbit.service.ServiceBuilder.serviceBuilder;
+<span class="hljs-keyword">import</span> <span class="hljs-keyword">static</span> org.boon.Lists.list;
+
+<span class="hljs-javadoc">/**
+ * Created by rhightower on 2/20/15.
+ */</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PrototypeMain</span> </span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String... args)</span> </span>{
+
+
+        <span class="hljs-comment">/* Create the service. */</span>
+        RecommendationService recommendationServiceImpl =
+                <span class="hljs-keyword">new</span> RecommendationService();
+
+        <span class="hljs-comment">/* Wrap the service in a queue. */</span>
+        ServiceQueue recommendationServiceQueue = serviceBuilder()
+                .setServiceObject(recommendationServiceImpl)
+                .build().start().startCallBackHandler();
+
+        <span class="hljs-comment">/* Create a proxy interface for the service. */</span>
+        RecommendationServiceClient recommendationServiceClient =
+                recommendationServiceQueue.createProxy(RecommendationServiceClient.class);
+
+
+        <span class="hljs-comment">/* Call the service with the proxy. */</span>
+        recommendationServiceClient.recommend(out::println, <span class="hljs-string">"Rick"</span>);
+
+        <span class="hljs-comment">/* Flush the call. This can be automated, but is a core concept. */</span>
+        flushServiceProxy(recommendationServiceClient);
+        Sys.sleep(<span class="hljs-number">1000</span>);
+
+
+
+        <span class="hljs-comment">/* Lambdas gone wild. */</span>
+
+        List&lt;String&gt; userNames = list(<span class="hljs-string">"Bob"</span>, <span class="hljs-string">"Joe"</span>, <span class="hljs-string">"Scott"</span>, <span class="hljs-string">"William"</span>);
+
+        userNames.forEach( userName-&gt;
+                recommendationServiceClient.recommend(recommendations -&gt; {
+                    System.out.println(<span class="hljs-string">"Recommendations for: "</span> + userName);
+                    recommendations.forEach(recommendation-&gt;
+                            System.out.println(<span class="hljs-string">"\t"</span> + recommendation));
+                }, userName)
+        );
+
+
+
+        flushServiceProxy(recommendationServiceClient);
+        Sys.sleep(<span class="hljs-number">1000</span>);
+
+    }
+}
+</code></pre>
+<h4 id="build-file">build file</h4>
+<pre><code>
+apply plugin: &#39;java&#39;
+apply plugin: &#39;application&#39;
+
+
+sourceCompatibility = 1.8
+version = &#39;1.0&#39;
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+
+dependencies {
+    compile group: &#39;io.advantageous.qbit&#39;, name: &#39;qbit-jetty&#39;, version: &#39;0.6.3&#39;
+    testCompile &quot;junit:junit:4.11&quot;
+    testCompile &quot;org.slf4j:slf4j-simple:[1.7,1.8)&quot;
+}
+</code></pre><p>You are done. Stretch your legs.
+Smoke &#39;em if you got them.
+Get some coffee or tea.
+Do some yoga. Pet your dog.
+Ask your kids how their day went.
+Get ready for Round 2.</p>
+<h2 id="the-first-rule-of-queue-club---dont-block">The first rule of Queue Club - don&#39;t block</h2>
+<p>Our client does not block, but our service does. Going back to our <code>RecommendationService</code>.
+If we get a lot of cache hits for user loads, perhaps the
+block will not be that long, but it will be there and every time we have to fault in a user, the whole system
+is gummed up. What we want to be able to do is if we can&#39;t handle the recommendation request,
+we go ahead and make an async call to the <code>UserDataService</code>. When that async callback comes back, then we
+handle that request. In the mean time, we handle recommendation lists requests as quickly as we can.
+We never block.</p>
+<p>So let&#39;s revisit the service. The first thing we are going to do is make the service method take
+a callback.</p>
+<h4 id="the-first-rule-of-queue-club-dont-block">The first rule of queue club don&#39;t block.</h4>
+<h4 id="the-second-rule-of-queue-club-if-you-are-not-ready-use-a-callback-and-continue-handling-stuff-you-are-ready-for">The second rule of queue club if you are not ready, use a callback and continue handling stuff you are ready for</h4>
+<p>Let&#39;s implement the second rule of queue club.</p>
+<h4 id="adding-a-callback-to-the-recommendationservice-inproc-microservice">Adding a CallBack to the RecommendationService inproc microservice</h4>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">RecommendationService</span> </span>{
+
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">recommend</span><span class="hljs-params">(<span class="hljs-keyword">final</span> Callback&lt;List&lt;Recommendation&gt;&gt; recommendationsCallback,
+                          <span class="hljs-keyword">final</span> String userName)</span> </span>{
+</code></pre>
+<p>Now we are taking a callback and we can decide when we want to handle this recommendation generation request.
+We can do it right away if there user data we need is in-memory or we can delay it.</p>
+<h4 id="if-the-user-is-found-call-the-callback-right-away-for-recommendationservice-inproc-microservice">If the user is found, call the callback right away for RecommendationService inproc microservice</h4>
+<pre><code class="lang-java">
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">recommend</span><span class="hljs-params">(<span class="hljs-keyword">final</span> Callback&lt;List&lt;Recommendation&gt;&gt; recommendationsCallback,
+                          <span class="hljs-keyword">final</span> String userName)</span> </span>{
+
+        <span class="hljs-javadoc">/** Look for user in user cache. */</span>
+        User user = users.get(userName);
+
+        <span class="hljs-javadoc">/** If the user not found, load the user from the user service. */</span>
+        <span class="hljs-keyword">if</span> (user == <span class="hljs-keyword">null</span>) {
+             ...
+        } <span class="hljs-keyword">else</span> {
+             <span class="hljs-comment">/* Call the callback now because we can handle the callback now. */</span>
+            recommendationsCallback.accept(runRulesEngineAgainstUser(user));
+        }
+
+    }
+</code></pre>
+<p>Notice, if the user is found in the cache, we run our recommendation rules in-memory and call the callback right away
+<code>recommendationsCallback.accept(runRulesEngineAgainstUser(user))</code>.</p>
+<p>The interesting part is what do we do if don&#39;t have the user loaded.</p>
+<h4 id="if-the-user-was-not-found-load-him-from-the-user-microservice-but-still-dont-block">If the user was not found, load him from the user microservice, but still don&#39;t block</h4>
+<pre><code class="lang-java">
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">recommend</span><span class="hljs-params">(<span class="hljs-keyword">final</span> Callback&lt;List&lt;Recommendation&gt;&gt; recommendationsCallback,
+                          <span class="hljs-keyword">final</span> String userName)</span> </span>{
+
+
+        <span class="hljs-javadoc">/** Look for user in users cache. */</span>
+        User user = users.get(userName);
+
+        <span class="hljs-javadoc">/** If the user not found, load the user from the user service. */</span>
+        <span class="hljs-keyword">if</span> (user == <span class="hljs-keyword">null</span>) {
+
+            <span class="hljs-comment">/* Load user using Callback. */</span>
+            userDataService.loadUser(<span class="hljs-keyword">new</span> Callback&lt;User&gt;() {
+                <span class="hljs-annotation">@Override</span>
+                <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">accept</span><span class="hljs-params">(<span class="hljs-keyword">final</span> User loadedUser)</span> </span>{
+                        handleLoadFromUserDataService(loadedUser,
+                                recommendationsCallback);
+                }
+            }, userName);
+
+        }
+        ...
+</code></pre>
+<p>Here we use a CallBack to load the user, and when the user is loaded, we call <code>handleLoadFromUserDataService</code>
+which adds some management about handling the callback so we can still handle this call, just not now.</p>
+<p>We can replace the last example using a lambda expression as follows:</p>
+<h4 id="if-the-user-was-not-found-load-him-from-the-user-microservice-but-still-dont-block-open-lambda-style">If the user was not found, load him from the user microservice, but still don&#39;t block, open lambda style</h4>
+<pre><code class="lang-java">
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">recommend</span><span class="hljs-params">(<span class="hljs-keyword">final</span> Callback&lt;List&lt;Recommendation&gt;&gt; recommendationsCallback,
+                          <span class="hljs-keyword">final</span> String userName)</span> </span>{
+
+
+        <span class="hljs-javadoc">/** Look for user in users cache. */</span>
+        User user = users.get(userName);
+
+        <span class="hljs-javadoc">/** If the user not found, load the user from the user service. */</span>
+        <span class="hljs-keyword">if</span> (user == <span class="hljs-keyword">null</span>) {
+
+            <span class="hljs-comment">/* Load user using lambda expression. */</span>
+         userDataService.loadUser(
+                    loadedUser -&gt; {
+                        handleLoadFromUserDataService(loadedUser,
+                        recommendationsCallback);
+                    }, userName);
+
+        }
+        ...
+</code></pre>
+<p>Using lambdas like this makes the code more readable and terse, but remember don&#39;t deeply next
+lambda expressions or you will create a code maintenance nightmare. Use the judiciously.</p>
+<h2 id="doing-something-later">Doing something later</h2>
+<p>There is some internal plumbing to automate many things in this example, but to be honest.
+If you don&#39;t know what we are doing underneath the covers, then you are in for a world of hurt.
+We will show the hard way to handle callbacks and then show you the easy way later.</p>
+<p>What we want is to handle the request for recommendations after the user service system loads
+the user from its store.</p>
+<h4 id="handling-userservicedata-callback-methods-once-we-get-them">Handling UserServiceData callback methods once we get them.</h4>
+<pre><code class="lang-java">
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">RecommendationService</span> </span>{
+
+
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> SimpleCache&lt;String, User&gt; users =
+            <span class="hljs-keyword">new</span> SimpleCache&lt;&gt;(<span class="hljs-number">10</span>_000);
+
+    <span class="hljs-keyword">private</span> UserDataServiceClient userDataService;
+
+
+    <span class="hljs-keyword">private</span> BlockingQueue&lt;Runnable&gt; callbacks =
+               <span class="hljs-keyword">new</span> ArrayBlockingQueue&lt;Runnable&gt;(<span class="hljs-number">10</span>_000);
+
+
+    ...
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">recommend</span><span class="hljs-params">(<span class="hljs-keyword">final</span> Callback&lt;List&lt;Recommendation&gt;&gt; recommendationsCallback,
+                          <span class="hljs-keyword">final</span> String userName)</span> </span>{
+
+        ...
+
+    }
+
+    <span class="hljs-javadoc">/** Handle defered recommendations based on user loads. */</span>
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">handleLoadFromUserDataService</span><span class="hljs-params">(<span class="hljs-keyword">final</span> User loadedUser,
+                                               <span class="hljs-keyword">final</span> Callback&lt;List&lt;Recommendation&gt;&gt; recommendationsCallback)</span> </span>{
+
+        <span class="hljs-javadoc">/** Add a runnable to the callbacks queue. */</span>
+        callbacks.add(<span class="hljs-keyword">new</span> Runnable() {
+            <span class="hljs-annotation">@Override</span>
+            <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">run</span><span class="hljs-params">()</span> </span>{
+              List&lt;Recommendation&gt; recommendations = runRulesEngineAgainstUser(loadedUser);
+              recommendationsCallback.accept(recommendations);
+            }
+        });
+    }
+</code></pre>
+<p>We can rewrite the above using lambda.</p>
+<h4 id="handling-userservicedata-callback-methods-once-we-get-them-using-lambda">Handling UserServiceData callback methods once we get them using lambda</h4>
+<pre><code class="lang-java">
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">RecommendationService</span> </span>{
+
+...
+
+    <span class="hljs-javadoc">/** Handle defered recommendations based on user loads. */</span>
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">handleLoadFromUserDataService</span><span class="hljs-params">(<span class="hljs-keyword">final</span> User loadedUser,
+                                               <span class="hljs-keyword">final</span> Callback&lt;List&lt;Recommendation&gt;&gt; recommendationsCallback)</span> </span>{
+
+        <span class="hljs-javadoc">/** Add a runnable to the callbacks list. */</span>
+        callbacks.add(() -&gt; {
+            List&lt;Recommendation&gt; recommendations = runRulesEngineAgainstUser(loadedUser);
+            recommendationsCallback.accept(recommendations);
+        });
+
+    }
+</code></pre>
+<p>The important part there is that every time we get a callback call from <code>UserDataService</code>, we then
+perform our CPU intensive recommendation rules and callback our caller. Well not exactly, what we
+do is enqueue an runnable onto our callbacks queue, and later we will iterate through those but when?</p>
+<h2 id="handling-callbacks-when-our-receive-queue-is-empty-a-new-batch-started-or-we-hit-a-batch-limit">Handling callbacks when our receive queue is empty, a new batch started or we hit a batch limit</h2>
+<p>The <code>RecommendationService</code> can be notified when its queue is empty, it has started a new batch and when
+it has reached a batch limit. These are all good times to handle callbacks from the <code>UserDataService</code>.</p>
+<h4 id="draining-our-callback-queue">Draining our callback queue</h4>
+<pre><code class="lang-java">
+    <span class="hljs-annotation">@QueueCallback</span>({
+            QueueCallbackType.EMPTY,
+            QueueCallbackType.START_BATCH,
+            QueueCallbackType.LIMIT})
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">handleCallbacks</span><span class="hljs-params">()</span> </span>{
+
+        flushServiceProxy(userDataService);
+        Runnable runnable = callbacks.poll();
+
+        <span class="hljs-keyword">while</span> (runnable != <span class="hljs-keyword">null</span>) {
+            runnable.run();
+            runnable = callbacks.poll();
+        }
+    }
+</code></pre>
+<p>It is important to remember when handling callbacks from another microservice that you want to handle
+callbacks from the other service before you handle more incoming requests from you clients.
+Essentially you have clients that have been waiting (async waiting but still), and these clients
+might represent an open TCP/IP connection like an HTTP call so it is best to close them out
+before handling more requests and like we said they were already waiting around with an open connection
+for users to load form the user service.</p>
+<h4 id="full-code-listing-for-part-2">Full code listing for part 2</h4>
+<h4 id="domain-object">Domain object</h4>
+<pre><code class="lang-java">
+<span class="hljs-keyword">package</span> io.advantageous.qbit.example;
+
+<span class="hljs-comment">/* Domain object. */</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">User</span> </span>{
+
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> String userName;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">User</span><span class="hljs-params">(String userName)</span></span>{
+            <span class="hljs-keyword">this</span>.userName = userName;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getUserName</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> userName;
+    }
+}
+</code></pre>
+<h4 id="user-data-service-client-proxy-for-userdataservice-microservice">User Data Service Client Proxy for UserDataService Microservice</h4>
+<pre><code class="lang-java">
+<span class="hljs-keyword">package</span> io.advantageous.qbit.example;
+
+<span class="hljs-keyword">import</span> io.advantageous.qbit.service.Callback;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">UserDataServiceClient</span> </span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">loadUser</span><span class="hljs-params">(Callback&lt;User&gt; callBack, String userId)</span></span>;
+}
+</code></pre>
+<h4 id="user-data-service-microservice">User Data Service microservice</h4>
+<pre><code class="lang-java">
+<span class="hljs-keyword">package</span> io.advantageous.qbit.example;
+
+
+<span class="hljs-keyword">import</span> io.advantageous.qbit.annotation.QueueCallback;
+<span class="hljs-keyword">import</span> io.advantageous.qbit.annotation.QueueCallbackType;
+<span class="hljs-keyword">import</span> io.advantageous.qbit.service.Callback;
+<span class="hljs-keyword">import</span> org.boon.core.Sys;
+
+<span class="hljs-keyword">import</span> java.util.ArrayList;
+<span class="hljs-keyword">import</span> java.util.List;
+
+<span class="hljs-keyword">import</span> <span class="hljs-keyword">static</span> org.boon.Boon.puts;
+
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">UserDataService</span> </span>{
+
+
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> List&lt;Runnable&gt; userLoadCallBacks = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;(<span class="hljs-number">1</span>_000);
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">loadUser</span><span class="hljs-params">(<span class="hljs-keyword">final</span> Callback&lt;User&gt; callBack, <span class="hljs-keyword">final</span> String userId)</span> </span>{
+
+        puts(<span class="hljs-string">"UserDataService :: loadUser called"</span>, userId);
+        userLoadCallBacks.add(
+                <span class="hljs-keyword">new</span> Runnable() {
+                    <span class="hljs-annotation">@Override</span>
+                    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">run</span><span class="hljs-params">()</span> </span>{
+                        callBack.accept(<span class="hljs-keyword">new</span> User(userId));
+                    }
+                });
+
+    }
+
+
+    <span class="hljs-annotation">@QueueCallback</span>({QueueCallbackType.EMPTY, QueueCallbackType.LIMIT})
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">pretendToDoIO</span><span class="hljs-params">()</span> </span>{
+        Sys.sleep(<span class="hljs-number">100</span>);
+
+        <span class="hljs-keyword">if</span> (userLoadCallBacks.size()==<span class="hljs-number">0</span>) {
+            <span class="hljs-keyword">return</span>;
+        }
+        <span class="hljs-keyword">for</span> (Runnable runnable : userLoadCallBacks) {
+            runnable.run();
+        }
+        userLoadCallBacks.clear();
+
+    }
+
+
+
+
+}
+</code></pre>
+<h4 id="recommendation-service-microservice-java-listing">Recommendation Service microservice Java listing</h4>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> io.advantageous.qbit.example;
+
+
+<span class="hljs-keyword">import</span> io.advantageous.qbit.annotation.QueueCallback;
+<span class="hljs-keyword">import</span> io.advantageous.qbit.annotation.QueueCallbackType;
+<span class="hljs-keyword">import</span> io.advantageous.qbit.service.Callback;
+<span class="hljs-keyword">import</span> org.boon.Lists;
+<span class="hljs-keyword">import</span> org.boon.cache.SimpleCache;
+
+<span class="hljs-keyword">import</span> java.util.ArrayList;
+<span class="hljs-keyword">import</span> java.util.List;
+<span class="hljs-keyword">import</span> java.util.concurrent.ArrayBlockingQueue;
+<span class="hljs-keyword">import</span> java.util.concurrent.BlockingQueue;
+
+<span class="hljs-keyword">import</span> <span class="hljs-keyword">static</span> io.advantageous.qbit.service.ServiceProxyUtils.flushServiceProxy;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">RecommendationService</span> </span>{
+
+
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> SimpleCache&lt;String, User&gt; users =
+            <span class="hljs-keyword">new</span> SimpleCache&lt;&gt;(<span class="hljs-number">10</span>_000);
+
+
+    <span class="hljs-keyword">private</span> BlockingQueue&lt;Runnable&gt; callbacks = <span class="hljs-keyword">new</span> ArrayBlockingQueue&lt;Runnable&gt;(<span class="hljs-number">10</span>_000);
+    <span class="hljs-keyword">private</span> UserDataServiceClient userDataService;
+
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">RecommendationService</span><span class="hljs-params">(UserDataServiceClient userDataService)</span> </span>{
+        <span class="hljs-keyword">this</span>.userDataService = userDataService;
+    }
+
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">recommend</span><span class="hljs-params">(<span class="hljs-keyword">final</span> Callback&lt;List&lt;Recommendation&gt;&gt; recommendationsCallback,
+                          <span class="hljs-keyword">final</span> String userName)</span> </span>{
+
+
+        System.out.println(<span class="hljs-string">"recommend called"</span>);
+
+        User user = users.get(userName);
+
+        <span class="hljs-keyword">if</span> (user == <span class="hljs-keyword">null</span>) {
+            userDataService.loadUser(
+                    loadedUser -&gt; {
+                        handleLoadFromUserDataService(loadedUser, recommendationsCallback);
+                     }, userName);
+        } <span class="hljs-keyword">else</span> {
+            recommendationsCallback.accept(runRulesEngineAgainstUser(user));
+        }
+
+    }
+
+    <span class="hljs-javadoc">/**
+     * Handle defered recommendations based on user loads.
+     */</span>
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">handleLoadFromUserDataService</span><span class="hljs-params">(<span class="hljs-keyword">final</span> User loadedUser,
+                                               <span class="hljs-keyword">final</span> Callback&lt;List&lt;Recommendation&gt;&gt; recommendationsCallback)</span> </span>{
+
+        <span class="hljs-javadoc">/** Add a runnable to the callbacks list. */</span>
+        callbacks.add(() -&gt; {
+            List&lt;Recommendation&gt; recommendations = runRulesEngineAgainstUser(loadedUser);
+            recommendationsCallback.accept(recommendations);
+        });
+    }
+
+
+    <span class="hljs-annotation">@QueueCallback</span>({
+            QueueCallbackType.EMPTY,
+            QueueCallbackType.START_BATCH,
+            QueueCallbackType.LIMIT})
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">handleCallbacks</span><span class="hljs-params">()</span> </span>{
+
+        flushServiceProxy(userDataService);
+        Runnable runnable = callbacks.poll();
+
+        <span class="hljs-keyword">while</span> (runnable != <span class="hljs-keyword">null</span>) {
+            runnable.run();
+            runnable = callbacks.poll();
+        }
+    }
+
+    <span class="hljs-comment">/* Fake CPU intensive operation. */</span>
+    <span class="hljs-function"><span class="hljs-keyword">private</span> List&lt;Recommendation&gt; <span class="hljs-title">runRulesEngineAgainstUser</span><span class="hljs-params">(<span class="hljs-keyword">final</span> User user)</span> </span>{
+        <span class="hljs-keyword">return</span> Lists.list(<span class="hljs-keyword">new</span> Recommendation(<span class="hljs-string">"Take a walk"</span>), <span class="hljs-keyword">new</span> Recommendation(<span class="hljs-string">"Read a book"</span>),
+                <span class="hljs-keyword">new</span> Recommendation(<span class="hljs-string">"Love more, complain less"</span>));
+    }
+
+}
+</code></pre>
+<h4 id="running-part-two">Running part two</h4>
+<pre><code class="lang-java">
+<span class="hljs-keyword">package</span> io.advantageous.qbit.example;
+
+<span class="hljs-keyword">import</span> io.advantageous.qbit.QBit;
+<span class="hljs-keyword">import</span> io.advantageous.qbit.service.ServiceQueue;
+<span class="hljs-keyword">import</span> org.boon.core.Sys;
+
+<span class="hljs-keyword">import</span> <span class="hljs-keyword">static</span> io.advantageous.qbit.service.ServiceProxyUtils.flushServiceProxy;
+
+<span class="hljs-keyword">import</span> java.util.List;
+
+<span class="hljs-keyword">import</span> <span class="hljs-keyword">static</span> io.advantageous.qbit.service.ServiceBuilder.serviceBuilder;
+<span class="hljs-keyword">import</span> <span class="hljs-keyword">static</span> org.boon.Lists.list;
+
+<span class="hljs-javadoc">/**
+ * Created by rhightower on 2/20/15.
+ */</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PrototypeMain</span> </span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String... args)</span> </span>{
+
+
+
+        <span class="hljs-comment">/* Create user data service and client proxy. */</span>
+        ServiceQueue userDataService = serviceBuilder()
+                                    .setServiceObject(<span class="hljs-keyword">new</span> UserDataService())
+                                    .build().start();
+        userDataService.startCallBackHandler();
+        UserDataServiceClient userDataServiceClient = userDataService
+                                .createProxy(UserDataServiceClient.class);
+
+
+
+        <span class="hljs-comment">/* Create recommendation service and client proxy. */</span>
+        RecommendationService recommendationServiceImpl =
+                <span class="hljs-keyword">new</span> RecommendationService(userDataServiceClient);
+        ServiceQueue recommendationServiceQueue = serviceBuilder()
+                .setServiceObject(recommendationServiceImpl)
+                .build().start().startCallBackHandler();
+
+        RecommendationServiceClient recommendationServiceClient =
+                recommendationServiceQueue.createProxy(RecommendationServiceClient.class);
+
+
+        <span class="hljs-comment">/* Use recommendationServiceClient for 4 recommendations for
+          Bob, Joe, Scott and William. */</span>
+        List&lt;String&gt; userNames = list(<span class="hljs-string">"Bob"</span>, <span class="hljs-string">"Joe"</span>, <span class="hljs-string">"Scott"</span>, <span class="hljs-string">"William"</span>);
+
+        userNames.forEach( userName-&gt;
+                recommendationServiceClient.recommend(recommendations -&gt; {
+                    System.out.println(<span class="hljs-string">"Recommendations for: "</span> + userName);
+                    recommendations.forEach(recommendation-&gt;
+                            System.out.println(<span class="hljs-string">"\t"</span> + recommendation));
+                }, userName)
+        );
+
+        flushServiceProxy(recommendationServiceClient);
+        Sys.sleep(<span class="hljs-number">1000</span>);
+
+    }
+}
+</code></pre>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../tutorials_and_examples/[rough_cut]_qbit_microservices_using_service_workers_and_sharded_service_workers.html" class="navigation navigation-prev " aria-label="Previous page: [Rough Cut] QBit Microservices using Service Workers and sharded service workers"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../tutorials_and_examples/[doc]_queue_callbacks_for_qbit_queue_based_services.html" class="navigation navigation-next " aria-label="Next page: [Doc] Queue Callbacks for QBit queue based services"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="https://cdn.mathjax.org/mathjax/2.4-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-mathjax/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"fontSettings":{"theme":null,"family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

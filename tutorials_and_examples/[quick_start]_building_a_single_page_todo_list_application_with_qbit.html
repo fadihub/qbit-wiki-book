@@ -1,0 +1,1033 @@
+<!DOCTYPE HTML>
+<html lang="en-US" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <title>[Quick Start] Building a single page; Todo List Application with QBit | Introduction to QBit - The microservice Library for Java</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 1.0.3">
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    
+    
+    
+    <link rel="next" href="../tutorials_and_examples/[detailed_tutorial]_building_a_single_page_todo_list_application_with_qbit.html" />
+    
+    
+    <link rel="prev" href="../tutorials_and_examples/[rough_cut]_delivering_up_single_page_applications_from_qbit_java_json_microservice_lib.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+<link rel="stylesheet" href="../gitbook/style.css">
+
+
+        
+    <div class="book"  data-level="1.17" data-basepath=".." data-revision="1426023905951">
+    
+
+<div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Type to search" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+    	
+    	
+    	
+
+        
+
+        
+    
+        
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                        <i class="fa fa-check"></i>
+                        
+                         Introduction
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="0.1" data-path="what_is_qbit.html">
+            
+                
+                    <a href="../what_is_qbit.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>0.1.</b>
+                        
+                         What is Qbit?
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="0.2" data-path="qbits_philosophy_and_inspiration.html">
+            
+                
+                    <a href="../qbits_philosophy_and_inspiration.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>0.2.</b>
+                        
+                         QBit&#39;s Philosophy and inspiration
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="0.3" data-path="does_it_work.html">
+            
+                
+                    <a href="../does_it_work.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>0.3.</b>
+                        
+                         Does it work?
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1" data-path="tutorials_and_examples/README.html">
+            
+                
+                    <a href="../tutorials_and_examples/README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                         Tutorials and Examples
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="1.1" data-path="tutorials_and_examples/[quick_start]_building_qbit_the_microservice_lib_for_java.html">
+            
+                
+                    <a href="../tutorials_and_examples/[quick_start]_building_qbit_the_microservice_lib_for_java.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                         [Quick Start] Building QBit the microservice lib for Java
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.2" data-path="tutorials_and_examples/[quick_start]_building_boon_for_the_qbit_microservice_engine.html">
+            
+                
+                    <a href="../tutorials_and_examples/[quick_start]_building_boon_for_the_qbit_microservice_engine.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                         [Quick Start] Building boon for the QBit microservice engine
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.3" data-path="tutorials_and_examples/[quick_start]_building_a_todo_web_microservice_server_with_qbit.html">
+            
+                
+                    <a href="../tutorials_and_examples/[quick_start]_building_a_todo_web_microservice_server_with_qbit.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                         [Quick Start] Building a TODO web microservice server with QBit
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.4" data-path="tutorials_and_examples/[quick_start]_building_a_todo_web_microservice_client_with_qbit.html">
+            
+                
+                    <a href="../tutorials_and_examples/[quick_start]_building_a_todo_web_microservice_client_with_qbit.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                         [Quick Start] Building a TODO web microservice client with QBit
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.5" data-path="tutorials_and_examples/[quick_start]_building_a_simple_rest_web_microservice_server_with_qbit.html">
+            
+                
+                    <a href="../tutorials_and_examples/[quick_start]_building_a_simple_rest_web_microservice_server_with_qbit.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.</b>
+                        
+                         [Quick Start] Building a simple Rest web microservice server with QBit
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.6" data-path="tutorials_and_examples/[rough_cut]_using_qbit_microservice_libs_rest_support_with_uri_params.html">
+            
+                
+                    <a href="../tutorials_and_examples/[rough_cut]_using_qbit_microservice_libs_rest_support_with_uri_params.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.</b>
+                        
+                         [Rough Cut] Using QBit microservice lib&#39;s REST support with URI Params
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.7" data-path="tutorials_and_examples/[quick_start]_working_with_inproc_microservices_within_qbit.html">
+            
+                
+                    <a href="../tutorials_and_examples/[quick_start]_working_with_inproc_microservices_within_qbit.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.7.</b>
+                        
+                         [Quick Start] Working with inproc MicroServices within QBit
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.8" data-path="tutorials_and_examples/[detailed_tutorial]_working_with_inproc_microservices_within_qbit.html">
+            
+                
+                    <a href="../tutorials_and_examples/[detailed_tutorial]_working_with_inproc_microservices_within_qbit.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.8.</b>
+                        
+                         [Detailed Tutorial] Working with inproc MicroServices within QBit.
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.9" data-path="tutorials_and_examples/[rough_cut]_working_with_inproc_microservices.html">
+            
+                
+                    <a href="../tutorials_and_examples/[rough_cut]_working_with_inproc_microservices.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.9.</b>
+                        
+                         [Rough Cut] Working with inproc MicroServices
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.10" data-path="tutorials_and_examples/[doc]_using_qbit_microservice_libs_httpclient_get,_post,_et_al,_json,_java_8_lambda.html">
+            
+                
+                    <a href="../tutorials_and_examples/[doc]_using_qbit_microservice_libs_httpclient_get,_post,_et_al,_json,_java_8_lambda.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.10.</b>
+                        
+                         [Doc] Using QBit microservice lib&#39;s HttpClient GET, POST, et al, JSON, Java 8 Lambda
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.11" data-path="tutorials_and_examples/[rough_cut]_working_with_event_bus_for_qbit_the_microservice_engine.html">
+            
+                
+                    <a href="../tutorials_and_examples/[rough_cut]_working_with_event_bus_for_qbit_the_microservice_engine.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.11.</b>
+                        
+                         [Rough Cut] Working with event bus for QBit the microservice engine
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.12" data-path="tutorials_and_examples/[rough_cut]_working_with_private_event_bus_for_inproc_microservices.html">
+            
+                
+                    <a href="../tutorials_and_examples/[rough_cut]_working_with_private_event_bus_for_inproc_microservices.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.12.</b>
+                        
+                         [Rough Cut] Working with private event bus for inproc microservices
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.13" data-path="tutorials_and_examples/[rough_cut]_working_with_strongly_typed_event_bus_proxies_for_qbit_java_microservice_lib.html">
+            
+                
+                    <a href="../tutorials_and_examples/[rough_cut]_working_with_strongly_typed_event_bus_proxies_for_qbit_java_microservice_lib.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.13.</b>
+                        
+                         [Rough Cut] Working with strongly typed event bus proxies for QBit Java Microservice lib
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.14" data-path="tutorials_and_examples/[doc]_qbit_java_microservice_lib_introducing_eventbus_replication_and_eventbus_connectors.html">
+            
+                
+                    <a href="../tutorials_and_examples/[doc]_qbit_java_microservice_lib_introducing_eventbus_replication_and_eventbus_connectors.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.14.</b>
+                        
+                         [Doc] QBit Java microservice lib introducing EventBus replication and EventBus connectors
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.15" data-path="tutorials_and_examples/[quick_start]_building_a_single_web_page_application_with_qbit.html">
+            
+                
+                    <a href="../tutorials_and_examples/[quick_start]_building_a_single_web_page_application_with_qbit.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.15.</b>
+                        
+                         [Quick Start] building a single web page application with QBit
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.16" data-path="tutorials_and_examples/[rough_cut]_delivering_up_single_page_applications_from_qbit_java_json_microservice_lib.html">
+            
+                
+                    <a href="../tutorials_and_examples/[rough_cut]_delivering_up_single_page_applications_from_qbit_java_json_microservice_lib.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.16.</b>
+                        
+                         [Rough Cut] Delivering up Single Page Applications from QBit Java JSON Microservice lib
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter active" data-level="1.17" data-path="tutorials_and_examples/[quick_start]_building_a_single_page_todo_list_application_with_qbit.html">
+            
+                
+                    <a href="../tutorials_and_examples/[quick_start]_building_a_single_page_todo_list_application_with_qbit.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.17.</b>
+                        
+                         [Quick Start] Building a single page; Todo List Application with QBit
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.18" data-path="tutorials_and_examples/[detailed_tutorial]_building_a_single_page_todo_list_application_with_qbit.html">
+            
+                
+                    <a href="../tutorials_and_examples/[detailed_tutorial]_building_a_single_page_todo_list_application_with_qbit.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.18.</b>
+                        
+                         [Detailed Tutorial] Building a single page; Todo List Application with QBit
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.19" data-path="tutorials_and_examples/[rough_cut]_using_qbit_microservice_lib_with_spring_boot.html">
+            
+                
+                    <a href="../tutorials_and_examples/[rough_cut]_using_qbit_microservice_lib_with_spring_boot.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.19.</b>
+                        
+                         [Rough Cut] Using QBit microservice lib with Spring Boot
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.20" data-path="tutorials_and_examples/[rough_cut]_working_with_system_manager_for_qbit_mircoservice_lib.html">
+            
+                
+                    <a href="../tutorials_and_examples/[rough_cut]_working_with_system_manager_for_qbit_mircoservice_lib.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.20.</b>
+                        
+                         [Rough Cut] Working with System Manager for QBit Mircoservice lib
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.21" data-path="tutorials_and_examples/[rough_cut]_qbit_microservices_using_service_workers_and_sharded_service_workers.html">
+            
+                
+                    <a href="../tutorials_and_examples/[rough_cut]_qbit_microservices_using_service_workers_and_sharded_service_workers.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.21.</b>
+                        
+                         [Rough Cut] QBit Microservices using Service Workers and sharded service workers
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.22" data-path="tutorials_and_examples/[rough_cut]_qbit_microservice_lib_working_with_callbacks.html">
+            
+                
+                    <a href="../tutorials_and_examples/[rough_cut]_qbit_microservice_lib_working_with_callbacks.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.22.</b>
+                        
+                         [Rough Cut] QBit Microservice Lib Working With CallBacks
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.23" data-path="tutorials_and_examples/[doc]_queue_callbacks_for_qbit_queue_based_services.html">
+            
+                
+                    <a href="../tutorials_and_examples/[doc]_queue_callbacks_for_qbit_queue_based_services.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.23.</b>
+                        
+                         [Doc] Queue Callbacks for QBit queue based services
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.24" data-path="tutorials_and_examples/[rough_cut]_qbit_java_microservice_lib_working_with_workers_sharded_and_pooled.html">
+            
+                
+                    <a href="../tutorials_and_examples/[rough_cut]_qbit_java_microservice_lib_working_with_workers_sharded_and_pooled.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.24.</b>
+                        
+                         [Rough Cut] QBit Java Microservice Lib Working With Workers Sharded and Pooled
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.25" data-path="tutorials_and_examples/[doc]_using_qbit_microservice_libs_websocket_support.html">
+            
+                
+                    <a href="../tutorials_and_examples/[doc]_using_qbit_microservice_libs_websocket_support.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.25.</b>
+                        
+                         [Doc] Using QBit microservice lib&#39;s WebSocket support
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.26" data-path="tutorials_and_examples/[doc]_qbit_microservice_java_lib_using_auto_flushing_client_proxies.html">
+            
+                
+                    <a href="../tutorials_and_examples/[doc]_qbit_microservice_java_lib_using_auto_flushing_client_proxies.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.26.</b>
+                        
+                         [Doc] QBit microservice Java lib Using auto flushing client proxies
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.27" data-path="tutorials_and_examples/[doc]_qbit_microservice_websocket_wire_protocol_draft_01___json_ascii_method_batching_rpc.html">
+            
+                
+                    <a href="../tutorials_and_examples/[doc]_qbit_microservice_websocket_wire_protocol_draft_01___json_ascii_method_batching_rpc.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.27.</b>
+                        
+                         [Doc] QBit Microservice WebSocket wire protocol draft 01   JSON ASCII method batching RPC
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.28" data-path="tutorials_and_examples/[doc]_qbit_java_microservice_lib_auto_flushing_service_queue_proxies.html">
+            
+                
+                    <a href="../tutorials_and_examples/[doc]_qbit_java_microservice_lib_auto_flushing_service_queue_proxies.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.28.</b>
+                        
+                         [Doc] QBit Java microservice lib auto flushing service queue proxies
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="2" data-path="qbit_roadmap/README.html">
+            
+                
+                    <a href="../qbit_roadmap/README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                         Qbit Roadmap
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="3" data-path="contact_us/README.html">
+            
+                
+                    <a href="../contact_us/README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                         Contact Us
+                    </a>
+                
+            
+            
+        </li>
+    
+
+
+        
+        <li class="divider"></li>
+        <li>
+            <a href="http://www.gitbook.io/" target="blank" class="gitbook-link">Published using GitBook</a>
+        </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search" aria-label="Toggle search"><i class="fa fa-search"></i></a>
+    
+    <div id="font-settings-wrapper" class="dropdown pull-left">
+        <a href="#" class="btn toggle-dropdown" aria-label="Toggle font settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="buttons">
+        <button type="button" id="reduce-font-size" class="button size-2">A</button>
+        <button type="button" id="enlarge-font-size" class="button size-2">A</button>
+    </div>
+
+    <div class="buttons font-family-list">
+        <button type="button" data-font="0" class="button">Serif</button>
+        <button type="button" data-font="1" class="button">Sans</button>
+    </div>
+
+    <div class="buttons color-theme-list">
+        <button type="button" id="color-theme-preview-0" class="button size-3" data-theme="0">White</button>
+        <button type="button" id="color-theme-preview-1" class="button size-3" data-theme="1">Sepia</button>
+        <button type="button" id="color-theme-preview-2" class="button size-3" data-theme="2">Night</button>
+    </div>
+</div>
+
+    </div>
+
+    <!-- Actions Right -->
+    
+    <div class="dropdown pull-right">
+        <a href="#" class="btn toggle-dropdown" aria-label="Toggle share dropdown"><i class="fa fa-share-alt"></i>
+        </a>
+        <div class="dropdown-menu font-settings dropdown-left">
+            <div class="dropdown-caret">
+                <span class="caret-outer"></span>
+                <span class="caret-inner"></span>
+            </div>
+            <div class="buttons">
+                <button type="button" data-sharing="twitter" class="button">Twitter</button>
+                <button type="button" data-sharing="google-plus" class="button">Google</button>
+                <button type="button" data-sharing="facebook" class="button">Facebook</button>
+                <button type="button" data-sharing="weibo" class="button">Weibo</button>
+                <button type="button" data-sharing="instapaper" class="button">Instapaper</button>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Share on Google Plus"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Share on Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Share on Twitter"><i class="fa fa-twitter"></i></a>
+    
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >Introduction to QBit - The microservice Library for Java</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-gitbook_1485">
+                    
+                        <h1 id="quick-start-building-a-single-page-todo-list-application-with-qbit">[Quick Start] Building a single page; Todo List Application with QBit</h1>
+<h2 id="overview">overview</h2>
+<p>QBit enables you to build applications hassle free, it can server up non-JSON resources. The QBit lib allows you to bind objects to HTTP ports so that they can be called by REST and WebSocket clients. This will be demonstrated in this example.</p>
+<h2 id="building-a-single-page-todo-list-application-with-qbit">Building a single page; Todo List Application with QBit</h2>
+<p>This wiki will walk you through the process of building a Todo List application with QBit.</p>
+<h2 id="what-you-will-build">What you will build</h2>
+<p>You will build a Todo List application with QBit, you be able to access the aplication at the following address:</p>
+<pre><code class="lang-bash">http://localhost:<span class="hljs-number">9999</span>/ui/index.html
+</code></pre>
+<p>The app has a text box that will let you add todo items after typing it in and hitting ENTER, after the item is added you can delete it simply by double clicking it, or you can change its status (draw a line though it) simply by checking a box. here is a picture of the app in action:</p>
+<p><img src="http://3.bp.blogspot.com/-TbWkqfGFb2g/VO0yCR6xtKI/AAAAAAAAAAg/D1IJAhivVg0/s1600/Screen%2BShot%2B2015-02-24%2Bat%2B6.22.02%2BPM.png" alt="todo list app"></p>
+<h2 id="how-to-complete-this-guide">How to complete this guide</h2>
+<p>In order to complete this example successfully you will need the following installed on your machine:</p>
+<ul>
+<li>Gradle; if you need help installing it, visit <a href="http://www.gradle.org/docs/current/userguide/installation.html" target="_blank">Installing Gradle. </a></li>
+<li>Your favorite IDE or text editor (we recommend [Intellig IDEA ] (<a href="https://www.jetbrains.com/idea/" target="_blank">https://www.jetbrains.com/idea/</a>) latest version).</li>
+<li><a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank">JDK </a> 1.8 or later.</li>
+<li>Build and install QBit on your machine click <a href="https://github.com/advantageous/qbit/wiki/%5BQuick-Start%5D-Building-QBit-the-microservice-lib-for-Java" target="_blank">Building QBit </a> for instrutions.</li>
+</ul>
+<p>Now that your machine is all ready let&#39;s get started:</p>
+<ul>
+<li><a href="https://github.com/fadihub/todo-list-app/archive/master.zip" target="_blank">Download </a> and unzip the source repository for this guide, or clone it using Git:</li>
+</ul>
+<pre><code class="lang-bash">git clone https://github.com/fadihub/todo-list-app.git
+</code></pre>
+<p>Once this is done you can <strong>test the service</strong>, let&#39;s first explain the process:</p>
+<p>The process will be explained in more detail under <a href="https://github.com/advantageous/qbit/wiki/%5BDetailed-Tutorial%5D-Building-a-single-page;-Todo-List-Application-with-QBit" target="_blank">[Detailed Tutorial] Building a single page; Todo List Application with QBit. </a> or in the next section.</p>
+<h4 id="indexhtml-listing">index.html Listing</h4>
+<p><code>src/main/java/io.advantageous.qbit.example.todolistapp/TodoService.java</code></p>
+<pre><code class="lang-html"><span class="hljs-doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">head</span> <span class="hljs-attribute">lang</span>=<span class="hljs-value">"en"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">charset</span>=<span class="hljs-value">"UTF-8"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">title</span>&gt;</span>TODO list example with Qbit<span class="hljs-tag">&lt;/<span class="hljs-title">title</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">style</span>&gt;</span><span class="css">
+
+        <span class="hljs-tag">body</span> <span class="hljs-rules">{
+        <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#D8D8D8</span></span></span>;
+        <span class="hljs-rule">}</span></span>
+        <span class="hljs-tag">h1</span> <span class="hljs-rules">{
+        <span class="hljs-rule"><span class="hljs-attribute">text-align</span>:<span class="hljs-value"> center</span></span>;
+        <span class="hljs-rule">}</span></span>
+
+        <span class="hljs-tag">ul</span> <span class="hljs-rules">{
+        <span class="hljs-rule"><span class="hljs-attribute">list-style-type</span>:<span class="hljs-value"> none</span></span>; <span class="hljs-rule"><span class="hljs-attribute">padding</span>:<span class="hljs-value"> <span class="hljs-number">20px</span></span></span>; <span class="hljs-rule"><span class="hljs-attribute">margin</span>:<span class="hljs-value"> <span class="hljs-number">0px</span></span></span>;
+        <span class="hljs-rule">}</span></span>
+        <span class="hljs-tag">li</span> <span class="hljs-rules">{
+        <span class="hljs-rule"><span class="hljs-attribute">background</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#CCFF00</span></span></span>; <span class="hljs-rule"><span class="hljs-attribute">font-size</span>:<span class="hljs-value"> <span class="hljs-number">30px</span></span></span>; <span class="hljs-rule"><span class="hljs-attribute">border</span>:<span class="hljs-value"> <span class="hljs-number">2px</span> solid <span class="hljs-hexcolor">#000</span></span></span>; <span class="hljs-rule"><span class="hljs-attribute">padding</span>:<span class="hljs-value"> <span class="hljs-number">10px</span> <span class="hljs-number">20px</span></span></span>; <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#000</span></span></span>; <span class="hljs-rule"><span class="hljs-attribute">cursor</span>:<span class="hljs-value"> cell</span></span>;
+        <span class="hljs-rule">}</span></span>
+
+
+        <span class="hljs-tag">li</span> <span class="hljs-tag">span</span> <span class="hljs-rules">{
+        <span class="hljs-rule"><span class="hljs-attribute">padding</span>:<span class="hljs-value"> <span class="hljs-number">10px</span></span></span>; <span class="hljs-rule"><span class="hljs-attribute">cursor</span>:<span class="hljs-value"> cell</span></span>;
+        <span class="hljs-rule">}</span></span>
+
+        <span class="hljs-class">.check</span> <span class="hljs-rules">{
+        <span class="hljs-rule"><span class="hljs-attribute">text-decoration</span>:<span class="hljs-value"> line-through</span></span>; <span class="hljs-rule"><span class="hljs-attribute">font-weight</span>:<span class="hljs-value"> bold</span></span>; <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value"><span class="hljs-hexcolor">#000</span></span></span>;
+
+        <span class="hljs-rule">}</span></span>
+
+        <span class="hljs-id">#enteritem</span> <span class="hljs-rules">{
+        <span class="hljs-rule"><span class="hljs-attribute">font-size</span>:<span class="hljs-value"> <span class="hljs-number">30px</span></span></span>;
+        <span class="hljs-rule"><span class="hljs-attribute">border</span>:<span class="hljs-value"> <span class="hljs-number">2px</span> solid <span class="hljs-hexcolor">#000</span></span></span>;
+        <span class="hljs-rule"><span class="hljs-attribute">padding</span>:<span class="hljs-value"> <span class="hljs-number">0</span></span></span>; <span class="hljs-rule"><span class="hljs-attribute">margin</span>:<span class="hljs-value"> <span class="hljs-number">0</span></span></span>;
+
+    </span></span><span class="hljs-tag">&lt;/<span class="hljs-title">style</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-title">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">body</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h1</span>&gt;</span>TODO LIST APP EXAMPLE WITH QBIT<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+
+
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"enteritem"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>Enter your item: <span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>   <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"enteritem"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"enteritem"</span>/&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!--&lt;button id="add"&gt;NEW ITEM&lt;/button&gt;--&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"todolist"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"demo"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">br</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">br</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">br</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>**To add an item type in the box and hit enter<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>**to delete an item double click it<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>**To check off an item, check the box<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="javascript">
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">httpGet</span><span class="hljs-params">(theUrl)</span>
+    </span>{
+        <span class="hljs-keyword">var</span> xmlHttp = <span class="hljs-literal">null</span>;
+
+        xmlHttp = <span class="hljs-keyword">new</span> XMLHttpRequest();
+        xmlHttp.open( <span class="hljs-string">"GET"</span>, theUrl, <span class="hljs-literal">false</span> );
+        xmlHttp.send( <span class="hljs-literal">null</span> );
+        <span class="hljs-keyword">return</span> xmlHttp.responseText;
+    }
+
+<span class="hljs-comment">//submit text box</span>
+<span class="hljs-keyword">var</span> enterItem = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"enteritem"</span>);
+enterItem.focus();
+
+enterItem.onkeyup = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(event)</span> </span>{
+
+<span class="hljs-comment">// 13 represents the enter key.</span>
+    <span class="hljs-keyword">if</span> (event.which == <span class="hljs-number">13</span>) {
+
+    <span class="hljs-keyword">var</span> itemContent = enterItem.value;
+
+    <span class="hljs-keyword">if</span> (!itemContent || itemContent == <span class="hljs-string">""</span> || itemContent == <span class="hljs-string">" "</span> || itemContent == <span class="hljs-string">"  "</span>) {
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+    }
+    addNewItem(<span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"todolist"</span>), itemContent);
+
+    enterItem.focus();
+    enterItem.select();
+        }
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">removeItem</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-comment">//var listId = this.id.replace("li_", "");</span>
+        <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-keyword">this</span>.id).style.display = <span class="hljs-string">"none"</span>;
+    }
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">addNewItem</span><span class="hljs-params">(list, itemContent)</span> </span>{
+
+
+    <span class="hljs-comment">// Getiing the id from TodoService</span>
+    <span class="hljs-keyword">var</span> json = httpGet(<span class="hljs-string">"/services/todoservice/todoo"</span>);
+    <span class="hljs-keyword">var</span> date = <span class="hljs-built_in">JSON</span>.parse(json);
+    <span class="hljs-keyword">var</span> id = date.time;
+
+
+    <span class="hljs-keyword">var</span> listItem = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">"li"</span>);
+    listItem.id = <span class="hljs-string">"li_"</span> + id;
+    <span class="hljs-keyword">var</span> checkBox = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">"input"</span>);
+    checkBox.type = <span class="hljs-string">"checkBox"</span>;
+    checkBox.id = <span class="hljs-string">"idc_"</span> + id;
+
+
+    <span class="hljs-keyword">var</span> span = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">"span"</span>);
+    span.id = <span class="hljs-string">"ids_"</span> + id;
+
+    checkBox.onclick = itemStatus;
+
+    span.innerText = itemContent;
+    listItem.ondblclick = removeItem;
+
+    listItem.appendChild(checkBox);
+    listItem.appendChild(span);
+
+
+    <span class="hljs-comment">//listItem.textContent = itemContent;</span>
+    list.appendChild(listItem);
+
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">itemStatus</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">var</span> checkboxId = <span class="hljs-keyword">this</span>.id.replace(<span class="hljs-string">"idc_"</span>, <span class="hljs-string">""</span>);
+    <span class="hljs-keyword">var</span> itemContent = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"ids_"</span> + checkboxId);
+
+    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.checked){
+
+        itemContent.className = <span class="hljs-string">"check"</span>;
+
+    }<span class="hljs-keyword">else</span> {
+         itemContent.className = <span class="hljs-string">""</span>;
+
+    }
+
+}
+</span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+
+
+<span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">html</span>&gt;</span>
+</code></pre>
+<p>This html file is made of html, css, and javasript. in order to deliver the todo app seen in the picture above.</p>
+<h4 id="todoobjectjava-listing">TodoObject.java Listing</h4>
+<p><code>src/main/java/io.advantageous.qbit.example.todolistapp/TodoObject.java</code></p>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> io.advantageous.qbit.example.todolistapp;
+
+<span class="hljs-javadoc">/**
+ * Created by rhightower on 2/10/15.
+ */</span>
+
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TodoObject</span> </span>{
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">long</span> time = System.currentTimeMillis();
+
+}
+</code></pre>
+<p>TodoObject is an object that holds the id number used for the items that will be listed, deleted, and status changed in the app.</p>
+<h4 id="todoservicejava-listing">TodoService.java Listing</h4>
+<p><code>src/main/java/io.advantageous.qbit.example.todolistapp/TodoService.java</code></p>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> io.advantageous.qbit.example.todolistapp;
+
+<span class="hljs-keyword">import</span> io.advantageous.qbit.annotation.*;
+
+
+<span class="hljs-javadoc">/**
+ * Created by rhightower on 2/10/15.
+ */</span>
+
+<span class="hljs-annotation">@RequestMapping</span>(<span class="hljs-string">"/todoservice"</span>)
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TodoService</span> </span>{
+
+
+    <span class="hljs-annotation">@RequestMapping</span>(<span class="hljs-string">"/todoo"</span>)
+    <span class="hljs-function"><span class="hljs-keyword">public</span> TodoObject <span class="hljs-title">list</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-function"><span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-title">TodoObject</span><span class="hljs-params">()</span></span>;
+    }
+
+}
+</code></pre>
+<p>In this app we will retrieve the id number mentioned above, by calling TodoService from the html file.</p>
+<h4 id="todorestserverjava-listing">TodoRestServer.java Listing</h4>
+<p><code>src/main/java/io.advantageous.qbit.example.todolistapp/TodoRestServer.java</code></p>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> io.advantageous.qbit.example.todolistapp;
+
+
+<span class="hljs-keyword">import</span> io.advantageous.qbit.http.server.HttpServer;
+<span class="hljs-keyword">import</span> io.advantageous.qbit.server.ServiceServer;
+<span class="hljs-keyword">import</span> io.advantageous.qbit.system.QBitSystemManager;
+
+<span class="hljs-keyword">import</span> <span class="hljs-keyword">static</span> io.advantageous.qbit.http.server.HttpServerBuilder.httpServerBuilder;
+<span class="hljs-keyword">import</span> <span class="hljs-keyword">static</span> io.advantageous.qbit.server.ServiceServerBuilder.serviceServerBuilder;
+<span class="hljs-keyword">import</span> <span class="hljs-keyword">static</span> org.boon.Boon.resource;
+
+<span class="hljs-javadoc">/**
+ * Created by rhightower on 2/9/15.
+ */</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TodoRestServer</span> </span>{
+
+
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String HTML_PAGE = <span class="hljs-string">"/ui/index.html"</span>;
+
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String... args)</span> </span>{
+
+        <span class="hljs-comment">/* Create the system manager to manage the shutdown. */</span>
+        QBitSystemManager systemManager = <span class="hljs-keyword">new</span> QBitSystemManager();
+
+        HttpServer httpServer = httpServerBuilder()
+                .setPort(<span class="hljs-number">9999</span>).build();
+
+        <span class="hljs-comment">/* Register the Predicate using a Java 8 lambda expression. */</span>
+        httpServer.setShouldContinueHttpRequest(httpRequest -&gt; {
+            <span class="hljs-comment">/* If not the page uri we want to then just continue by returning true. */</span>
+            <span class="hljs-keyword">if</span> (!httpRequest.getUri().equals(HTML_PAGE)) {
+                <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
+            }
+            <span class="hljs-comment">/* read the page from the file system or classpath. */</span>
+            <span class="hljs-keyword">final</span> String todoWebPage = resource(HTML_PAGE);
+            <span class="hljs-comment">/* Send the HTML file out to the browser. */</span>
+            httpRequest.getResponse().response(<span class="hljs-number">200</span>, <span class="hljs-string">"text/html"</span>, todoWebPage);
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
+        });
+
+
+        <span class="hljs-comment">/* Start the service. */</span>
+        <span class="hljs-keyword">final</span> ServiceServer serviceServer = serviceServerBuilder().setSystemManager(systemManager)
+                .setHttpServer(httpServer).build().initServices(<span class="hljs-keyword">new</span> TodoService()).startServer();
+
+        <span class="hljs-comment">/* Wait for the service to shutdown. */</span>
+        systemManager.waitForShutdown();
+
+    }
+
+}
+</code></pre>
+<p>Once you run this you will be able to access the Todo List application at <strong><a href="http://localhost:9999/ui/index.html" target="_blank">http://localhost:9999/ui/index.html</a></strong></p>
+<h2 id="test-the-service">Test The Service</h2>
+<p>Using your terminal <code>cd todo-list-app</code>
+then <code>gradle clean build</code>
+then <code>gradle run</code>
+then open up your favorite browser and visit this address <strong><a href="http://localhost:9999/ui/index.html" target="_blank">http://localhost:9999/ui/index.html</a></strong>, now you should have access to a working todo list applications that looks like this:</p>
+<p><img src="http://3.bp.blogspot.com/-TbWkqfGFb2g/VO0yCR6xtKI/AAAAAAAAAAg/D1IJAhivVg0/s1600/Screen%2BShot%2B2015-02-24%2Bat%2B6.22.02%2BPM.png" alt="todo list app"></p>
+<h2 id="summary">Summary</h2>
+<p>You have just built and tested a Todo List Application with QBit.</p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../tutorials_and_examples/[rough_cut]_delivering_up_single_page_applications_from_qbit_java_json_microservice_lib.html" class="navigation navigation-prev " aria-label="Previous page: [Rough Cut] Delivering up Single Page Applications from QBit Java JSON Microservice lib"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../tutorials_and_examples/[detailed_tutorial]_building_a_single_page_todo_list_application_with_qbit.html" class="navigation navigation-next " aria-label="Next page: [Detailed Tutorial] Building a single page; Todo List Application with QBit"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="https://cdn.mathjax.org/mathjax/2.4-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-mathjax/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"fontSettings":{"theme":null,"family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

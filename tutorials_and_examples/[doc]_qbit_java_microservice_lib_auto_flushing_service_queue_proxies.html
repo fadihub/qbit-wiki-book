@@ -1,0 +1,1015 @@
+<!DOCTYPE HTML>
+<html lang="en-US" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <title>[Doc] QBit Java microservice lib auto flushing service queue proxies | Introduction to QBit - The microservice Library for Java</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 1.0.3">
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    
+    
+    
+    <link rel="next" href="../qbit_roadmap/README.html" />
+    
+    
+    <link rel="prev" href="../tutorials_and_examples/[doc]_qbit_microservice_websocket_wire_protocol_draft_01___json_ascii_method_batching_rpc.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+<link rel="stylesheet" href="../gitbook/style.css">
+
+
+        
+    <div class="book"  data-level="1.28" data-basepath=".." data-revision="1426023905951">
+    
+
+<div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Type to search" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+    	
+    	
+    	
+
+        
+
+        
+    
+        
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                        <i class="fa fa-check"></i>
+                        
+                         Introduction
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="0.1" data-path="what_is_qbit.html">
+            
+                
+                    <a href="../what_is_qbit.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>0.1.</b>
+                        
+                         What is Qbit?
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="0.2" data-path="qbits_philosophy_and_inspiration.html">
+            
+                
+                    <a href="../qbits_philosophy_and_inspiration.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>0.2.</b>
+                        
+                         QBit&#39;s Philosophy and inspiration
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="0.3" data-path="does_it_work.html">
+            
+                
+                    <a href="../does_it_work.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>0.3.</b>
+                        
+                         Does it work?
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1" data-path="tutorials_and_examples/README.html">
+            
+                
+                    <a href="../tutorials_and_examples/README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                         Tutorials and Examples
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="1.1" data-path="tutorials_and_examples/[quick_start]_building_qbit_the_microservice_lib_for_java.html">
+            
+                
+                    <a href="../tutorials_and_examples/[quick_start]_building_qbit_the_microservice_lib_for_java.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                         [Quick Start] Building QBit the microservice lib for Java
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.2" data-path="tutorials_and_examples/[quick_start]_building_boon_for_the_qbit_microservice_engine.html">
+            
+                
+                    <a href="../tutorials_and_examples/[quick_start]_building_boon_for_the_qbit_microservice_engine.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                         [Quick Start] Building boon for the QBit microservice engine
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.3" data-path="tutorials_and_examples/[quick_start]_building_a_todo_web_microservice_server_with_qbit.html">
+            
+                
+                    <a href="../tutorials_and_examples/[quick_start]_building_a_todo_web_microservice_server_with_qbit.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                         [Quick Start] Building a TODO web microservice server with QBit
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.4" data-path="tutorials_and_examples/[quick_start]_building_a_todo_web_microservice_client_with_qbit.html">
+            
+                
+                    <a href="../tutorials_and_examples/[quick_start]_building_a_todo_web_microservice_client_with_qbit.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                         [Quick Start] Building a TODO web microservice client with QBit
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.5" data-path="tutorials_and_examples/[quick_start]_building_a_simple_rest_web_microservice_server_with_qbit.html">
+            
+                
+                    <a href="../tutorials_and_examples/[quick_start]_building_a_simple_rest_web_microservice_server_with_qbit.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.</b>
+                        
+                         [Quick Start] Building a simple Rest web microservice server with QBit
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.6" data-path="tutorials_and_examples/[rough_cut]_using_qbit_microservice_libs_rest_support_with_uri_params.html">
+            
+                
+                    <a href="../tutorials_and_examples/[rough_cut]_using_qbit_microservice_libs_rest_support_with_uri_params.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.</b>
+                        
+                         [Rough Cut] Using QBit microservice lib&#39;s REST support with URI Params
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.7" data-path="tutorials_and_examples/[quick_start]_working_with_inproc_microservices_within_qbit.html">
+            
+                
+                    <a href="../tutorials_and_examples/[quick_start]_working_with_inproc_microservices_within_qbit.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.7.</b>
+                        
+                         [Quick Start] Working with inproc MicroServices within QBit
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.8" data-path="tutorials_and_examples/[detailed_tutorial]_working_with_inproc_microservices_within_qbit.html">
+            
+                
+                    <a href="../tutorials_and_examples/[detailed_tutorial]_working_with_inproc_microservices_within_qbit.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.8.</b>
+                        
+                         [Detailed Tutorial] Working with inproc MicroServices within QBit.
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.9" data-path="tutorials_and_examples/[rough_cut]_working_with_inproc_microservices.html">
+            
+                
+                    <a href="../tutorials_and_examples/[rough_cut]_working_with_inproc_microservices.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.9.</b>
+                        
+                         [Rough Cut] Working with inproc MicroServices
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.10" data-path="tutorials_and_examples/[doc]_using_qbit_microservice_libs_httpclient_get,_post,_et_al,_json,_java_8_lambda.html">
+            
+                
+                    <a href="../tutorials_and_examples/[doc]_using_qbit_microservice_libs_httpclient_get,_post,_et_al,_json,_java_8_lambda.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.10.</b>
+                        
+                         [Doc] Using QBit microservice lib&#39;s HttpClient GET, POST, et al, JSON, Java 8 Lambda
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.11" data-path="tutorials_and_examples/[rough_cut]_working_with_event_bus_for_qbit_the_microservice_engine.html">
+            
+                
+                    <a href="../tutorials_and_examples/[rough_cut]_working_with_event_bus_for_qbit_the_microservice_engine.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.11.</b>
+                        
+                         [Rough Cut] Working with event bus for QBit the microservice engine
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.12" data-path="tutorials_and_examples/[rough_cut]_working_with_private_event_bus_for_inproc_microservices.html">
+            
+                
+                    <a href="../tutorials_and_examples/[rough_cut]_working_with_private_event_bus_for_inproc_microservices.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.12.</b>
+                        
+                         [Rough Cut] Working with private event bus for inproc microservices
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.13" data-path="tutorials_and_examples/[rough_cut]_working_with_strongly_typed_event_bus_proxies_for_qbit_java_microservice_lib.html">
+            
+                
+                    <a href="../tutorials_and_examples/[rough_cut]_working_with_strongly_typed_event_bus_proxies_for_qbit_java_microservice_lib.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.13.</b>
+                        
+                         [Rough Cut] Working with strongly typed event bus proxies for QBit Java Microservice lib
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.14" data-path="tutorials_and_examples/[doc]_qbit_java_microservice_lib_introducing_eventbus_replication_and_eventbus_connectors.html">
+            
+                
+                    <a href="../tutorials_and_examples/[doc]_qbit_java_microservice_lib_introducing_eventbus_replication_and_eventbus_connectors.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.14.</b>
+                        
+                         [Doc] QBit Java microservice lib introducing EventBus replication and EventBus connectors
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.15" data-path="tutorials_and_examples/[quick_start]_building_a_single_web_page_application_with_qbit.html">
+            
+                
+                    <a href="../tutorials_and_examples/[quick_start]_building_a_single_web_page_application_with_qbit.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.15.</b>
+                        
+                         [Quick Start] building a single web page application with QBit
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.16" data-path="tutorials_and_examples/[rough_cut]_delivering_up_single_page_applications_from_qbit_java_json_microservice_lib.html">
+            
+                
+                    <a href="../tutorials_and_examples/[rough_cut]_delivering_up_single_page_applications_from_qbit_java_json_microservice_lib.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.16.</b>
+                        
+                         [Rough Cut] Delivering up Single Page Applications from QBit Java JSON Microservice lib
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.17" data-path="tutorials_and_examples/[quick_start]_building_a_single_page_todo_list_application_with_qbit.html">
+            
+                
+                    <a href="../tutorials_and_examples/[quick_start]_building_a_single_page_todo_list_application_with_qbit.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.17.</b>
+                        
+                         [Quick Start] Building a single page; Todo List Application with QBit
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.18" data-path="tutorials_and_examples/[detailed_tutorial]_building_a_single_page_todo_list_application_with_qbit.html">
+            
+                
+                    <a href="../tutorials_and_examples/[detailed_tutorial]_building_a_single_page_todo_list_application_with_qbit.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.18.</b>
+                        
+                         [Detailed Tutorial] Building a single page; Todo List Application with QBit
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.19" data-path="tutorials_and_examples/[rough_cut]_using_qbit_microservice_lib_with_spring_boot.html">
+            
+                
+                    <a href="../tutorials_and_examples/[rough_cut]_using_qbit_microservice_lib_with_spring_boot.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.19.</b>
+                        
+                         [Rough Cut] Using QBit microservice lib with Spring Boot
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.20" data-path="tutorials_and_examples/[rough_cut]_working_with_system_manager_for_qbit_mircoservice_lib.html">
+            
+                
+                    <a href="../tutorials_and_examples/[rough_cut]_working_with_system_manager_for_qbit_mircoservice_lib.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.20.</b>
+                        
+                         [Rough Cut] Working with System Manager for QBit Mircoservice lib
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.21" data-path="tutorials_and_examples/[rough_cut]_qbit_microservices_using_service_workers_and_sharded_service_workers.html">
+            
+                
+                    <a href="../tutorials_and_examples/[rough_cut]_qbit_microservices_using_service_workers_and_sharded_service_workers.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.21.</b>
+                        
+                         [Rough Cut] QBit Microservices using Service Workers and sharded service workers
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.22" data-path="tutorials_and_examples/[rough_cut]_qbit_microservice_lib_working_with_callbacks.html">
+            
+                
+                    <a href="../tutorials_and_examples/[rough_cut]_qbit_microservice_lib_working_with_callbacks.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.22.</b>
+                        
+                         [Rough Cut] QBit Microservice Lib Working With CallBacks
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.23" data-path="tutorials_and_examples/[doc]_queue_callbacks_for_qbit_queue_based_services.html">
+            
+                
+                    <a href="../tutorials_and_examples/[doc]_queue_callbacks_for_qbit_queue_based_services.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.23.</b>
+                        
+                         [Doc] Queue Callbacks for QBit queue based services
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.24" data-path="tutorials_and_examples/[rough_cut]_qbit_java_microservice_lib_working_with_workers_sharded_and_pooled.html">
+            
+                
+                    <a href="../tutorials_and_examples/[rough_cut]_qbit_java_microservice_lib_working_with_workers_sharded_and_pooled.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.24.</b>
+                        
+                         [Rough Cut] QBit Java Microservice Lib Working With Workers Sharded and Pooled
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.25" data-path="tutorials_and_examples/[doc]_using_qbit_microservice_libs_websocket_support.html">
+            
+                
+                    <a href="../tutorials_and_examples/[doc]_using_qbit_microservice_libs_websocket_support.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.25.</b>
+                        
+                         [Doc] Using QBit microservice lib&#39;s WebSocket support
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.26" data-path="tutorials_and_examples/[doc]_qbit_microservice_java_lib_using_auto_flushing_client_proxies.html">
+            
+                
+                    <a href="../tutorials_and_examples/[doc]_qbit_microservice_java_lib_using_auto_flushing_client_proxies.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.26.</b>
+                        
+                         [Doc] QBit microservice Java lib Using auto flushing client proxies
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.27" data-path="tutorials_and_examples/[doc]_qbit_microservice_websocket_wire_protocol_draft_01___json_ascii_method_batching_rpc.html">
+            
+                
+                    <a href="../tutorials_and_examples/[doc]_qbit_microservice_websocket_wire_protocol_draft_01___json_ascii_method_batching_rpc.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.27.</b>
+                        
+                         [Doc] QBit Microservice WebSocket wire protocol draft 01   JSON ASCII method batching RPC
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter active" data-level="1.28" data-path="tutorials_and_examples/[doc]_qbit_java_microservice_lib_auto_flushing_service_queue_proxies.html">
+            
+                
+                    <a href="../tutorials_and_examples/[doc]_qbit_java_microservice_lib_auto_flushing_service_queue_proxies.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.28.</b>
+                        
+                         [Doc] QBit Java microservice lib auto flushing service queue proxies
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="2" data-path="qbit_roadmap/README.html">
+            
+                
+                    <a href="../qbit_roadmap/README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                         Qbit Roadmap
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="3" data-path="contact_us/README.html">
+            
+                
+                    <a href="../contact_us/README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                         Contact Us
+                    </a>
+                
+            
+            
+        </li>
+    
+
+
+        
+        <li class="divider"></li>
+        <li>
+            <a href="http://www.gitbook.io/" target="blank" class="gitbook-link">Published using GitBook</a>
+        </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search" aria-label="Toggle search"><i class="fa fa-search"></i></a>
+    
+    <div id="font-settings-wrapper" class="dropdown pull-left">
+        <a href="#" class="btn toggle-dropdown" aria-label="Toggle font settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="buttons">
+        <button type="button" id="reduce-font-size" class="button size-2">A</button>
+        <button type="button" id="enlarge-font-size" class="button size-2">A</button>
+    </div>
+
+    <div class="buttons font-family-list">
+        <button type="button" data-font="0" class="button">Serif</button>
+        <button type="button" data-font="1" class="button">Sans</button>
+    </div>
+
+    <div class="buttons color-theme-list">
+        <button type="button" id="color-theme-preview-0" class="button size-3" data-theme="0">White</button>
+        <button type="button" id="color-theme-preview-1" class="button size-3" data-theme="1">Sepia</button>
+        <button type="button" id="color-theme-preview-2" class="button size-3" data-theme="2">Night</button>
+    </div>
+</div>
+
+    </div>
+
+    <!-- Actions Right -->
+    
+    <div class="dropdown pull-right">
+        <a href="#" class="btn toggle-dropdown" aria-label="Toggle share dropdown"><i class="fa fa-share-alt"></i>
+        </a>
+        <div class="dropdown-menu font-settings dropdown-left">
+            <div class="dropdown-caret">
+                <span class="caret-outer"></span>
+                <span class="caret-inner"></span>
+            </div>
+            <div class="buttons">
+                <button type="button" data-sharing="twitter" class="button">Twitter</button>
+                <button type="button" data-sharing="google-plus" class="button">Google</button>
+                <button type="button" data-sharing="facebook" class="button">Facebook</button>
+                <button type="button" data-sharing="weibo" class="button">Weibo</button>
+                <button type="button" data-sharing="instapaper" class="button">Instapaper</button>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Share on Google Plus"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Share on Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Share on Twitter"><i class="fa fa-twitter"></i></a>
+    
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >Introduction to QBit - The microservice Library for Java</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-gitbook_1477">
+                    
+                        <h1 id="doc-qbit-java-microservice-lib-auto-flushing-service-queue-proxies">[Doc] QBit Java microservice lib auto flushing service queue proxies</h1>
+<p>QBit is a queue batching system.
+QBit has the ability to batch many queue items and send them in batches.
+When you create a QBit queue you can ask how large you would like that batch to be.
+QBit also has the ability to check to see if the other side is busy. By other side we mean the consumer or consumers of the queue items is busy.</p>
+<p>This is all fine and dandy, until you get a message waiting to be sent.
+Let&#39;s say that you have a batch size of 20,000 but you only get 100 messages. It is a slow day, and the messages are just waiting there to be sent. We do not flush to the other side or check to see if the other side is not busy (bored) until we get a new message. Then you have 100 messages just waiting until that one message comes through or the 19,900 message come through depending on how you have the periodic busy check configured.</p>
+<p>This means that you as the developer must remember to flush the queue messages periodically.
+It is worse than that because if you use a ServiceQueue proxy, which is basically just a proxy on top
+of a series of QBit queues that talk to one or more services or an event bus, and you do not flush
+the proxy, the method calls never get sent.</p>
+<p>In practice this is not too difficult, because when you develop services in QBit there are some natural places to flush messages to queues and client proxies, i.e., you get notified that you are empty, idle or your limit has been reached then you might as well flush calls to your collaborators.</p>
+<p>One thing we added to QBIt is auto-flushing Queue senders. QBit divides up a <code>Queue</code> into <code>SendQueue</code> and <code>ReceiveQueue</code> and the uses this division to add batching of messages on to a queue. You use <code>Queue</code> as a factory object to create <code>SendQueue</code>s and <code>ReceiveQueue</code>s.</p>
+<h2 id="example-basic-sendqueue-no-auto-flush">Example Basic SendQueue no auto flush</h2>
+<h4 id="basic-send-queue-example">Basic Send Queue example</h4>
+<p>Here is the full code for a basis send queue example where we send items on one thread
+and read those times from another thread.</p>
+<h4 id="complete-code-example-of-basic-send-queue">Complete code example of basic send queue.</h4>
+<pre><code class="lang-java">
+        <span class="hljs-javadoc">/** Build our queue. */</span>
+        <span class="hljs-keyword">final</span> QueueBuilder builder = <span class="hljs-keyword">new</span> QueueBuilder().setName(<span class="hljs-string">"test"</span>).setPollWait(<span class="hljs-number">1000</span>).setBatchSize(<span class="hljs-number">10</span>);
+        Queue&lt;String&gt; queue = builder.build();
+
+
+        <span class="hljs-keyword">final</span> AtomicInteger count = <span class="hljs-keyword">new</span> AtomicInteger();
+
+        <span class="hljs-comment">/* Create a sender queue. */</span>
+        <span class="hljs-keyword">final</span> SendQueue&lt;String&gt; sendQueue = queue.sendQueue();
+
+
+        <span class="hljs-comment">/* Create a receiver queue. */</span>
+        <span class="hljs-keyword">final</span> ReceiveQueue&lt;String&gt; receiveQueue = queue.receiveQueue();
+
+
+        <span class="hljs-comment">/* Create a writer thread that uses the send queue. */</span>
+        Thread writerThread = <span class="hljs-keyword">new</span> Thread(() -&gt; {
+
+
+            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> index = <span class="hljs-number">0</span>; index &lt; <span class="hljs-number">1000</span>; index++) {
+                sendQueue.send(<span class="hljs-string">"item"</span> + index); <span class="hljs-comment">//It will flush every 10 or so</span>
+            }
+            sendQueue.flushSends(); <span class="hljs-comment">//We can also call flushSends so it sends what remains.</span>
+        });
+
+
+
+        <span class="hljs-comment">/* Create a reader thread that consumes queue items. */</span>
+        Thread readerThread = <span class="hljs-keyword">new</span> Thread(() -&gt; {
+            String item = receiveQueue.pollWait();
+
+            <span class="hljs-keyword">while</span> (item != <span class="hljs-keyword">null</span>) {
+                count.incrementAndGet();
+                item = receiveQueue.pollWait();
+
+            }
+        });
+
+        <span class="hljs-comment">/* Starts the threads and wait for them to end. */</span>
+        writerThread.start();
+        readerThread.start();
+
+        <span class="hljs-comment">/* Wait for them to end. */</span>
+        writerThread.join();
+        readerThread.join();
+
+        puts(count);
+
+        ok = count.get() == <span class="hljs-number">1000</span> || die(<span class="hljs-string">"count should be 1000"</span>, count.get());
+</code></pre>
+<p>Let&#39;s break this down:</p>
+<h4 id="build-the-queue-with-queuebuilder">Build the queue with QueueBuilder</h4>
+<pre><code class="lang-java">        <span class="hljs-javadoc">/** Build our queue. */</span>
+        <span class="hljs-keyword">final</span> QueueBuilder builder = queueBuilder().setName(<span class="hljs-string">"test"</span>)
+                                      .setPollWait(<span class="hljs-number">1000</span>).setBatchSize(<span class="hljs-number">10</span>);
+        Queue&lt;String&gt; queue = builder.build();
+</code></pre>
+<p>Create a counter so we can track how many items the reader thread gets.</p>
+<h4 id="counter-for-testing">Counter for testing</h4>
+<pre><code class="lang-java">
+        <span class="hljs-keyword">final</span> AtomicInteger count = <span class="hljs-keyword">new</span> AtomicInteger();
+</code></pre>
+<p>Use the queue to create a sender queue.</p>
+<h4 id="create-sendqueue-from-queue-to-send-messages">Create SendQueue from queue to send messages</h4>
+<pre><code class="lang-java">     <span class="hljs-comment">/* Create a sender queue. */</span>
+        <span class="hljs-keyword">final</span> SendQueue&lt;String&gt; sendQueue = queue.sendQueue();
+</code></pre>
+<p>Sender queues are not thread safe. They are optimized to be accessed by on thread so they can buffer enqueues and so that can check to see if the other side is busy.</p>
+<p>Use the queue to create a receiver queue.</p>
+<h4 id="create-receivequeue-from-queue-to-receive-messages">Create ReceiveQueue from queue to receive messages</h4>
+<pre><code class="lang-java">        <span class="hljs-comment">/* Create a receiver queue. */</span>
+        <span class="hljs-keyword">final</span> ReceiveQueue&lt;String&gt; receiveQueue = queue.receiveQueue();
+</code></pre>
+<p>Now create a writer thread that sends 1000 queue messages to the receiver.</p>
+<h4 id="writer-thread">Writer Thread</h4>
+<p>``java
+        /<em> Create a writer thread that uses the send queue. </em>/
+        Thread writerThread = new Thread(() -&gt; {</p>
+<pre><code>        for (int index = 0; index &lt; 1000; index++) {
+            sendQueue.send(&quot;item&quot; + index); //It will flush every 10 or so
+        }
+        sendQueue.flushSends(); //We can also call flushSends so it sends what remains.
+    });
+</code></pre><pre><code>
+Notice that we call `sendQueue.flushSends()` after the loop finishes. We do this so we know the queue
+sends all of its items to the other side.
+
+Now create a reader that reads the messages from the writer thread.
+
+
+####Reader Thread
+```java
+
+
+        /* Create a reader thread that consumes queue items. */
+        Thread readerThread = new Thread(() -&gt; {
+            String item = receiveQueue.pollWait();
+
+            while (item != null) {
+                count.incrementAndGet();
+                item = receiveQueue.pollWait();
+
+            }
+        });
+</code></pre><p>Then start the threads and wait for them to end.</p>
+<h4 id="close-shop-and-assert-we-got-the-right-count">Close shop and assert we got the right count</h4>
+<pre><code class="lang-java">
+        <span class="hljs-comment">/* Starts the threads and wait for them to end. */</span>
+        writerThread.start();
+        readerThread.start();
+
+        <span class="hljs-comment">/* Wait for them to end. */</span>
+        writerThread.join();
+        readerThread.join();
+</code></pre>
+<p>This is great but what if we forget to call flush. It can happen. Also what if we are using the sendQueue behind a <code>ServiceQueue</code> client proxy, it becomes a leaky abstraction if we force everyone to use our flush utilities to flush client proxies. What we want is a way to auto flush the sender queue every so often.</p>
+<h2 id="auto-flushing-send-queue">Auto-flushing send queue</h2>
+<p>We added two methods to <code>Queue</code> to support auto-flushing.</p>
+<pre><code class="lang-java">
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">Queue</span>&lt;<span class="hljs-title">T</span>&gt; </span>{
+
+...
+
+
+    <span class="hljs-function"><span class="hljs-keyword">default</span> SendQueue&lt;T&gt; <span class="hljs-title">sendQueueWithAutoFlush</span><span class="hljs-params">(<span class="hljs-keyword">final</span> <span class="hljs-keyword">int</span> interval, <span class="hljs-keyword">final</span> TimeUnit timeUnit)</span> </span>{
+
+        PeriodicScheduler periodicScheduler = QBit.factory().periodicScheduler();
+
+        <span class="hljs-function"><span class="hljs-keyword">return</span> <span class="hljs-title">sendQueueWithAutoFlush</span><span class="hljs-params">(periodicScheduler, interval, timeUnit)</span></span>;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">default</span> SendQueue&lt;T&gt; <span class="hljs-title">sendQueueWithAutoFlush</span><span class="hljs-params">(<span class="hljs-keyword">final</span> PeriodicScheduler periodicScheduler,
+                                                <span class="hljs-keyword">final</span> <span class="hljs-keyword">int</span> interval, <span class="hljs-keyword">final</span> TimeUnit timeUnit)</span> </span>{
+
+        SendQueue&lt;T&gt; sendQueue = sendQueue();
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> AutoFlushingSendQueue&lt;&gt;(sendQueue, periodicScheduler, interval, timeUnit);
+    }
+</code></pre>
+<p>We have the <code>sendQueueWithAutoFlush</code> that takes a <code>PeriodicScheduler</code> and one that does not and just uses the system <code>PeriodicScheduler</code>. The one that takes a <code>PeriodicScheduler</code> will probably never be needed and if it is, you are probably missing the whole concept of what a MircoSerivce is. That said, it is there. The provided <code>PeriodicScheduler</code> should meet most needs. The <code>PeriodicScheduler</code> is a simple interface as follows:</p>
+<h4 id="periodicscheduler">PeriodicScheduler</h4>
+<pre><code class="lang-java">
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">PeriodicScheduler</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Startable</span>, <span class="hljs-title">Stoppable</span></span>{
+
+    <span class="hljs-function">ScheduledFuture <span class="hljs-title">repeat</span><span class="hljs-params">(Runnable runnable, <span class="hljs-keyword">int</span> interval, TimeUnit timeUnit)</span></span>;
+
+    <span class="hljs-function"><span class="hljs-keyword">default</span> <span class="hljs-keyword">void</span> <span class="hljs-title">start</span><span class="hljs-params">()</span> </span>{}
+    <span class="hljs-function"><span class="hljs-keyword">default</span> <span class="hljs-keyword">void</span> <span class="hljs-title">stop</span><span class="hljs-params">()</span> </span>{}
+
+}
+</code></pre>
+<p>You can provide your own or use the Factory create method for <code>PeriodicScheduler</code> if your system needs more than one (unlikely).</p>
+<p>The <code>sendQueueWithAutoFlush</code> method passes a <code>PeriodicScheduler</code> and then constructs a <code>AutoFlushingSendQueue</code>. A <code>AutoFlushingSendQueue</code> implements the <code>SendQueue</code> and wraps a <code>SendQueue</code> which it uses the <code>PeriodicScheduler</code> to flush periodically. Recall that 50 ms is like years and years to a CPU.</p>
+<p>Let&#39;s redo our last example with the periodic flush.</p>
+<h4 id="complete-listing-showing-using-a-auto-flushing-send-queue">Complete listing showing using a auto-flushing send queue</h4>
+<pre><code class="lang-java">    <span class="hljs-annotation">@Test</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">testUsingAutoFlush</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> Exception </span>{
+
+
+        <span class="hljs-keyword">final</span> QueueBuilder builder = <span class="hljs-keyword">new</span> QueueBuilder().setName(<span class="hljs-string">"test"</span>).setPollWait(<span class="hljs-number">1000</span>).setBatchSize(<span class="hljs-number">20</span>_000);
+        <span class="hljs-keyword">final</span> Queue&lt;String&gt; queue = builder.build();
+
+        <span class="hljs-keyword">final</span> AtomicInteger count = <span class="hljs-keyword">new</span> AtomicInteger();
+
+        <span class="hljs-keyword">final</span> SendQueue&lt;String&gt; sendQueue = queue.sendQueueWithAutoFlush(<span class="hljs-number">50</span>, TimeUnit.MILLISECONDS);
+        <span class="hljs-keyword">final</span> ReceiveQueue&lt;String&gt; receiveQueue = queue.receiveQueue();
+
+        sendQueue.start();
+
+        Thread writerThread = <span class="hljs-keyword">new</span> Thread(() -&gt; {
+            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> index = <span class="hljs-number">0</span>; index &lt; <span class="hljs-number">1000</span>; index++) {
+                sendQueue.send(<span class="hljs-string">"item"</span> + index);
+            }
+        });
+
+
+        Thread readerThread = <span class="hljs-keyword">new</span> Thread(() -&gt; {
+            <span class="hljs-keyword">while</span> (receiveQueue.pollWait() != <span class="hljs-keyword">null</span>) {
+                count.incrementAndGet();
+            }
+        });
+
+        writerThread.start();
+        readerThread.start();
+        writerThread.join();
+        readerThread.join();
+        Sys.sleep(<span class="hljs-number">1000</span>); <span class="hljs-comment">//simulate a long sleep</span>
+        sendQueue.stop();
+
+        puts(count);
+
+        ok = count.get() == <span class="hljs-number">1000</span> || die(<span class="hljs-string">"count should be 1000"</span>, count);
+
+    }
+</code></pre>
+<p>The big change from before is this:</p>
+<h4 id="using-the-autoflush-creation-method">Using the autoFlush creation method.</h4>
+<pre><code class="lang-java">
+        <span class="hljs-keyword">final</span> SendQueue&lt;String&gt; sendQueue =
+              queue.sendQueueWithAutoFlush(<span class="hljs-number">50</span>, TimeUnit.MILLISECONDS);
+</code></pre>
+<p>The above creates a <code>sendQueue</code>, which will be auto-flushed every 50 milliseconds.</p>
+<p>This means we do not have to explicitly flush like we did in the last example.</p>
+<h2 id="using-auto-flushing-service-queue-proxies">Using auto flushing service queue proxies</h2>
+<p>To create a service queue proxy client that auto flushes, you use the <code>createProxyWithAutoFlush</code> method
+of the ServiceQueue.</p>
+<h4 id="using-createproxywithautoflush-method">Using createProxyWithAutoFlush method</h4>
+<pre><code class="lang-java">
+        TodoServiceClient todoServiceClient =
+                serviceQueue.createProxyWithAutoFlush(TodoServiceClient.class,
+                                                      <span class="hljs-number">50</span>, TimeUnit.MILLISECONDS);
+</code></pre>
+<p>The above method creates a proxy that will be flushed every 50 ms. The <code>createProxyWithAutoFlush</code> creates
+a proxy that in turn uses <code>queue.sendQueueWithAutoFlush</code> for the method sender queue.</p>
+<h4 id="complete-example-using-servicequeue-createproxywithautoflush">Complete example using ServiceQueue createProxyWithAutoFlush</h4>
+<pre><code class="lang-java">
+    <span class="hljs-annotation">@Test</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">testUsingProxyWithAutoFlush</span><span class="hljs-params">()</span> </span>{
+
+
+        <span class="hljs-comment">/* Create a service that lives behind a ServiceQueue. */</span>
+        ServiceQueue serviceQueue = serviceBuilder()
+                                    .setServiceAddress(<span class="hljs-string">"/todo-service"</span>)
+                                    .setServiceObject(<span class="hljs-keyword">new</span> TodoService())
+                                    .build();
+
+        serviceQueue.start().startCallBackHandler();
+
+        TodoServiceClient todoServiceClient =
+                serviceQueue.createProxyWithAutoFlush(TodoServiceClient.class, <span class="hljs-number">50</span>, TimeUnit.MILLISECONDS);
+
+        todoServiceClient.add(<span class="hljs-keyword">new</span> TodoItem(<span class="hljs-string">"foo"</span>, <span class="hljs-string">"foo"</span>, <span class="hljs-keyword">null</span>));
+
+        AtomicReference&lt;List&lt;TodoItem&gt;&gt; items = <span class="hljs-keyword">new</span> AtomicReference&lt;&gt;();
+        todoServiceClient.list(todoItems -&gt; items.set(todoItems));
+
+        Sys.sleep(<span class="hljs-number">200</span>);
+
+        ok = items.get()!=<span class="hljs-keyword">null</span> || die();
+        ok = items.get().size() &gt; <span class="hljs-number">0</span> || die();
+        ok = items.get().get(<span class="hljs-number">0</span>).getDescription().equals(<span class="hljs-string">"foo"</span>) || die();
+
+    }
+</code></pre>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../tutorials_and_examples/[doc]_qbit_microservice_websocket_wire_protocol_draft_01___json_ascii_method_batching_rpc.html" class="navigation navigation-prev " aria-label="Previous page: [Doc] QBit Microservice WebSocket wire protocol draft 01   JSON ASCII method batching RPC"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../qbit_roadmap/README.html" class="navigation navigation-next " aria-label="Next page: Qbit Roadmap"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="https://cdn.mathjax.org/mathjax/2.4-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-mathjax/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"fontSettings":{"theme":null,"family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

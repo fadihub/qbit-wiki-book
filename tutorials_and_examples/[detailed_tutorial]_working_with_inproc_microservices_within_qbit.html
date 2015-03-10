@@ -1,0 +1,1266 @@
+<!DOCTYPE HTML>
+<html lang="en-US" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <title>[Detailed Tutorial] Working with inproc MicroServices within QBit. | Introduction to QBit - The microservice Library for Java</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 1.0.3">
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    
+    
+    
+    <link rel="next" href="../tutorials_and_examples/[rough_cut]_working_with_inproc_microservices.html" />
+    
+    
+    <link rel="prev" href="../tutorials_and_examples/[quick_start]_working_with_inproc_microservices_within_qbit.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+<link rel="stylesheet" href="../gitbook/style.css">
+
+
+        
+    <div class="book"  data-level="1.8" data-basepath=".." data-revision="1426023905951">
+    
+
+<div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Type to search" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+    	
+    	
+    	
+
+        
+
+        
+    
+        
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                        <i class="fa fa-check"></i>
+                        
+                         Introduction
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="0.1" data-path="what_is_qbit.html">
+            
+                
+                    <a href="../what_is_qbit.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>0.1.</b>
+                        
+                         What is Qbit?
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="0.2" data-path="qbits_philosophy_and_inspiration.html">
+            
+                
+                    <a href="../qbits_philosophy_and_inspiration.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>0.2.</b>
+                        
+                         QBit&#39;s Philosophy and inspiration
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="0.3" data-path="does_it_work.html">
+            
+                
+                    <a href="../does_it_work.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>0.3.</b>
+                        
+                         Does it work?
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1" data-path="tutorials_and_examples/README.html">
+            
+                
+                    <a href="../tutorials_and_examples/README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                         Tutorials and Examples
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="1.1" data-path="tutorials_and_examples/[quick_start]_building_qbit_the_microservice_lib_for_java.html">
+            
+                
+                    <a href="../tutorials_and_examples/[quick_start]_building_qbit_the_microservice_lib_for_java.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                         [Quick Start] Building QBit the microservice lib for Java
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.2" data-path="tutorials_and_examples/[quick_start]_building_boon_for_the_qbit_microservice_engine.html">
+            
+                
+                    <a href="../tutorials_and_examples/[quick_start]_building_boon_for_the_qbit_microservice_engine.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                         [Quick Start] Building boon for the QBit microservice engine
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.3" data-path="tutorials_and_examples/[quick_start]_building_a_todo_web_microservice_server_with_qbit.html">
+            
+                
+                    <a href="../tutorials_and_examples/[quick_start]_building_a_todo_web_microservice_server_with_qbit.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                         [Quick Start] Building a TODO web microservice server with QBit
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.4" data-path="tutorials_and_examples/[quick_start]_building_a_todo_web_microservice_client_with_qbit.html">
+            
+                
+                    <a href="../tutorials_and_examples/[quick_start]_building_a_todo_web_microservice_client_with_qbit.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                         [Quick Start] Building a TODO web microservice client with QBit
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.5" data-path="tutorials_and_examples/[quick_start]_building_a_simple_rest_web_microservice_server_with_qbit.html">
+            
+                
+                    <a href="../tutorials_and_examples/[quick_start]_building_a_simple_rest_web_microservice_server_with_qbit.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.</b>
+                        
+                         [Quick Start] Building a simple Rest web microservice server with QBit
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.6" data-path="tutorials_and_examples/[rough_cut]_using_qbit_microservice_libs_rest_support_with_uri_params.html">
+            
+                
+                    <a href="../tutorials_and_examples/[rough_cut]_using_qbit_microservice_libs_rest_support_with_uri_params.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.</b>
+                        
+                         [Rough Cut] Using QBit microservice lib&#39;s REST support with URI Params
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.7" data-path="tutorials_and_examples/[quick_start]_working_with_inproc_microservices_within_qbit.html">
+            
+                
+                    <a href="../tutorials_and_examples/[quick_start]_working_with_inproc_microservices_within_qbit.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.7.</b>
+                        
+                         [Quick Start] Working with inproc MicroServices within QBit
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter active" data-level="1.8" data-path="tutorials_and_examples/[detailed_tutorial]_working_with_inproc_microservices_within_qbit.html">
+            
+                
+                    <a href="../tutorials_and_examples/[detailed_tutorial]_working_with_inproc_microservices_within_qbit.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.8.</b>
+                        
+                         [Detailed Tutorial] Working with inproc MicroServices within QBit.
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.9" data-path="tutorials_and_examples/[rough_cut]_working_with_inproc_microservices.html">
+            
+                
+                    <a href="../tutorials_and_examples/[rough_cut]_working_with_inproc_microservices.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.9.</b>
+                        
+                         [Rough Cut] Working with inproc MicroServices
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.10" data-path="tutorials_and_examples/[doc]_using_qbit_microservice_libs_httpclient_get,_post,_et_al,_json,_java_8_lambda.html">
+            
+                
+                    <a href="../tutorials_and_examples/[doc]_using_qbit_microservice_libs_httpclient_get,_post,_et_al,_json,_java_8_lambda.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.10.</b>
+                        
+                         [Doc] Using QBit microservice lib&#39;s HttpClient GET, POST, et al, JSON, Java 8 Lambda
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.11" data-path="tutorials_and_examples/[rough_cut]_working_with_event_bus_for_qbit_the_microservice_engine.html">
+            
+                
+                    <a href="../tutorials_and_examples/[rough_cut]_working_with_event_bus_for_qbit_the_microservice_engine.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.11.</b>
+                        
+                         [Rough Cut] Working with event bus for QBit the microservice engine
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.12" data-path="tutorials_and_examples/[rough_cut]_working_with_private_event_bus_for_inproc_microservices.html">
+            
+                
+                    <a href="../tutorials_and_examples/[rough_cut]_working_with_private_event_bus_for_inproc_microservices.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.12.</b>
+                        
+                         [Rough Cut] Working with private event bus for inproc microservices
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.13" data-path="tutorials_and_examples/[rough_cut]_working_with_strongly_typed_event_bus_proxies_for_qbit_java_microservice_lib.html">
+            
+                
+                    <a href="../tutorials_and_examples/[rough_cut]_working_with_strongly_typed_event_bus_proxies_for_qbit_java_microservice_lib.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.13.</b>
+                        
+                         [Rough Cut] Working with strongly typed event bus proxies for QBit Java Microservice lib
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.14" data-path="tutorials_and_examples/[doc]_qbit_java_microservice_lib_introducing_eventbus_replication_and_eventbus_connectors.html">
+            
+                
+                    <a href="../tutorials_and_examples/[doc]_qbit_java_microservice_lib_introducing_eventbus_replication_and_eventbus_connectors.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.14.</b>
+                        
+                         [Doc] QBit Java microservice lib introducing EventBus replication and EventBus connectors
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.15" data-path="tutorials_and_examples/[quick_start]_building_a_single_web_page_application_with_qbit.html">
+            
+                
+                    <a href="../tutorials_and_examples/[quick_start]_building_a_single_web_page_application_with_qbit.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.15.</b>
+                        
+                         [Quick Start] building a single web page application with QBit
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.16" data-path="tutorials_and_examples/[rough_cut]_delivering_up_single_page_applications_from_qbit_java_json_microservice_lib.html">
+            
+                
+                    <a href="../tutorials_and_examples/[rough_cut]_delivering_up_single_page_applications_from_qbit_java_json_microservice_lib.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.16.</b>
+                        
+                         [Rough Cut] Delivering up Single Page Applications from QBit Java JSON Microservice lib
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.17" data-path="tutorials_and_examples/[quick_start]_building_a_single_page_todo_list_application_with_qbit.html">
+            
+                
+                    <a href="../tutorials_and_examples/[quick_start]_building_a_single_page_todo_list_application_with_qbit.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.17.</b>
+                        
+                         [Quick Start] Building a single page; Todo List Application with QBit
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.18" data-path="tutorials_and_examples/[detailed_tutorial]_building_a_single_page_todo_list_application_with_qbit.html">
+            
+                
+                    <a href="../tutorials_and_examples/[detailed_tutorial]_building_a_single_page_todo_list_application_with_qbit.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.18.</b>
+                        
+                         [Detailed Tutorial] Building a single page; Todo List Application with QBit
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.19" data-path="tutorials_and_examples/[rough_cut]_using_qbit_microservice_lib_with_spring_boot.html">
+            
+                
+                    <a href="../tutorials_and_examples/[rough_cut]_using_qbit_microservice_lib_with_spring_boot.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.19.</b>
+                        
+                         [Rough Cut] Using QBit microservice lib with Spring Boot
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.20" data-path="tutorials_and_examples/[rough_cut]_working_with_system_manager_for_qbit_mircoservice_lib.html">
+            
+                
+                    <a href="../tutorials_and_examples/[rough_cut]_working_with_system_manager_for_qbit_mircoservice_lib.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.20.</b>
+                        
+                         [Rough Cut] Working with System Manager for QBit Mircoservice lib
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.21" data-path="tutorials_and_examples/[rough_cut]_qbit_microservices_using_service_workers_and_sharded_service_workers.html">
+            
+                
+                    <a href="../tutorials_and_examples/[rough_cut]_qbit_microservices_using_service_workers_and_sharded_service_workers.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.21.</b>
+                        
+                         [Rough Cut] QBit Microservices using Service Workers and sharded service workers
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.22" data-path="tutorials_and_examples/[rough_cut]_qbit_microservice_lib_working_with_callbacks.html">
+            
+                
+                    <a href="../tutorials_and_examples/[rough_cut]_qbit_microservice_lib_working_with_callbacks.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.22.</b>
+                        
+                         [Rough Cut] QBit Microservice Lib Working With CallBacks
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.23" data-path="tutorials_and_examples/[doc]_queue_callbacks_for_qbit_queue_based_services.html">
+            
+                
+                    <a href="../tutorials_and_examples/[doc]_queue_callbacks_for_qbit_queue_based_services.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.23.</b>
+                        
+                         [Doc] Queue Callbacks for QBit queue based services
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.24" data-path="tutorials_and_examples/[rough_cut]_qbit_java_microservice_lib_working_with_workers_sharded_and_pooled.html">
+            
+                
+                    <a href="../tutorials_and_examples/[rough_cut]_qbit_java_microservice_lib_working_with_workers_sharded_and_pooled.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.24.</b>
+                        
+                         [Rough Cut] QBit Java Microservice Lib Working With Workers Sharded and Pooled
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.25" data-path="tutorials_and_examples/[doc]_using_qbit_microservice_libs_websocket_support.html">
+            
+                
+                    <a href="../tutorials_and_examples/[doc]_using_qbit_microservice_libs_websocket_support.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.25.</b>
+                        
+                         [Doc] Using QBit microservice lib&#39;s WebSocket support
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.26" data-path="tutorials_and_examples/[doc]_qbit_microservice_java_lib_using_auto_flushing_client_proxies.html">
+            
+                
+                    <a href="../tutorials_and_examples/[doc]_qbit_microservice_java_lib_using_auto_flushing_client_proxies.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.26.</b>
+                        
+                         [Doc] QBit microservice Java lib Using auto flushing client proxies
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.27" data-path="tutorials_and_examples/[doc]_qbit_microservice_websocket_wire_protocol_draft_01___json_ascii_method_batching_rpc.html">
+            
+                
+                    <a href="../tutorials_and_examples/[doc]_qbit_microservice_websocket_wire_protocol_draft_01___json_ascii_method_batching_rpc.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.27.</b>
+                        
+                         [Doc] QBit Microservice WebSocket wire protocol draft 01   JSON ASCII method batching RPC
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.28" data-path="tutorials_and_examples/[doc]_qbit_java_microservice_lib_auto_flushing_service_queue_proxies.html">
+            
+                
+                    <a href="../tutorials_and_examples/[doc]_qbit_java_microservice_lib_auto_flushing_service_queue_proxies.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.28.</b>
+                        
+                         [Doc] QBit Java microservice lib auto flushing service queue proxies
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="2" data-path="qbit_roadmap/README.html">
+            
+                
+                    <a href="../qbit_roadmap/README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                         Qbit Roadmap
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="3" data-path="contact_us/README.html">
+            
+                
+                    <a href="../contact_us/README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                         Contact Us
+                    </a>
+                
+            
+            
+        </li>
+    
+
+
+        
+        <li class="divider"></li>
+        <li>
+            <a href="http://www.gitbook.io/" target="blank" class="gitbook-link">Published using GitBook</a>
+        </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search" aria-label="Toggle search"><i class="fa fa-search"></i></a>
+    
+    <div id="font-settings-wrapper" class="dropdown pull-left">
+        <a href="#" class="btn toggle-dropdown" aria-label="Toggle font settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="buttons">
+        <button type="button" id="reduce-font-size" class="button size-2">A</button>
+        <button type="button" id="enlarge-font-size" class="button size-2">A</button>
+    </div>
+
+    <div class="buttons font-family-list">
+        <button type="button" data-font="0" class="button">Serif</button>
+        <button type="button" data-font="1" class="button">Sans</button>
+    </div>
+
+    <div class="buttons color-theme-list">
+        <button type="button" id="color-theme-preview-0" class="button size-3" data-theme="0">White</button>
+        <button type="button" id="color-theme-preview-1" class="button size-3" data-theme="1">Sepia</button>
+        <button type="button" id="color-theme-preview-2" class="button size-3" data-theme="2">Night</button>
+    </div>
+</div>
+
+    </div>
+
+    <!-- Actions Right -->
+    
+    <div class="dropdown pull-right">
+        <a href="#" class="btn toggle-dropdown" aria-label="Toggle share dropdown"><i class="fa fa-share-alt"></i>
+        </a>
+        <div class="dropdown-menu font-settings dropdown-left">
+            <div class="dropdown-caret">
+                <span class="caret-outer"></span>
+                <span class="caret-inner"></span>
+            </div>
+            <div class="buttons">
+                <button type="button" data-sharing="twitter" class="button">Twitter</button>
+                <button type="button" data-sharing="google-plus" class="button">Google</button>
+                <button type="button" data-sharing="facebook" class="button">Facebook</button>
+                <button type="button" data-sharing="weibo" class="button">Weibo</button>
+                <button type="button" data-sharing="instapaper" class="button">Instapaper</button>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Share on Google Plus"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Share on Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Share on Twitter"><i class="fa fa-twitter"></i></a>
+    
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >Introduction to QBit - The microservice Library for Java</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-gitbook_1476">
+                    
+                        <h1 id="detailed-tutorial-working-with-inproc-microservices-within-qbit">[Detailed Tutorial] Working with inproc MicroServices within QBit.</h1>
+<h2 id="overview">Overview</h2>
+<p>What is a process? A process provides the resources needed to execute a program. It is a collection interrelated work tasks initiated in response to an event. In-process microservices happen in-memory, locally on your machine no need for JSON/WebSocket or JSON/REST.</p>
+<h2 id="working-with-inproc-microservices-within-qbit">Working with Inproc MicroServices within QBit</h2>
+<p>This wiki will walk you through the process of creating high speed in-process services with QBit</p>
+<h2 id="what-you-will-build">What you will build</h2>
+<p>You will build an example of qbit handling and executing very fast async services; in this case a a todo service.
+Will execute 2 methods <code>example1(args)</code> and <code>example2(args)</code> each method will add the following todo item:</p>
+<pre><code class="lang-javascript">Todo{name=<span class="hljs-string">'Call Mom'</span>, description=<span class="hljs-string">'Give Mom a call'</span>}
+</code></pre>
+<p>When this example is executed it will show you the following:</p>
+<pre><code class="lang-javascript">This is an async call
+This is an async call to count
+
+
+This lambda expression is the callback <span class="hljs-number">1</span>
+This is the count back from the server <span class="hljs-number">1</span>
+END EXAMPLE <span class="hljs-number">1</span>
+END EXAMPLE <span class="hljs-number">1</span>
+END EXAMPLE <span class="hljs-number">1</span>
+END EXAMPLE <span class="hljs-number">1</span>
+
+This is an async call
+This is an async call to count
+
+This lambda expression is the callback <span class="hljs-number">1</span>
+Todo{name=<span class="hljs-string">'Call Mom'</span>, description=<span class="hljs-string">'Give Mom a call'</span>}
+</code></pre>
+<p>I cleaned up the output to make it visible, will post the entire output at the end after testing.
+This is basically telling you when the first example started and ended and returning the callback count, same thing for the second example, also the todo item is printed.</p>
+<h2 id="how-to-complete-this-guide">How to complete this guide</h2>
+<p>In order to complete this example successfully you will need the following installed on your machine:</p>
+<ul>
+<li>Gradle; if you need help installing it, visit <a href="http://www.gradle.org/docs/current/userguide/installation.html" target="_blank">Installing Gradle. </a></li>
+<li>Your favorite IDE or text editor (we recommend <a href="https://www.jetbrains.com/idea/" target="_blank">Intellij IDEA </a> latest version).</li>
+<li><a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank">JDK </a> 1.8 or later.</li>
+<li>Build and install QBit on your machine click <a href="https://github.com/advantageous/qbit/wiki/%5BQuick-Start%5D-Building-QBit-the-microservice-lib-for-Java" target="_blank">Building QBit </a> for instructions.</li>
+</ul>
+<p>Now that your machine is all ready let&#39;s get started:</p>
+<ul>
+<li><a href="https://github.com/fadihub/inproc-microservice-qbit/archive/master.zip" target="_blank">Download </a> and unzip the source repository for this guide, or clone it using Git:</li>
+</ul>
+<pre><code class="lang-bash">git clone https://github.com/fadihub/inproc-microservice-qbit.git
+</code></pre>
+<p>Once this is done you can <strong>test the service</strong>, let&#39;s first explain the process:</p>
+<p>We have a <code>Todo</code> service, this sets your todo item with 2 parameters <code>name</code> and <code>description</code>, also enables you to get the name and description of the item:</p>
+<pre><code class="lang-java">        <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Todo</span> </span>{
+        <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> String name;
+        <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> String description;
+
+
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Todo</span><span class="hljs-params">(String name, String description)</span> </span>{
+
+            <span class="hljs-keyword">this</span>.name = name;
+            <span class="hljs-keyword">this</span>.description = description;
+        }
+
+        <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getName</span><span class="hljs-params">()</span> </span>{
+            <span class="hljs-keyword">return</span> name;
+        }
+
+        <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getDescription</span><span class="hljs-params">()</span> </span>{
+            <span class="hljs-keyword">return</span> description;
+        }
+
+        <span class="hljs-annotation">@Override</span>
+        <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">toString</span><span class="hljs-params">()</span> </span>{
+            <span class="hljs-keyword">return</span> <span class="hljs-string">"Todo{"</span> +
+                    <span class="hljs-string">"name='"</span> + name + <span class="hljs-string">'\''</span> +
+                    <span class="hljs-string">", description='"</span> + description + <span class="hljs-string">'\''</span> +
+                    <span class="hljs-string">'}'</span>;
+        }
+    }
+</code></pre>
+<p><code>TodoManager</code> service and the <code>TodoManagerClientInterface</code>, enables the user to add(), list(), count() the todo items:</p>
+<pre><code class="lang-java"> <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">TodoManagerClientInterface</span> </span>{
+
+        <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">add</span><span class="hljs-params">(Todo todo)</span></span>;
+
+        <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">list</span><span class="hljs-params">(Callback&lt;List&lt;Todo&gt;&gt; list)</span></span>;
+
+        <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">count</span><span class="hljs-params">(Callback&lt;Integer&gt; count)</span></span>;
+
+        <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">clientProxyFlush</span><span class="hljs-params">()</span></span>;
+
+    }
+
+    <span class="hljs-javadoc">/**
+     * Example service class
+     */</span>
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TodoManager</span> </span>{
+
+        <span class="hljs-keyword">private</span> List&lt;Todo&gt; list = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
+
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">add</span><span class="hljs-params">(Todo todo)</span> </span>{
+            System.out.println(<span class="hljs-string">"Add Todo"</span>);
+            list.add(todo);
+        }
+
+        <span class="hljs-function"><span class="hljs-keyword">public</span> List&lt;Todo&gt; <span class="hljs-title">list</span><span class="hljs-params">()</span> </span>{
+
+            System.out.println(<span class="hljs-string">"List Todo"</span>);
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> ArrayList&lt;&gt;(list);
+        }
+
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">count</span><span class="hljs-params">()</span> </span>{
+            System.out.println(<span class="hljs-string">"Count Todo"</span>);
+            <span class="hljs-keyword">return</span> list.size();
+        }
+    }
+</code></pre>
+<p>So we have a <code>TodoManager</code> class, how can we make it a QBit service? Very simple you just create an object of the class and wire it in as follows:</p>
+<pre><code class="lang-java"><span class="hljs-comment">/* Synchronous service. */</span>
+        <span class="hljs-keyword">final</span> TodoManager todoManagerImpl = <span class="hljs-keyword">new</span> TodoManager();
+
+        <span class="hljs-comment">/*
+        Create the service which manages async calls to todoManagerImpl.
+         */</span>
+                <span class="hljs-keyword">final</span> ServiceQueue service = serviceBuilder()
+                .setQueueBuilder(queueBuilder().setBatchSize(<span class="hljs-number">1</span>))
+                .setServiceObject(todoManagerImpl).setInvokeDynamic(<span class="hljs-keyword">false</span>)
+                .build().start();
+</code></pre>
+<p>Very important to note that you can set the batch size of methods this allows threads to handle many method calls with an access of the queue.</p>
+<p>Now you have a QBit service all you need is a proxy to invoke a method on a QBit service, also to send messages to a service. The service will get those messages as method calls.</p>
+<p>Every call is sent over a high-speed internal in-process queue (inproc queue); to make a <code>todoManager</code> proxy do the following:</p>
+<pre><code class="lang-java"><span class="hljs-comment">/* Create Asynchronous proxy over Synchronous service. */</span>
+        <span class="hljs-keyword">final</span> TodoManagerClientInterface todoManager = service.createProxy(TodoManagerClientInterface.class);
+</code></pre>
+<p>To be able to count the call backs later you have to start the call back handler:</p>
+<pre><code class="lang-java">service.startCallBackHandler();
+</code></pre>
+<p>Since the proxy is created now, we can send messages to it. Here the client proxy is used to add <strong>&quot;Call Mom&quot;, &quot;Give Mom a call&quot;</strong> as a todo item:</p>
+<pre><code class="lang-java">todoManager.add(<span class="hljs-keyword">new</span> Todo(<span class="hljs-string">"Call Mom"</span>, <span class="hljs-string">"Give Mom a call"</span>));
+</code></pre>
+<p>The <code>countTracker</code> variable is initialized it holds the count value from call to service, <code>todoManager.count</code> return the count on the todo items listed then the lambda expression sets <code>count</code> to the value of listed items then countTracker is set to count:</p>
+<pre><code class="lang-java">AtomicInteger countTracker = <span class="hljs-keyword">new</span> AtomicInteger(); <span class="hljs-comment">//Hold count from async call to service</span>
+
+System.out.println(<span class="hljs-string">"This is an async call to count"</span>);
+
+            todoManager.count(count -&gt; {
+            System.out.println(<span class="hljs-string">"This lambda expression is the callback "</span> + count);
+
+            countTracker.set(count);
+</code></pre>
+<p>Every so often, we have to flush calls to the proxy. The proxy will flush calls every time the queue batch size is met. Here the queue batch size was set to 1, so it would flush every call. But no matter what, when you are done making calls, you should flush the calls. QBit employes micro-batching to reduce thread hand off into the queues. It is done as follows:</p>
+<pre><code class="lang-java">todoManager.clientProxyFlush(); <span class="hljs-comment">//Flush all methods. It batches calls.</span>
+</code></pre>
+<p>There is also a utility method for flushing proxies so you do not have to add the clientProxyFlush to every proxy.</p>
+<p>The following statements are printed to show you when the first example has ended:</p>
+<pre><code class="lang-java">        System.out.printf(<span class="hljs-string">"END EXAMPLE 1\n"</span>, countTracker.get());
+        System.out.printf(<span class="hljs-string">"END EXAMPLE 1\n"</span>, countTracker.get());
+        System.out.printf(<span class="hljs-string">"END EXAMPLE 1\n"</span>, countTracker.get());
+        System.out.printf(<span class="hljs-string">"END EXAMPLE 1\n"</span>, countTracker.get());
+</code></pre>
+<p>the second example `example2(args) is exactly the same; except for the todo item print at the end:</p>
+<pre><code class="lang-java">            todoManager.list(todos -&gt; {
+            todos.forEach(item -&gt; System.out.println(item));
+</code></pre>
+<p>it just prints the todo item posted:</p>
+<pre><code class="lang-javascript">{name=<span class="hljs-string">'Call Mom'</span>, description=<span class="hljs-string">'Give Mom a call'</span>}
+</code></pre>
+<h4 id="inprocexamplejava-listing-full-example">InProcExample.java Listing (full example)</h4>
+<p><code>src/main/java/io.advantageous.qbit.example.inproc/InProcExample.java</code></p>
+<pre><code class="lang-java"><span class="hljs-keyword">import</span> io.advantageous.qbit.service.Callback;
+<span class="hljs-keyword">import</span> io.advantageous.qbit.service.Service;
+<span class="hljs-keyword">import</span> org.boon.core.Sys;
+
+<span class="hljs-keyword">import</span> java.util.ArrayList;
+<span class="hljs-keyword">import</span> java.util.List;
+<span class="hljs-keyword">import</span> java.util.concurrent.atomic.AtomicInteger;
+
+<span class="hljs-keyword">import</span> <span class="hljs-keyword">static</span> io.advantageous.qbit.queue.QueueBuilder.queueBuilder;
+<span class="hljs-keyword">import</span> <span class="hljs-keyword">static</span> io.advantageous.qbit.service.ServiceBuilder.serviceBuilder;
+
+<span class="hljs-javadoc">/**
+ * Created by rhightower on 1/30/15.
+ */</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">InProcExample</span> </span>{
+
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String... args)</span> <span class="hljs-keyword">throws</span> Exception </span>{
+
+        example1(args);
+
+        example2(args);
+
+    }
+
+    <span class="hljs-javadoc">/**
+     * You can use services in process
+     */</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">example1</span><span class="hljs-params">(String... args)</span> <span class="hljs-keyword">throws</span> Exception </span>{
+
+        <span class="hljs-comment">/* Synchronous service. */</span>
+        <span class="hljs-keyword">final</span> TodoManager todoManagerImpl = <span class="hljs-keyword">new</span> TodoManager();
+
+        <span class="hljs-comment">/*
+        Create the service which manages async calls to todoManagerImpl.
+         */</span>
+        <span class="hljs-keyword">final</span> ServiceQueue service = serviceBuilder()
+                .setServiceObject(todoManagerImpl)
+                .build().start();
+
+
+        <span class="hljs-comment">/* Create Asynchronous proxy over Synchronous service. */</span>
+        <span class="hljs-keyword">final</span> TodoManagerClientInterface todoManager =
+                  service.createProxy(TodoManagerClientInterface.class);
+
+        service.startCallBackHandler();
+
+
+        System.out.println(<span class="hljs-string">"This is an async call"</span>);
+        <span class="hljs-comment">/* Asynchronous method call. */</span>
+        todoManager.add(<span class="hljs-keyword">new</span> Todo(<span class="hljs-string">"Call Mom"</span>, <span class="hljs-string">"Give Mom a call"</span>));
+
+
+        AtomicInteger countTracker = <span class="hljs-keyword">new</span> AtomicInteger(); <span class="hljs-comment">//Hold count from async call to service</span>
+
+        System.out.println(<span class="hljs-string">"This is an async call to count"</span>);
+
+        todoManager.count(count -&gt; {
+            System.out.println(<span class="hljs-string">"This lambda expression is the callback "</span> + count);
+
+            countTracker.set(count);
+        });
+
+
+        todoManager.clientProxyFlush(); <span class="hljs-comment">//Flush all methods. It batches calls.</span>
+
+        Sys.sleep(<span class="hljs-number">100</span>);
+
+        System.out.printf(<span class="hljs-string">"This is the count back from the server %d\n"</span>, countTracker.get());
+
+
+        System.out.printf(<span class="hljs-string">"END EXAMPLE 1\n"</span>, countTracker.get());
+        System.out.printf(<span class="hljs-string">"END EXAMPLE 1\n"</span>, countTracker.get());
+        System.out.printf(<span class="hljs-string">"END EXAMPLE 1\n"</span>, countTracker.get());
+        System.out.printf(<span class="hljs-string">"END EXAMPLE 1\n"</span>, countTracker.get());
+
+    }
+
+
+    <span class="hljs-javadoc">/**
+     * You can use services in process
+     */</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">example2</span><span class="hljs-params">(String... args)</span> <span class="hljs-keyword">throws</span> Exception </span>{
+
+        <span class="hljs-comment">/* Synchronous service. */</span>
+        <span class="hljs-keyword">final</span> TodoManager todoManagerImpl = <span class="hljs-keyword">new</span> TodoManager();
+
+        <span class="hljs-comment">/*
+        Create the service which manages async calls to todoManagerImpl.
+
+        You can control the batch size of methods.
+        After it hits so many, it sends those methods to the service.
+        This allows threads to handle many method calls with on access of the queue.
+        Here we set it to 1 so it will flush with every call.
+        Setting invoke dynamic false turns off auto type conversion which is mainly for JSON REST calls
+        and WebSocket calls.
+        This means that you can execute the service more efficiently when it is in proc.
+         */</span>
+        <span class="hljs-keyword">final</span> ServiceQueue service = serviceBuilder()
+                .setQueueBuilder(queueBuilder().setBatchSize(<span class="hljs-number">1</span>))
+                .setServiceObject(todoManagerImpl).setInvokeDynamic(<span class="hljs-keyword">false</span>)
+                .build().start();
+
+
+        <span class="hljs-comment">/* Create Asynchronous proxy over Synchronous service. */</span>
+        <span class="hljs-keyword">final</span> TodoManagerClientInterface todoManager =
+                    service.createProxy(TodoManagerClientInterface.class);
+
+        service.startCallBackHandler();
+
+
+        System.out.println(<span class="hljs-string">"This is an async call"</span>);
+        <span class="hljs-comment">/* Asynchronous method call. */</span>
+        todoManager.add(<span class="hljs-keyword">new</span> Todo(<span class="hljs-string">"Call Mom"</span>, <span class="hljs-string">"Give Mom a call"</span>));
+
+
+        AtomicInteger countTracker = <span class="hljs-keyword">new</span> AtomicInteger();
+            <span class="hljs-comment">//Hold count from async call to service</span>
+
+        System.out.println(<span class="hljs-string">"This is an async call to count"</span>);
+
+        todoManager.count(count -&gt; {
+            System.out.println(<span class="hljs-string">"This lambda expression is the callback "</span> + count);
+
+            countTracker.set(count);
+        });
+
+
+        <span class="hljs-comment">/*
+        We don't need this now.
+         */</span>
+        <span class="hljs-comment">//todoManager.clientProxyFlush(); //Flush all methods. It batches calls.</span>
+
+        Sys.sleep(<span class="hljs-number">100</span>);
+
+        System.out.printf(<span class="hljs-string">"This is the count back from the service %d\n"</span>, countTracker.get());
+
+        todoManager.list(todos -&gt; {
+            todos.forEach(item -&gt; System.out.println(item));
+        });
+
+    }
+
+    <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">TodoManagerClientInterface</span> </span>{
+
+        <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">add</span><span class="hljs-params">(Todo todo)</span></span>;
+
+        <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">list</span><span class="hljs-params">(Callback&lt;List&lt;Todo&gt;&gt; list)</span></span>;
+
+        <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">count</span><span class="hljs-params">(Callback&lt;Integer&gt; count)</span></span>;
+
+        <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">clientProxyFlush</span><span class="hljs-params">()</span></span>;
+
+    }
+
+    <span class="hljs-javadoc">/**
+     * Example service class
+     */</span>
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TodoManager</span> </span>{
+
+        <span class="hljs-keyword">private</span> List&lt;Todo&gt; list = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
+
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">add</span><span class="hljs-params">(Todo todo)</span> </span>{
+            System.out.println(<span class="hljs-string">"Add Todo"</span>);
+            list.add(todo);
+        }
+
+        <span class="hljs-function"><span class="hljs-keyword">public</span> List&lt;Todo&gt; <span class="hljs-title">list</span><span class="hljs-params">()</span> </span>{
+
+            System.out.println(<span class="hljs-string">"List Todo"</span>);
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> ArrayList&lt;&gt;(list);
+        }
+
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">count</span><span class="hljs-params">()</span> </span>{
+            System.out.println(<span class="hljs-string">"Count Todo"</span>);
+            <span class="hljs-keyword">return</span> list.size();
+        }
+    }
+
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Todo</span> </span>{
+        <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> String name;
+        <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> String description;
+
+
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Todo</span><span class="hljs-params">(String name, String description)</span> </span>{
+
+            <span class="hljs-keyword">this</span>.name = name;
+            <span class="hljs-keyword">this</span>.description = description;
+        }
+
+        <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getName</span><span class="hljs-params">()</span> </span>{
+            <span class="hljs-keyword">return</span> name;
+        }
+
+        <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getDescription</span><span class="hljs-params">()</span> </span>{
+            <span class="hljs-keyword">return</span> description;
+        }
+
+        <span class="hljs-annotation">@Override</span>
+        <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">toString</span><span class="hljs-params">()</span> </span>{
+            <span class="hljs-keyword">return</span> <span class="hljs-string">"Todo{"</span> +
+                    <span class="hljs-string">"name='"</span> + name + <span class="hljs-string">'\''</span> +
+                    <span class="hljs-string">", description='"</span> + description + <span class="hljs-string">'\''</span> +
+                    <span class="hljs-string">'}'</span>;
+        }
+    }
+}
+</code></pre>
+<p>This is just an example to show you how to use an in-proc service.</p>
+<p>The AtomicInteger was to demonstrate that this example is working, you would avoid AtomicInteger in your services.</p>
+<h4 id="buildgradle-listing">build.gradle Listing</h4>
+<p>Here is the build</p>
+<pre><code class="lang-gradle"><span class="hljs-keyword">group</span> = <span class="hljs-string">'io.advantageous.qbit'</span>
+apply plugin: <span class="hljs-string">'idea'</span>
+apply plugin: <span class="hljs-string">'java'</span>
+apply plugin: <span class="hljs-string">'maven'</span>
+apply plugin: <span class="hljs-string">'application'</span>
+
+<span class="hljs-keyword">sourceCompatibility</span> = <span class="hljs-number">1.8</span>
+version = <span class="hljs-string">'1.0'</span>
+
+
+<span class="hljs-keyword">repositories</span> {
+    mavenLocal()
+    mavenCentral()
+}
+
+<span class="hljs-keyword">sourceCompatibility</span> = JavaVersion.VERSION_1_8
+<span class="hljs-keyword">targetCompatibility</span> = JavaVersion.VERSION_1_8
+
+mainClassName = <span class="hljs-string">"io.advantageous.qbit.example.inproc.InProcExample"</span>
+
+
+<span class="hljs-keyword">dependencies</span> {
+
+    <span class="hljs-keyword">compile</span> <span class="hljs-keyword">group</span>: <span class="hljs-string">'io.advantageous.qbit'</span>, name: <span class="hljs-string">'qbit-vertx'</span>, version: <span class="hljs-string">'0.5.2-SNAPSHOT'</span>
+    <span class="hljs-keyword">compile</span> <span class="hljs-keyword">group</span>: <span class="hljs-string">'io.advantageous.qbit'</span>, name: <span class="hljs-string">'qbit-boon'</span>, version: <span class="hljs-string">'0.5.2-SNAPSHOT'</span>
+    <span class="hljs-keyword">compile</span> <span class="hljs-keyword">group</span>: <span class="hljs-string">'io.advantageous.qbit'</span>, name: <span class="hljs-string">'qbit-core'</span>, version: <span class="hljs-string">'0.5.2-SNAPSHOT'</span>
+
+    <span class="hljs-keyword">compile</span> <span class="hljs-string">"org.slf4j:slf4j-api:[1.7,1.8)"</span>
+    <span class="hljs-keyword">compile</span> <span class="hljs-string">'ch.qos.logback:logback-classic:1.1.2'</span>
+
+    testCompile <span class="hljs-keyword">group</span>: <span class="hljs-string">'junit'</span>, name: <span class="hljs-string">'junit'</span>, version: <span class="hljs-string">'4.10'</span>
+}
+
+idea {
+    <span class="hljs-keyword">project</span> {
+        jdkName = <span class="hljs-string">'1.8'</span>
+        languageLevel = <span class="hljs-string">'1.8'</span>
+    }
+}
+</code></pre>
+<p>This is how you create very fast inproc services with QBit.</p>
+<h2 id="test-the-in-process-example">Test The In-Process Example</h2>
+<p>With your terminal cd into <code>inproc-microservice-qbit</code> then
+<code>gradle clean build</code> then
+<code>gradle run</code>
+You should get the following output:</p>
+<pre><code class="lang-javascript">Factory was <span class="hljs-literal">null</span>
+<span class="hljs-number">22</span>:<span class="hljs-number">46</span>:<span class="hljs-number">04.525</span> [main] DEBUG io.advantageous.qbit.util.Timer - timer started
+<span class="hljs-number">22</span>:<span class="hljs-number">46</span>:<span class="hljs-number">04.529</span> [main] DEBUG i.a.q.c.ScheduledThreadContext - Started: <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">NULL</span>&gt;</span>
+
+22:46:04.560 [main] DEBUG i.a.q.c.ScheduledThreadContext - Started: <span class="hljs-tag">&lt;<span class="hljs-title">NULL</span>&gt;</span>
+
+22:46:04.565 [main] DEBUG i.a.q.c.ScheduledThreadContext - Started: <span class="hljs-tag">&lt;<span class="hljs-title">NULL</span>&gt;</span>
+
+22:46:04.570 [main] DEBUG i.a.q.c.ScheduledThreadContext - Started: <span class="hljs-tag">&lt;<span class="hljs-title">NULL</span>&gt;</span>
+
+This is an async call
+This is an async call to count
+22:46:04.611 [QueueListener Send Queue  booneventmanager] DEBUG i.a.qbit.service.impl.ServiceImpl - ServiceImpl::doHandleMethodCall() METHOD CALLio.advantageous.qbit.service.impl.ServiceImpl$MethodCallLocal@69d7ae6d
+22:46:04.612 [QueueListener Send Queue  booneventmanager] DEBUG i.a.qbit.service.impl.ServiceImpl - ServiceImpl::receive()
+RESPONSE
+ResponseImpl{address='', params=null, body={Error=Must be called from inside of a Service, Details=java.lang.IllegalStateException: Must be called from inside of a Service, Message=Problem while calling method joinService, Cause=null}}
+FROM CALL
+io.advantageous.qbit.service.impl.ServiceImpl$MethodCallLocal@69d7ae6d
+
+
+22:46:04.616 [QueueListener Send Queue  todomanager] DEBUG i.a.qbit.service.impl.ServiceImpl - ServiceImpl::doHandleMethodCall() METHOD CALLio.advantageous.qbit.service.impl.ServiceImpl$MethodCallLocal@31d7f68
+Add Todo
+22:46:04.616 [QueueListener Send Queue  todomanager] DEBUG i.a.qbit.service.impl.ServiceImpl - ServiceImpl::receive()
+RESPONSE
+io.advantageous.qbit.service.impl.ServiceConstants$1@dda817b
+FROM CALL
+io.advantageous.qbit.service.impl.ServiceImpl$MethodCallLocal@31d7f68
+
+
+22:46:04.616 [QueueListener Send Queue  todomanager] DEBUG i.a.qbit.service.impl.ServiceImpl - ServiceImpl::doHandleMethodCall() METHOD CALLio.advantageous.qbit.service.impl.ServiceImpl$MethodCallLocal@9e51418
+Count Todo
+22:46:04.617 [QueueListener Send Queue  todomanager] DEBUG i.a.qbit.service.impl.ServiceImpl - ServiceImpl::receive()
+RESPONSE
+ResponseImpl{address='count', params=null, body=1}
+FROM CALL
+io.advantageous.qbit.service.impl.ServiceImpl$MethodCallLocal@9e51418
+
+
+This lambda expression is the callback 1
+This is the count back from the server 1
+END EXAMPLE 1
+END EXAMPLE 1
+END EXAMPLE 1
+END EXAMPLE 1
+22:46:04.682 [main] DEBUG i.a.q.c.ScheduledThreadContext - Started: <span class="hljs-tag">&lt;<span class="hljs-title">NULL</span>&gt;</span>
+
+22:46:04.682 [QueueListener Send Queue  booneventmanager] DEBUG i.a.qbit.service.impl.ServiceImpl - ServiceImpl::doHandleMethodCall() METHOD CALLio.advantageous.qbit.service.impl.ServiceImpl$MethodCallLocal@725d2172
+22:46:04.683 [QueueListener Send Queue  booneventmanager] DEBUG i.a.qbit.service.impl.ServiceImpl - ServiceImpl::receive()
+RESPONSE
+io.advantageous.qbit.service.impl.ServiceConstants$1@dda817b
+FROM CALL
+io.advantageous.qbit.service.impl.ServiceImpl$MethodCallLocal@725d2172
+
+
+22:46:04.683 [main] DEBUG i.a.q.c.ScheduledThreadContext - Started: <span class="hljs-tag">&lt;<span class="hljs-title">NULL</span>&gt;</span>
+
+This is an async call
+This is an async call to count
+22:46:04.734 [QueueListener Send Queue  todomanager] DEBUG i.a.qbit.service.impl.ServiceImpl - ServiceImpl::doHandleMethodCall() METHOD CALLio.advantageous.qbit.service.impl.ServiceImpl$MethodCallLocal@5710420b
+Add Todo
+22:46:04.734 [QueueListener Send Queue  todomanager] DEBUG i.a.qbit.service.impl.ServiceImpl - ServiceImpl::receive()
+RESPONSE
+io.advantageous.qbit.service.impl.ServiceConstants$1@dda817b
+FROM CALL
+io.advantageous.qbit.service.impl.ServiceImpl$MethodCallLocal@5710420b
+
+
+22:46:04.734 [QueueListener Send Queue  todomanager] DEBUG i.a.qbit.service.impl.ServiceImpl - ServiceImpl::doHandleMethodCall() METHOD CALLio.advantageous.qbit.service.impl.ServiceImpl$MethodCallLocal@59d7a699
+Count Todo
+22:46:04.734 [QueueListener Send Queue  todomanager] DEBUG i.a.qbit.service.impl.ServiceImpl - ServiceImpl::receive()
+RESPONSE
+ResponseImpl{address='count', params=null, body=1}
+FROM CALL
+io.advantageous.qbit.service.impl.ServiceImpl$MethodCallLocal@59d7a699
+
+
+This is the count back from the service 0
+22:46:04.786 [QueueListener Send Queue  todomanager] DEBUG i.a.qbit.service.impl.ServiceImpl - ServiceImpl::doHandleMethodCall() METHOD CALLio.advantageous.qbit.service.impl.ServiceImpl$MethodCallLocal@5de8297b
+List Todo
+22:46:04.786 [QueueListener Send Queue  todomanager] DEBUG i.a.qbit.service.impl.ServiceImpl - ServiceImpl::receive()
+RESPONSE
+ResponseImpl{address='list', params=null, body=[Todo{name='Call Mom', description='Give Mom a call'}]}
+FROM CALL
+io.advantageous.qbit.service.impl.ServiceImpl$MethodCallLocal@5de8297b
+
+
+This lambda expression is the callback 1
+Todo{name='Call Mom', description='Give Mom a call'}</span>
+</code></pre>
+<h2 id="summary">Summary</h2>
+<p>You have just built an inproc service within QBit and tested it.</p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../tutorials_and_examples/[quick_start]_working_with_inproc_microservices_within_qbit.html" class="navigation navigation-prev " aria-label="Previous page: [Quick Start] Working with inproc MicroServices within QBit"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../tutorials_and_examples/[rough_cut]_working_with_inproc_microservices.html" class="navigation navigation-next " aria-label="Next page: [Rough Cut] Working with inproc MicroServices"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="https://cdn.mathjax.org/mathjax/2.4-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-mathjax/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"fontSettings":{"theme":null,"family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

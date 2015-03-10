@@ -1,0 +1,1591 @@
+<!DOCTYPE HTML>
+<html lang="en-US" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <title>[Rough Cut] Working with event bus for QBit the microservice engine | Introduction to QBit - The microservice Library for Java</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 1.0.3">
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    
+    
+    
+    <link rel="next" href="../tutorials_and_examples/[rough_cut]_working_with_private_event_bus_for_inproc_microservices.html" />
+    
+    
+    <link rel="prev" href="../tutorials_and_examples/[doc]_using_qbit_microservice_libs_httpclient_get,_post,_et_al,_json,_java_8_lambda.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+<link rel="stylesheet" href="../gitbook/style.css">
+
+
+        
+    <div class="book"  data-level="1.11" data-basepath=".." data-revision="1426023905951">
+    
+
+<div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Type to search" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+    	
+    	
+    	
+
+        
+
+        
+    
+        
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                        <i class="fa fa-check"></i>
+                        
+                         Introduction
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="0.1" data-path="what_is_qbit.html">
+            
+                
+                    <a href="../what_is_qbit.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>0.1.</b>
+                        
+                         What is Qbit?
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="0.2" data-path="qbits_philosophy_and_inspiration.html">
+            
+                
+                    <a href="../qbits_philosophy_and_inspiration.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>0.2.</b>
+                        
+                         QBit&#39;s Philosophy and inspiration
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="0.3" data-path="does_it_work.html">
+            
+                
+                    <a href="../does_it_work.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>0.3.</b>
+                        
+                         Does it work?
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1" data-path="tutorials_and_examples/README.html">
+            
+                
+                    <a href="../tutorials_and_examples/README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                         Tutorials and Examples
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="1.1" data-path="tutorials_and_examples/[quick_start]_building_qbit_the_microservice_lib_for_java.html">
+            
+                
+                    <a href="../tutorials_and_examples/[quick_start]_building_qbit_the_microservice_lib_for_java.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                         [Quick Start] Building QBit the microservice lib for Java
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.2" data-path="tutorials_and_examples/[quick_start]_building_boon_for_the_qbit_microservice_engine.html">
+            
+                
+                    <a href="../tutorials_and_examples/[quick_start]_building_boon_for_the_qbit_microservice_engine.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                         [Quick Start] Building boon for the QBit microservice engine
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.3" data-path="tutorials_and_examples/[quick_start]_building_a_todo_web_microservice_server_with_qbit.html">
+            
+                
+                    <a href="../tutorials_and_examples/[quick_start]_building_a_todo_web_microservice_server_with_qbit.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                         [Quick Start] Building a TODO web microservice server with QBit
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.4" data-path="tutorials_and_examples/[quick_start]_building_a_todo_web_microservice_client_with_qbit.html">
+            
+                
+                    <a href="../tutorials_and_examples/[quick_start]_building_a_todo_web_microservice_client_with_qbit.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                         [Quick Start] Building a TODO web microservice client with QBit
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.5" data-path="tutorials_and_examples/[quick_start]_building_a_simple_rest_web_microservice_server_with_qbit.html">
+            
+                
+                    <a href="../tutorials_and_examples/[quick_start]_building_a_simple_rest_web_microservice_server_with_qbit.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.</b>
+                        
+                         [Quick Start] Building a simple Rest web microservice server with QBit
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.6" data-path="tutorials_and_examples/[rough_cut]_using_qbit_microservice_libs_rest_support_with_uri_params.html">
+            
+                
+                    <a href="../tutorials_and_examples/[rough_cut]_using_qbit_microservice_libs_rest_support_with_uri_params.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.</b>
+                        
+                         [Rough Cut] Using QBit microservice lib&#39;s REST support with URI Params
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.7" data-path="tutorials_and_examples/[quick_start]_working_with_inproc_microservices_within_qbit.html">
+            
+                
+                    <a href="../tutorials_and_examples/[quick_start]_working_with_inproc_microservices_within_qbit.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.7.</b>
+                        
+                         [Quick Start] Working with inproc MicroServices within QBit
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.8" data-path="tutorials_and_examples/[detailed_tutorial]_working_with_inproc_microservices_within_qbit.html">
+            
+                
+                    <a href="../tutorials_and_examples/[detailed_tutorial]_working_with_inproc_microservices_within_qbit.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.8.</b>
+                        
+                         [Detailed Tutorial] Working with inproc MicroServices within QBit.
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.9" data-path="tutorials_and_examples/[rough_cut]_working_with_inproc_microservices.html">
+            
+                
+                    <a href="../tutorials_and_examples/[rough_cut]_working_with_inproc_microservices.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.9.</b>
+                        
+                         [Rough Cut] Working with inproc MicroServices
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.10" data-path="tutorials_and_examples/[doc]_using_qbit_microservice_libs_httpclient_get,_post,_et_al,_json,_java_8_lambda.html">
+            
+                
+                    <a href="../tutorials_and_examples/[doc]_using_qbit_microservice_libs_httpclient_get,_post,_et_al,_json,_java_8_lambda.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.10.</b>
+                        
+                         [Doc] Using QBit microservice lib&#39;s HttpClient GET, POST, et al, JSON, Java 8 Lambda
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter active" data-level="1.11" data-path="tutorials_and_examples/[rough_cut]_working_with_event_bus_for_qbit_the_microservice_engine.html">
+            
+                
+                    <a href="../tutorials_and_examples/[rough_cut]_working_with_event_bus_for_qbit_the_microservice_engine.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.11.</b>
+                        
+                         [Rough Cut] Working with event bus for QBit the microservice engine
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.12" data-path="tutorials_and_examples/[rough_cut]_working_with_private_event_bus_for_inproc_microservices.html">
+            
+                
+                    <a href="../tutorials_and_examples/[rough_cut]_working_with_private_event_bus_for_inproc_microservices.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.12.</b>
+                        
+                         [Rough Cut] Working with private event bus for inproc microservices
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.13" data-path="tutorials_and_examples/[rough_cut]_working_with_strongly_typed_event_bus_proxies_for_qbit_java_microservice_lib.html">
+            
+                
+                    <a href="../tutorials_and_examples/[rough_cut]_working_with_strongly_typed_event_bus_proxies_for_qbit_java_microservice_lib.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.13.</b>
+                        
+                         [Rough Cut] Working with strongly typed event bus proxies for QBit Java Microservice lib
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.14" data-path="tutorials_and_examples/[doc]_qbit_java_microservice_lib_introducing_eventbus_replication_and_eventbus_connectors.html">
+            
+                
+                    <a href="../tutorials_and_examples/[doc]_qbit_java_microservice_lib_introducing_eventbus_replication_and_eventbus_connectors.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.14.</b>
+                        
+                         [Doc] QBit Java microservice lib introducing EventBus replication and EventBus connectors
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.15" data-path="tutorials_and_examples/[quick_start]_building_a_single_web_page_application_with_qbit.html">
+            
+                
+                    <a href="../tutorials_and_examples/[quick_start]_building_a_single_web_page_application_with_qbit.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.15.</b>
+                        
+                         [Quick Start] building a single web page application with QBit
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.16" data-path="tutorials_and_examples/[rough_cut]_delivering_up_single_page_applications_from_qbit_java_json_microservice_lib.html">
+            
+                
+                    <a href="../tutorials_and_examples/[rough_cut]_delivering_up_single_page_applications_from_qbit_java_json_microservice_lib.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.16.</b>
+                        
+                         [Rough Cut] Delivering up Single Page Applications from QBit Java JSON Microservice lib
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.17" data-path="tutorials_and_examples/[quick_start]_building_a_single_page_todo_list_application_with_qbit.html">
+            
+                
+                    <a href="../tutorials_and_examples/[quick_start]_building_a_single_page_todo_list_application_with_qbit.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.17.</b>
+                        
+                         [Quick Start] Building a single page; Todo List Application with QBit
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.18" data-path="tutorials_and_examples/[detailed_tutorial]_building_a_single_page_todo_list_application_with_qbit.html">
+            
+                
+                    <a href="../tutorials_and_examples/[detailed_tutorial]_building_a_single_page_todo_list_application_with_qbit.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.18.</b>
+                        
+                         [Detailed Tutorial] Building a single page; Todo List Application with QBit
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.19" data-path="tutorials_and_examples/[rough_cut]_using_qbit_microservice_lib_with_spring_boot.html">
+            
+                
+                    <a href="../tutorials_and_examples/[rough_cut]_using_qbit_microservice_lib_with_spring_boot.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.19.</b>
+                        
+                         [Rough Cut] Using QBit microservice lib with Spring Boot
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.20" data-path="tutorials_and_examples/[rough_cut]_working_with_system_manager_for_qbit_mircoservice_lib.html">
+            
+                
+                    <a href="../tutorials_and_examples/[rough_cut]_working_with_system_manager_for_qbit_mircoservice_lib.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.20.</b>
+                        
+                         [Rough Cut] Working with System Manager for QBit Mircoservice lib
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.21" data-path="tutorials_and_examples/[rough_cut]_qbit_microservices_using_service_workers_and_sharded_service_workers.html">
+            
+                
+                    <a href="../tutorials_and_examples/[rough_cut]_qbit_microservices_using_service_workers_and_sharded_service_workers.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.21.</b>
+                        
+                         [Rough Cut] QBit Microservices using Service Workers and sharded service workers
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.22" data-path="tutorials_and_examples/[rough_cut]_qbit_microservice_lib_working_with_callbacks.html">
+            
+                
+                    <a href="../tutorials_and_examples/[rough_cut]_qbit_microservice_lib_working_with_callbacks.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.22.</b>
+                        
+                         [Rough Cut] QBit Microservice Lib Working With CallBacks
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.23" data-path="tutorials_and_examples/[doc]_queue_callbacks_for_qbit_queue_based_services.html">
+            
+                
+                    <a href="../tutorials_and_examples/[doc]_queue_callbacks_for_qbit_queue_based_services.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.23.</b>
+                        
+                         [Doc] Queue Callbacks for QBit queue based services
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.24" data-path="tutorials_and_examples/[rough_cut]_qbit_java_microservice_lib_working_with_workers_sharded_and_pooled.html">
+            
+                
+                    <a href="../tutorials_and_examples/[rough_cut]_qbit_java_microservice_lib_working_with_workers_sharded_and_pooled.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.24.</b>
+                        
+                         [Rough Cut] QBit Java Microservice Lib Working With Workers Sharded and Pooled
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.25" data-path="tutorials_and_examples/[doc]_using_qbit_microservice_libs_websocket_support.html">
+            
+                
+                    <a href="../tutorials_and_examples/[doc]_using_qbit_microservice_libs_websocket_support.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.25.</b>
+                        
+                         [Doc] Using QBit microservice lib&#39;s WebSocket support
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.26" data-path="tutorials_and_examples/[doc]_qbit_microservice_java_lib_using_auto_flushing_client_proxies.html">
+            
+                
+                    <a href="../tutorials_and_examples/[doc]_qbit_microservice_java_lib_using_auto_flushing_client_proxies.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.26.</b>
+                        
+                         [Doc] QBit microservice Java lib Using auto flushing client proxies
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.27" data-path="tutorials_and_examples/[doc]_qbit_microservice_websocket_wire_protocol_draft_01___json_ascii_method_batching_rpc.html">
+            
+                
+                    <a href="../tutorials_and_examples/[doc]_qbit_microservice_websocket_wire_protocol_draft_01___json_ascii_method_batching_rpc.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.27.</b>
+                        
+                         [Doc] QBit Microservice WebSocket wire protocol draft 01   JSON ASCII method batching RPC
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.28" data-path="tutorials_and_examples/[doc]_qbit_java_microservice_lib_auto_flushing_service_queue_proxies.html">
+            
+                
+                    <a href="../tutorials_and_examples/[doc]_qbit_java_microservice_lib_auto_flushing_service_queue_proxies.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.28.</b>
+                        
+                         [Doc] QBit Java microservice lib auto flushing service queue proxies
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="2" data-path="qbit_roadmap/README.html">
+            
+                
+                    <a href="../qbit_roadmap/README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                         Qbit Roadmap
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="3" data-path="contact_us/README.html">
+            
+                
+                    <a href="../contact_us/README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                         Contact Us
+                    </a>
+                
+            
+            
+        </li>
+    
+
+
+        
+        <li class="divider"></li>
+        <li>
+            <a href="http://www.gitbook.io/" target="blank" class="gitbook-link">Published using GitBook</a>
+        </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search" aria-label="Toggle search"><i class="fa fa-search"></i></a>
+    
+    <div id="font-settings-wrapper" class="dropdown pull-left">
+        <a href="#" class="btn toggle-dropdown" aria-label="Toggle font settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="buttons">
+        <button type="button" id="reduce-font-size" class="button size-2">A</button>
+        <button type="button" id="enlarge-font-size" class="button size-2">A</button>
+    </div>
+
+    <div class="buttons font-family-list">
+        <button type="button" data-font="0" class="button">Serif</button>
+        <button type="button" data-font="1" class="button">Sans</button>
+    </div>
+
+    <div class="buttons color-theme-list">
+        <button type="button" id="color-theme-preview-0" class="button size-3" data-theme="0">White</button>
+        <button type="button" id="color-theme-preview-1" class="button size-3" data-theme="1">Sepia</button>
+        <button type="button" id="color-theme-preview-2" class="button size-3" data-theme="2">Night</button>
+    </div>
+</div>
+
+    </div>
+
+    <!-- Actions Right -->
+    
+    <div class="dropdown pull-right">
+        <a href="#" class="btn toggle-dropdown" aria-label="Toggle share dropdown"><i class="fa fa-share-alt"></i>
+        </a>
+        <div class="dropdown-menu font-settings dropdown-left">
+            <div class="dropdown-caret">
+                <span class="caret-outer"></span>
+                <span class="caret-inner"></span>
+            </div>
+            <div class="buttons">
+                <button type="button" data-sharing="twitter" class="button">Twitter</button>
+                <button type="button" data-sharing="google-plus" class="button">Google</button>
+                <button type="button" data-sharing="facebook" class="button">Facebook</button>
+                <button type="button" data-sharing="weibo" class="button">Weibo</button>
+                <button type="button" data-sharing="instapaper" class="button">Instapaper</button>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Share on Google Plus"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Share on Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Share on Twitter"><i class="fa fa-twitter"></i></a>
+    
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >Introduction to QBit - The microservice Library for Java</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-gitbook_1498">
+                    
+                        <h1 id="rough-cut-working-with-event-bus-for-qbit-the-microservice-engine">[Rough Cut] Working with event bus for QBit the microservice engine</h1>
+<p>QBit has an event bus. The event bus is loosely modeled after the vertx event bus.</p>
+<p>QBit Services are sent events on the same thread/queue they use to handle method calls so the events a QBit service gets is thread safe.</p>
+<p>The event bus is a great way to include additional services without disrupting existing services.</p>
+<p>Except with QBit you can send object strongly typed objects, JSON, Maps, etc.
+When sending strongly typed objects care must be done to ensure the objects are immutable or one must ensure that object being sent will not be written to by more than one service.
+It is best just to send immutable objects or JSON.</p>
+<p>You get the system event bus from the QBit factory:</p>
+<pre><code class="lang-java">
+EventManager eventManager = QBit.factory().systemEventManager();
+</code></pre>
+<p>You can register for events like this:</p>
+<pre><code class="lang-java">
+
+        String rick = <span class="hljs-string">"rick"</span>; <span class="hljs-comment">//channelName</span>
+
+        eventManager.register(rick, <span class="hljs-keyword">new</span> EventConsumer&lt;Object&gt;() {
+            <span class="hljs-annotation">@Override</span>
+            <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">listen</span><span class="hljs-params">(Event&lt;Object&gt; event)</span> </span>{
+                <span class="hljs-comment">//puts(event);</span>
+                consumerMessageCount++;
+            }
+        });
+</code></pre>
+<p>In this hello world example, we are using the channel called &quot;rick&quot; to send a string.
+A follow up example uses an Employee domain object.</p>
+<p>The above registers for the event as a consumer.
+You can only have one consumer.
+The consumer gets called after all the subscribers.
+If you subscribe from a QBit Service, then the event is enqueued on to the Service&#39;s queue.
+QBit implements the Actor/Active Object style programming similar to Akka or Go or ErLang.</p>
+<p>To register as a subscriber, you would do this:</p>
+<pre><code class="lang-java">
+        eventManager.register(rick, <span class="hljs-keyword">new</span> EventSubscriber&lt;Object&gt;() {
+            <span class="hljs-annotation">@Override</span>
+            <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">listen</span><span class="hljs-params">(Event&lt;Object&gt; event)</span> </span>{
+                System.out.println(event.getBody());
+            }
+        });
+</code></pre>
+<p>Recall that rick is just a channel name. When the event happens, the listener will be notified.</p>
+<p>The body of the event holds the object you sent.
+You can send arrays or lists as the body and if you have a listener that uses an annotation show later, QBit will use the list or array to invoke the listener method.
+QBit supports strongly typed listeners.</p>
+<p>To use a CallBack instance instead of a EventListener, you would do this:</p>
+<pre><code class="lang-java">        eventManager.register(rick, callbackEventListener(event -&gt; {
+            <span class="hljs-keyword">if</span> (subscribeMessageCount &lt; <span class="hljs-number">1000</span>) puts(event);
+            subscribeMessageCount++;
+        }));
+</code></pre>
+<p>You can also register class instance as listeners. To do this you use the @Listen annotation as shown below.</p>
+<p>Here is an example listener using the @Listen annotation.</p>
+<pre><code class="lang-java">
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyEventListener</span> </span>{
+
+        <span class="hljs-keyword">volatile</span> <span class="hljs-keyword">int</span> callCount = <span class="hljs-number">0</span>;
+
+        <span class="hljs-annotation">@Listen</span>(<span class="hljs-string">"rick"</span>)
+        <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">listen</span><span class="hljs-params">(String message)</span> </span>{
+            callCount++;
+        }
+    }
+</code></pre>
+<p>Notice we use the @Listen annotation to denote which method will get called when the event happens.</p>
+<p>To register the above you would use this:</p>
+<pre><code class="lang-java">
+
+        MyEventListener myEventListener = <span class="hljs-keyword">new</span> MyEventListener();
+
+        eventManager.listen(myEventListener);
+</code></pre>
+<p>You send messages like this:</p>
+<pre><code class="lang-java">        eventManager.send(rick, <span class="hljs-string">"Hello Rick"</span>);
+</code></pre>
+<p>If you are using the eventManager outside of a service in a QBit queue, then you have to flush the eventManager after you are done using it.</p>
+<pre><code class="lang-java">flushServiceProxy(eventManager);
+</code></pre>
+<p>All of the event listeners we showed so fall are for events that come on another thread. Services are special. They can register for events that come back on their own thread. Side note: you can define your own event bus, as all services monitor a method queue and an event queue in the same thread. See <a href="https://github.com/advantageous/qbit/wiki/%5BRough-Cut%5D-Working-with-private-event-bus-for-inproc-microservices" target="_blank">QBit Microservice lib private event bus</a>. The event bus is a good integration point for Kafka, ActiveMQ, Tibco, STOMP, Camel, 0MQ, etc.  This was &quot;call&quot; can come from REST, WebSocket or other means.</p>
+<h2 id="event-manager-and-qbit-services">Event Manager and QBit Services</h2>
+<p>You can use the EventManager with QBit Services.</p>
+<p>Here are two example simple services.</p>
+<pre><code class="lang-java">
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyService</span> </span>{
+
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">sendHi</span><span class="hljs-params">(String hi)</span> </span>{
+            serviceContext().send(<span class="hljs-string">"rick"</span>, <span class="hljs-string">"hello rick "</span> + hi);
+        }
+    }
+
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyServiceConsumer</span> </span>{
+
+        <span class="hljs-keyword">int</span> callCount = <span class="hljs-number">0</span>;
+
+
+        <span class="hljs-annotation">@Listen</span>(<span class="hljs-string">"rick"</span>)
+        <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">listen</span><span class="hljs-params">(String message)</span> </span>{
+
+            puts(message);
+            callCount++;
+        }
+
+
+        <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> <span class="hljs-title">callCount</span><span class="hljs-params">()</span> </span>{
+            <span class="hljs-keyword">return</span> callCount;
+        }
+
+
+    }
+</code></pre>
+<p>The one service, sends a message to the other service using the event bus.</p>
+<p>If you wanted the listener service to be a consumer instead of a subscriber, then you would do this:</p>
+<pre><code class="lang-java">
+
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyServiceConsumer</span> </span>{
+        <span class="hljs-annotation">@Listen</span>(value = <span class="hljs-string">"rick"</span>, consume = <span class="hljs-keyword">true</span>)
+        <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">listen</span><span class="hljs-params">(String message)</span> </span>{
+
+            puts(message);
+            callCount++;
+        }
+    }
+</code></pre>
+<p>To use the services within QBit you could do this:</p>
+<pre><code class="lang-java">
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">MyServiceClient</span>  </span>{
+
+        <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">sendHi</span><span class="hljs-params">(String hi)</span></span>;
+    }
+...
+        <span class="hljs-keyword">final</span> MyServiceConsumer myServiceConsumer = <span class="hljs-keyword">new</span> MyServiceConsumer();
+
+        <span class="hljs-keyword">final</span> MyService myService = <span class="hljs-keyword">new</span> MyService();
+
+
+        <span class="hljs-keyword">final</span> ServiceQueue consumerService = serviceBuilder()
+                .setServiceObject(myServiceConsumer)
+                .setInvokeDynamic(<span class="hljs-keyword">false</span>).build();
+
+        <span class="hljs-keyword">final</span> ServiceQueue senderService = serviceBuilder()
+                .setServiceObject(myService)
+                .setInvokeDynamic(<span class="hljs-keyword">false</span>).build();
+
+
+
+        <span class="hljs-keyword">final</span> MyServiceClient clientProxy =
+              senderService.createProxy(MyServiceClient.class);
+
+        clientProxy.sendHi(<span class="hljs-string">"Hello"</span>);
+        flushServiceProxy(clientProxy);
+</code></pre>
+<p>The advantage of using the event bus with QBit services is that the events come into the same
+queue that handles the method calls so the events method calls are thread safe.
+Everything comes in on the same thread, events and methods. Responses can either go out on the same thread, or you can have a separate response thread or if you use a ServiceBundle the bundle will handle all responses. But this is off topic.</p>
+<p>The event bus is very fast. Expect speeds up to 10M to 100M messages a second.</p>
+<p>Let&#39;s try another example. First I will show all of the code and then I will break it down step by step.</p>
+<p>Let&#39;s build a set of services that handles when a new employees is hired. We want to add the employee to the payroll system, enrolled the employee into the benefits system and we want to invite them to our community outreach program.</p>
+<p>We will define four services but the first service will not know about the other service.
+And we can add more services in the future which can listen to events and participate in the new employee being hired.</p>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> io.advantageous.qbit.example.events;
+
+<span class="hljs-keyword">import</span> io.advantageous.qbit.annotation.OnEvent;
+<span class="hljs-keyword">import</span> io.advantageous.qbit.events.EventManager;
+<span class="hljs-keyword">import</span> io.advantageous.qbit.service.Service;
+<span class="hljs-keyword">import</span> io.advantageous.qbit.service.ServiceProxyUtils;
+<span class="hljs-keyword">import</span> org.boon.Lists;
+<span class="hljs-keyword">import</span> org.boon.core.Sys;
+
+<span class="hljs-keyword">import</span> <span class="hljs-keyword">static</span> io.advantageous.qbit.service.ServiceBuilder.serviceBuilder;
+<span class="hljs-keyword">import</span> <span class="hljs-keyword">static</span> io.advantageous.qbit.service.ServiceContext.serviceContext;
+<span class="hljs-keyword">import</span> <span class="hljs-keyword">static</span> io.advantageous.qbit.service.ServiceProxyUtils.flushServiceProxy;
+
+<span class="hljs-javadoc">/**
+ * Created by rhightower on 2/4/15.
+ */</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">EmployeeEventExample</span> </span>{
+
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String NEW_HIRE_CHANNEL = <span class="hljs-string">"com.mycompnay.employee.new"</span>;
+
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String PAYROLL_ADJUSTMENT_CHANNEL = <span class="hljs-string">"com.mycompnay.employee.payroll"</span>;
+
+    <span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Employee</span> </span>{
+        <span class="hljs-keyword">final</span> String firstName;
+        <span class="hljs-keyword">final</span> <span class="hljs-keyword">int</span> employeeId;
+
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Employee</span><span class="hljs-params">(String firstName, <span class="hljs-keyword">int</span> employeeId)</span> </span>{
+            <span class="hljs-keyword">this</span>.firstName = firstName;
+            <span class="hljs-keyword">this</span>.employeeId = employeeId;
+        }
+
+        <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getFirstName</span><span class="hljs-params">()</span> </span>{
+            <span class="hljs-keyword">return</span> firstName;
+        }
+
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">getEmployeeId</span><span class="hljs-params">()</span> </span>{
+            <span class="hljs-keyword">return</span> employeeId;
+        }
+
+        <span class="hljs-annotation">@Override</span>
+        <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">toString</span><span class="hljs-params">()</span> </span>{
+            <span class="hljs-keyword">return</span> <span class="hljs-string">"Employee{"</span> +
+                    <span class="hljs-string">"firstName='"</span> + firstName + <span class="hljs-string">'\''</span> +
+                    <span class="hljs-string">", employeeId="</span> + employeeId +
+                    <span class="hljs-string">'}'</span>;
+        }
+    }
+
+    <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">EmployeeHiringServiceClient</span> </span>{
+        <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">hireEmployee</span><span class="hljs-params">(<span class="hljs-keyword">final</span> Employee employee)</span></span>;
+
+    }
+
+    <span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">EmployeeHiringService</span> </span>{
+
+
+
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">hireEmployee</span><span class="hljs-params">(<span class="hljs-keyword">final</span> Employee employee)</span> </span>{
+
+            <span class="hljs-keyword">int</span> salary = <span class="hljs-number">100</span>;
+            System.out.printf(<span class="hljs-string">"Hired employee %s\n"</span>, employee);
+
+            <span class="hljs-comment">//Does stuff to hire employee</span>
+
+            <span class="hljs-comment">//Sends events</span>
+            <span class="hljs-keyword">final</span> EventManager eventManager =
+                              serviceContext().eventManager();
+
+            eventManager.send(NEW_HIRE_CHANNEL, employee);
+
+            eventManager.sendArray(PAYROLL_ADJUSTMENT_CHANNEL,
+                                                employee, salary);
+
+
+        }
+
+    }
+
+
+
+    <span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">BenefitsService</span> </span>{
+
+        <span class="hljs-annotation">@OnEvent</span>(NEW_HIRE_CHANNEL)
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">enroll</span><span class="hljs-params">(<span class="hljs-keyword">final</span> Employee employee)</span> </span>{
+
+            System.out.printf(<span class="hljs-string">"Employee enrolled into benefits system employee %s %d\n"</span>,
+                    employee.getFirstName(), employee.getEmployeeId());
+
+        }
+
+    }
+
+    <span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">VolunteerService</span> </span>{
+
+        <span class="hljs-annotation">@OnEvent</span>(NEW_HIRE_CHANNEL)
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">invite</span><span class="hljs-params">(<span class="hljs-keyword">final</span> Employee employee)</span> </span>{
+
+            System.out.printf(<span class="hljs-string">"Employee will be invited to the community outreach program %s %d\n"</span>,
+                    employee.getFirstName(), employee.getEmployeeId());
+
+        }
+
+    }
+
+
+
+    <span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PayrollService</span> </span>{
+
+        <span class="hljs-annotation">@OnEvent</span>(PAYROLL_ADJUSTMENT_CHANNEL)
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addEmployeeToPayroll</span><span class="hljs-params">(<span class="hljs-keyword">final</span> Employee employee, <span class="hljs-keyword">int</span> salary)</span> </span>{
+
+            System.out.printf(<span class="hljs-string">"Employee added to payroll  %s %d %d\n"</span>,
+                    employee.getFirstName(), employee.getEmployeeId(), salary);
+
+        }
+
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String... args)</span> </span>{
+
+
+        EmployeeHiringService employeeHiring = <span class="hljs-keyword">new</span> EmployeeHiringService();
+        PayrollService payroll = <span class="hljs-keyword">new</span> PayrollService();
+        BenefitsService benefits = <span class="hljs-keyword">new</span> BenefitsService();
+        VolunteerService volunteering = <span class="hljs-keyword">new</span> VolunteerService();
+
+
+        ServiceQueue employeeHiringService = serviceBuilder()
+                .setServiceObject(employeeHiring)
+                .setInvokeDynamic(<span class="hljs-keyword">false</span>).build();
+
+        Sys.sleep(<span class="hljs-number">100</span>);
+
+
+        ServiceQueue payrollService = serviceBuilder()
+                .setServiceObject(payroll)
+                .setInvokeDynamic(<span class="hljs-keyword">false</span>).build();
+
+        Sys.sleep(<span class="hljs-number">100</span>);
+
+        ServiceQueue employeeBenefitsService = serviceBuilder()
+                .setServiceObject(benefits)
+                .setInvokeDynamic(<span class="hljs-keyword">false</span>).build();
+
+
+        ServiceQueue volunteeringService = serviceBuilder()
+                .setServiceObject(volunteering)
+                .setInvokeDynamic(<span class="hljs-keyword">false</span>).build();
+
+        EmployeeHiringServiceClient employeeHiringServiceClientProxy =
+
+                   employeeHiringService.createProxy(EmployeeHiringServiceClient.class);
+
+        employeeHiringServiceClientProxy.hireEmployee(<span class="hljs-keyword">new</span> Employee(<span class="hljs-string">"Rick"</span>, <span class="hljs-number">1</span>));
+
+        flushServiceProxy(employeeHiringServiceClientProxy);
+
+        Sys.sleep(<span class="hljs-number">5</span>_000);
+
+    }
+}
+</code></pre>
+<p>I added another example because the first one just used strings and I wanted to show how to use strongly typed objects.</p>
+<p>This one uses two channels.</p>
+<pre><code>public static final String NEW_HIRE_CHANNEL = &quot;com.mycompnay.employee.new&quot;;
+
+public static final String PAYROLL_ADJUSTMENT_CHANNEL = &quot;com.mycompnay.employee.payroll&quot;;
+</code></pre><p>The first channel NEW_HIRE_CHANNEL is where we send new employee objects when they are hired.
+A whole slew of services could be listening to this channel.</p>
+<p>An employee object looks like this:</p>
+<pre><code class="lang-java">
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Employee</span> </span>{
+       <span class="hljs-keyword">final</span> String firstName;
+       <span class="hljs-keyword">final</span> <span class="hljs-keyword">int</span> employeeId;
+</code></pre>
+<p>Imagine getter and setter methods and a constructor or go look at the full listing.</p>
+<p>This example has three services: EmployeeHiringService, BenefitsService, and PayrollService.</p>
+<p>These services are inproc services. QBit supports WebSocket, HTTP and REST remote services as well, but for now, let&#39;s focus on inproc services. If you understand inproc then you will understand remote.</p>
+<p>The EmployeeHiringService actually fires off the events to other two services.</p>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">EmployeeHiringService</span> </span>{
+
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">hireEmployee</span><span class="hljs-params">(<span class="hljs-keyword">final</span> Employee employee)</span> </span>{
+
+           <span class="hljs-keyword">int</span> salary = <span class="hljs-number">100</span>;
+           System.out.printf(<span class="hljs-string">"Hired employee %s\n"</span>, employee);
+
+           <span class="hljs-comment">//Does stuff to hire employee</span>
+
+           <span class="hljs-comment">//Sends events</span>
+           <span class="hljs-keyword">final</span> EventManager eventManager =
+                               serviceContext().eventManager();
+           eventManager.send(NEW_HIRE_CHANNEL, employee);
+
+           eventManager.sendArray(PAYROLL_ADJUSTMENT_CHANNEL,
+                                     employee, salary);
+
+
+    }
+
+   }
+</code></pre>
+<p>When working inside of a QBit Service, you can access the event manager using serviceContext().eventManager(). If you access it this way, the the flushing is taken care of for you.
+Flushing messages to other services in batches helps with the performance. You have to flush after
+you use a client proxy. The eventManager() method returns a client proxy.
+When running inside of QBit, you do not have to flush, it is done for you at the time when/where
+you will get the most performance out of the system. This is what allows the event manager to send so many messages in such a short period of time. Not only send the messages but enqueue them on other
+service queues.</p>
+<p>Notice that we call sendArray so we can send the employee and their salary. The listener for PAYROLL_ADJUSTMENT_CHANNEL will have to handle both an employee and an int that represents the new employees salary.</p>
+<p>The BenefitsService listens for new employees being hired so it can enroll them into the benefits system.</p>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">BenefitsService</span> </span>{
+
+       <span class="hljs-annotation">@OnEvent</span>(NEW_HIRE_CHANNEL)
+       <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">enroll</span><span class="hljs-params">(<span class="hljs-keyword">final</span> Employee employee)</span> </span>{
+
+           System.out.printf(<span class="hljs-string">"Employee enrolled into benefits system employee %s %d\n"</span>,
+                   employee.getFirstName(), employee.getEmployeeId());
+
+       }
+</code></pre>
+<pre><code class="lang-java">    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PayrollService</span> </span>{
+
+        <span class="hljs-annotation">@OnEvent</span>(PAYROLL_ADJUSTMENT_CHANNEL)
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addEmployeeToPayroll</span><span class="hljs-params">(<span class="hljs-keyword">final</span> Employee employee, <span class="hljs-keyword">int</span> salary)</span> </span>{
+
+            System.out.printf(<span class="hljs-string">"Employee added to payroll  %s %d %d\n"</span>,
+                    employee.getFirstName(), employee.getEmployeeId(), salary);
+
+        }
+
+    }
+</code></pre>
+<p>The employee is the employee object from the EmployeeHiringService.</p>
+<p>so you can get your benefits...</p>
+<p>To start things off, you need to get a client proxy to the EmployeeHiringService using the employeeHiringService.</p>
+<pre><code class="lang-java">EmployeeHiringServiceClient employeeHiringServiceClientProxy =
+         employeeHiringService.createProxy(EmployeeHiringServiceClient.class);
+
+employeeHiringServiceClientProxy.hireEmployee(<span class="hljs-keyword">new</span> Employee(<span class="hljs-string">"Rick"</span>, <span class="hljs-number">1</span>));
+</code></pre>
+<p>The full wiring is done like this for all of the services.</p>
+<p>Create the POJOs</p>
+<pre><code class="lang-java">
+        EmployeeHiringService employeeHiring = <span class="hljs-keyword">new</span> EmployeeHiringService();
+        PayrollService payroll = <span class="hljs-keyword">new</span> PayrollService();
+        BenefitsService benefits = <span class="hljs-keyword">new</span> BenefitsService();
+</code></pre>
+<p>Wire in employeeHiring, payroll and benefits into the QBit queuing apparatus.</p>
+<pre><code>        ServiceQueue employeeHiringService = serviceBuilder()
+                .setServiceObject(employeeHiring)
+                .setInvokeDynamic(false).build();
+
+        ServiceQueue payrollService = serviceBuilder()
+                .setServiceObject(payroll)
+                .setInvokeDynamic(false).build();
+
+
+        ServiceQueue employeeBenefitsService = serviceBuilder()
+                .setServiceObject(benefits)
+                .setInvokeDynamic(false).build();
+</code></pre><p>The objects employeeHiringService, payrollService, employeeBenefitsService are QBit services.</p>
+<p>To invoke a method on a QBit service, you want to get a client proxy.
+A client proxy will send messages to a service. The service will get those messages as method calls.</p>
+<p>Every call is sent over a high-speed internal inproc queue.
+You can also use a client proxy to talk to QBit over WebSockets.</p>
+<p>To create a proxy you use the createProxy method of Service.</p>
+<pre><code class="lang-java">        EmployeeHiringServiceClient employeeHiringServiceClientProxy =
+                      employeeHiringService.createProxy(EmployeeHiringServiceClient.class);
+</code></pre>
+<p>Now that we created our proxy, we can send messages to it.</p>
+<pre><code class="lang-java">
+        employeeHiringServiceClientProxy.hireEmployee(<span class="hljs-keyword">new</span> Employee(<span class="hljs-string">"Rick"</span>, <span class="hljs-number">1</span>));
+</code></pre>
+<p>Every so often, we have to flush calls to the client proxy.</p>
+<p>The client proxy will flush calls every time the queue batch size is met.
+So if the queue batch size was set to 5, then it would flush every five calls.
+But no matter, when you are done making calls, you should flush the calls as follows:</p>
+<pre><code class="lang-java">        flushServiceProxy(employeeHiringServiceClientProxy);
+</code></pre>
+<p>If you were making calls to a service in a tight loop, you may want to flush every ten calls or every 100 calls. Or you may want to flush related calls.</p>
+<p>If you set the batch size to 1, then every method calls is flushed, but this hampers performance.</p>
+<p>If you use the event manager service, it will get auto flushed for you but in an extremely performant way. We may provide similar support for injected client proxies into a service.</p>
+<p>Now we are all done. But you know how apps are. Later someone decides to create a community outreach program. Now what?</p>
+<p>Simple enough, we just add another service to listen to the new hire event channel.</p>
+<p>First we define our POJO:</p>
+<pre><code class="lang-java">    <span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">VolunteerService</span> </span>{
+
+        <span class="hljs-annotation">@OnEvent</span>(NEW_HIRE_CHANNEL)
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">invite</span><span class="hljs-params">(<span class="hljs-keyword">final</span> Employee employee)</span> </span>{
+
+            System.out.printf(
+             <span class="hljs-string">"Employee will be invited to the community "</span> +
+                <span class="hljs-string">"outreach program %s %d\n"</span>,
+                 employee.getFirstName(), employee.getEmployeeId());
+
+        }
+
+    }
+</code></pre>
+<p>The OnEvent annotation is an alternative to @Listen. We also have @Consume, @Subscribe, @Hear.
+You do not have to use our annotation. So if you wanted to write a service that was not tied to
+QBit at all, i.e., no compile time dependencies, then you would just define your own annotation called
+OnEvent, or Listen, or Consume or Subscribe or Hear. We believe in no compile time dependencies for your services. And no class-loader discovery magic that would tie you to Boon or QBit. There is an API.
+Your implementation can be divorced from QBit as much as possible.</p>
+<pre><code class="lang-java">
+<span class="hljs-annotation">@Target</span>({ ElementType.METHOD, ElementType.FIELD })
+<span class="hljs-annotation">@Retention</span>(RetentionPolicy.RUNTIME)
+<span class="hljs-keyword">public</span> <span class="hljs-annotation">@interface</span> OnEvent {
+
+
+    <span class="hljs-comment">/* The channel you want to listen to. */</span>;
+    <span class="hljs-function">String <span class="hljs-title">value</span><span class="hljs-params">()</span> <span class="hljs-keyword">default</span> ""</span>;
+
+    <span class="hljs-comment">/* The consume is the last object listening to this event.
+       An event channel can have many subscribers but only one consume.
+     */</span>
+    <span class="hljs-function"><span class="hljs-keyword">boolean</span> <span class="hljs-title">consume</span><span class="hljs-params">()</span> <span class="hljs-keyword">default</span> <span class="hljs-keyword">false</span></span>;
+
+
+}
+</code></pre>
+<p>So now we have our new service and we are set to do good in the world.</p>
+<p>Let&#39;s wire it in!</p>
+<pre><code class="lang-java">
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String... args)</span> </span>{
+
+        <span class="hljs-comment">//Create the POJO which is not tied to QBit at all</span>
+        VolunteerService volunteering = <span class="hljs-keyword">new</span> VolunteerService();
+
+        <span class="hljs-comment">//Create a service to wrap the POJO in a class</span>
+        ServiceQueue volunteeringService = serviceBuilder()
+                .setServiceObject(volunteering)
+                .setInvokeDynamic(<span class="hljs-keyword">false</span>).build();
+
+
+        <span class="hljs-comment">//Now send our message!</span>
+        EmployeeHiringServiceClient employeeHiringServiceClientProxy =
+               employeeHiringService
+                  .createProxy(EmployeeHiringServiceClient.class);
+
+        employeeHiringServiceClientProxy.hireEmployee(<span class="hljs-keyword">new</span> Employee(<span class="hljs-string">"Rick"</span>, <span class="hljs-number">1</span>));
+
+        flushServiceProxy(employeeHiringServiceClientProxy);
+
+        Sys.sleep(<span class="hljs-number">5</span>_000);
+
+    }
+</code></pre>
+<p>This is the output from this app.</p>
+<pre><code>Hired employee Employee{firstName=&#39;Rick&#39;, employeeId=1}
+Employee added to payroll  Rick 1 100
+Employee enrolled into benefits system employee Rick 1
+Employee will be invited to the community outreach program Rick 1
+</code></pre><p>Now our new employees are hired, added to the payroll system, enrolled into benefits and are invited to our community outreach program.</p>
+<p>Here is the full wiring. Since we use Java properties and builders, it would be easy to use QBit from Guice or Spring.</p>
+<pre><code class="lang-java">
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String... args)</span> </span>{
+
+
+        EmployeeHiringService employeeHiring = <span class="hljs-keyword">new</span> EmployeeHiringService();
+        PayrollService payroll = <span class="hljs-keyword">new</span> PayrollService();
+        BenefitsService benefits = <span class="hljs-keyword">new</span> BenefitsService();
+        VolunteerService volunteering = <span class="hljs-keyword">new</span> VolunteerService();
+
+
+        ServiceQueue employeeHiringService = serviceBuilder()
+                .setServiceObject(employeeHiring)
+                .setInvokeDynamic(<span class="hljs-keyword">false</span>).build();
+
+
+
+        ServiceQueue payrollService = serviceBuilder()
+                .setServiceObject(payroll)
+                .setInvokeDynamic(<span class="hljs-keyword">false</span>).build();
+
+
+        ServiceQueue employeeBenefitsService = serviceBuilder()
+                .setServiceObject(benefits)
+                .setInvokeDynamic(<span class="hljs-keyword">false</span>).build();
+
+
+        ServiceQueue volunteeringService = serviceBuilder()
+                .setServiceObject(volunteering)
+                .setInvokeDynamic(<span class="hljs-keyword">false</span>).build();
+
+        EmployeeHiringServiceClient employeeHiringServiceClientProxy =
+                 employeeHiringService.createProxy(EmployeeHiringServiceClient.class);
+
+        employeeHiringServiceClientProxy.hireEmployee(<span class="hljs-keyword">new</span> Employee(<span class="hljs-string">"Rick"</span>, <span class="hljs-number">1</span>));
+
+        flushServiceProxy(employeeHiringServiceClientProxy);
+
+        Sys.sleep(<span class="hljs-number">5</span>_000);
+
+    }
+</code></pre>
+<p>Here is the code from our first example which came from a Unit Test which uses just strings instead of domain objects.</p>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> io.advantageous.qbit.events.impl;
+
+<span class="hljs-keyword">import</span> io.advantageous.qbit.QBit;
+<span class="hljs-keyword">import</span> io.advantageous.qbit.annotation.Listen;
+<span class="hljs-keyword">import</span> io.advantageous.qbit.client.ClientProxy;
+<span class="hljs-keyword">import</span> io.advantageous.qbit.events.EventConsumer;
+<span class="hljs-keyword">import</span> io.advantageous.qbit.events.EventManager;
+<span class="hljs-keyword">import</span> io.advantageous.qbit.events.EventSubscriber;
+<span class="hljs-keyword">import</span> io.advantageous.qbit.message.Event;
+<span class="hljs-keyword">import</span> io.advantageous.qbit.service.Service;
+<span class="hljs-keyword">import</span> io.advantageous.qbit.service.ServiceBuilder;
+<span class="hljs-keyword">import</span> io.advantageous.qbit.service.ServiceContext;
+<span class="hljs-keyword">import</span> io.advantageous.qbit.service.ServiceProxyUtils;
+<span class="hljs-keyword">import</span> org.boon.core.Sys;
+<span class="hljs-keyword">import</span> org.junit.Before;
+<span class="hljs-keyword">import</span> org.junit.Test;
+
+<span class="hljs-keyword">import</span> <span class="hljs-keyword">static</span> io.advantageous.qbit.events.EventUtils.callbackEventListener;
+<span class="hljs-keyword">import</span> <span class="hljs-keyword">static</span> io.advantageous.qbit.service.ServiceBuilder.serviceBuilder;
+<span class="hljs-keyword">import</span> <span class="hljs-keyword">static</span> io.advantageous.qbit.service.ServiceContext.serviceContext;
+<span class="hljs-keyword">import</span> <span class="hljs-keyword">static</span> org.boon.Boon.puts;
+<span class="hljs-keyword">import</span> <span class="hljs-keyword">static</span> org.boon.Exceptions.die;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">BoonEventManagerTest</span> </span>{
+
+    EventManager eventManager;
+
+    ClientProxy clientProxy;
+
+    <span class="hljs-keyword">volatile</span> <span class="hljs-keyword">int</span> subscribeMessageCount = <span class="hljs-number">0</span>;
+
+    <span class="hljs-keyword">volatile</span> <span class="hljs-keyword">int</span> consumerMessageCount = <span class="hljs-number">0</span>;
+
+    <span class="hljs-keyword">boolean</span> ok;
+
+    <span class="hljs-annotation">@Before</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setup</span><span class="hljs-params">()</span> </span>{
+        eventManager = QBit.factory().systemEventManager();
+        clientProxy = (ClientProxy) eventManager;
+        subscribeMessageCount = <span class="hljs-number">0</span>;
+        consumerMessageCount = <span class="hljs-number">0</span>;
+
+    }
+
+
+    <span class="hljs-annotation">@Test</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">test</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> Exception </span>{
+
+
+        String rick = <span class="hljs-string">"rick"</span>;
+
+        MyEventListener myEventListener = <span class="hljs-keyword">new</span> MyEventListener();
+
+        eventManager.listen(myEventListener);
+        clientProxy.clientProxyFlush();
+
+        eventManager.register(rick, <span class="hljs-keyword">new</span> EventConsumer&lt;Object&gt;() {
+            <span class="hljs-annotation">@Override</span>
+            <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">listen</span><span class="hljs-params">(Event&lt;Object&gt; event)</span> </span>{
+                <span class="hljs-comment">//puts(event);</span>
+                consumerMessageCount++;
+            }
+        });
+
+
+        eventManager.register(rick, <span class="hljs-keyword">new</span> EventSubscriber&lt;Object&gt;() {
+            <span class="hljs-annotation">@Override</span>
+            <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">listen</span><span class="hljs-params">(Event&lt;Object&gt; event)</span> </span>{
+                <span class="hljs-comment">//puts(event);</span>
+                subscribeMessageCount++;
+            }
+        });
+
+        eventManager.register(rick, callbackEventListener(event -&gt; {
+            <span class="hljs-keyword">if</span> (subscribeMessageCount &lt; <span class="hljs-number">1000</span>) puts(event);
+            subscribeMessageCount++;
+        }));
+
+
+        <span class="hljs-keyword">final</span> MyServiceConsumer myServiceConsumer = <span class="hljs-keyword">new</span> MyServiceConsumer();
+
+        <span class="hljs-keyword">final</span> MyService myService = <span class="hljs-keyword">new</span> MyService();
+
+        ServiceQueue consumerService = serviceBuilder()
+                .setServiceObject(myServiceConsumer)
+                .setInvokeDynamic(<span class="hljs-keyword">false</span>).build();
+
+        clientProxy.clientProxyFlush();
+
+        Sys.sleep(<span class="hljs-number">100</span>);
+
+
+        eventManager.send(rick, <span class="hljs-string">"Hello Rick"</span>);
+        clientProxy.clientProxyFlush();
+
+        Sys.sleep(<span class="hljs-number">100</span>);
+
+        ok = subscribeMessageCount == <span class="hljs-number">2</span> || die(subscribeMessageCount);
+
+        ok = consumerMessageCount == <span class="hljs-number">1</span> || die();
+
+
+        ok = myEventListener.callCount == <span class="hljs-number">1</span> || die();
+
+        ok = myServiceConsumer.callCount() == <span class="hljs-number">1</span> || die();
+
+
+        Sys.sleep(<span class="hljs-number">100</span>);
+        ServiceQueue senderService = serviceBuilder()
+                .setServiceObject(myService)
+                .setInvokeDynamic(<span class="hljs-keyword">false</span>).build();
+
+        <span class="hljs-keyword">final</span> MyServiceClient clientProxy = senderService.createProxy(MyServiceClient.class);
+
+        clientProxy.sendHi(<span class="hljs-string">"Hello"</span>);
+        ServiceProxyUtils.flushServiceProxy(clientProxy);
+
+        Sys.sleep(<span class="hljs-number">100</span>);
+
+        ok = subscribeMessageCount == <span class="hljs-number">4</span> || die(subscribeMessageCount);
+
+        ok = consumerMessageCount == <span class="hljs-number">2</span> || die();
+
+
+        ok = myEventListener.callCount == <span class="hljs-number">2</span> || die();
+
+        ok = myServiceConsumer.callCount() == <span class="hljs-number">2</span> || die();
+
+    }
+
+
+    <span class="hljs-comment">//@Test This takes a long time to run. I only need it for perf tuning.</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">testPerfMultiple</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> Exception </span>{
+
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> index = <span class="hljs-number">0</span>; index &lt; <span class="hljs-number">5</span>; index++) {
+            testPerf();
+            Sys.sleep(<span class="hljs-number">5</span>_000);
+        }
+    }
+
+    <span class="hljs-annotation">@Test</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">testPerf</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> Exception </span>{
+
+
+        eventManager = QBit.factory().systemEventManager();
+        consumerMessageCount = <span class="hljs-number">0</span>;
+        Sys.sleep(<span class="hljs-number">100</span>);
+        subscribeMessageCount = <span class="hljs-number">0</span>;
+        Sys.sleep(<span class="hljs-number">100</span>);
+
+
+        String rick = <span class="hljs-string">"rick"</span>;
+
+        eventManager.register(rick, <span class="hljs-keyword">new</span> EventConsumer&lt;Object&gt;() {
+            <span class="hljs-annotation">@Override</span>
+            <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">listen</span><span class="hljs-params">(Event&lt;Object&gt; event)</span> </span>{
+                consumerMessageCount++;
+            }
+        });
+
+
+        eventManager.register(rick, callbackEventListener(event -&gt; {
+            subscribeMessageCount++;
+        }));
+
+        clientProxy.clientProxyFlush();
+        Sys.sleep(<span class="hljs-number">100</span>);
+
+
+        <span class="hljs-keyword">long</span> start = System.currentTimeMillis();
+
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> index = <span class="hljs-number">0</span>; index &lt; <span class="hljs-number">1</span>_000_000; index++) {
+            eventManager.send(rick, <span class="hljs-string">"PERF"</span>);
+
+        }
+
+
+        clientProxy.clientProxyFlush();
+        Sys.sleep(<span class="hljs-number">100</span>);
+
+
+        <span class="hljs-keyword">while</span> (<span class="hljs-keyword">true</span>) {
+
+            Sys.sleep(<span class="hljs-number">10</span>);
+
+
+            <span class="hljs-keyword">if</span> (consumerMessageCount &gt;= <span class="hljs-number">900</span>_000) {
+                <span class="hljs-keyword">break</span>;
+            }
+
+            <span class="hljs-keyword">if</span> (start - System.currentTimeMillis() &gt; <span class="hljs-number">3</span>_000) {
+                <span class="hljs-keyword">break</span>;
+            }
+        }
+
+
+        <span class="hljs-keyword">long</span> stop = System.currentTimeMillis();
+        Sys.sleep(<span class="hljs-number">100</span>);
+
+
+        <span class="hljs-keyword">long</span> duration = (stop - start);
+
+        <span class="hljs-keyword">if</span> (duration &gt; <span class="hljs-number">10</span>_000) {
+            die(<span class="hljs-string">"duration"</span>, duration);
+        }
+
+
+        <span class="hljs-keyword">if</span> (consumerMessageCount &lt; <span class="hljs-number">900</span>_000) {
+            die(<span class="hljs-string">"consumerMessageCount"</span>, consumerMessageCount);
+        }
+
+        puts(<span class="hljs-string">"Duration to send messages"</span>, duration,
+                <span class="hljs-string">"ms. \nconsume message count"</span>, consumerMessageCount,
+                <span class="hljs-string">"\ntotal message count"</span>, consumerMessageCount + subscribeMessageCount);
+
+
+    }
+
+
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyEventListener</span> </span>{
+
+        <span class="hljs-keyword">volatile</span> <span class="hljs-keyword">int</span> callCount = <span class="hljs-number">0</span>;
+
+        <span class="hljs-annotation">@Listen</span>(<span class="hljs-string">"rick"</span>)
+        <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">listen</span><span class="hljs-params">(String message)</span> </span>{
+            callCount++;
+        }
+    }
+
+
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">MyServiceClient</span>  </span>{
+
+        <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">sendHi</span><span class="hljs-params">(String hi)</span></span>;
+    }
+
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyService</span> </span>{
+
+        <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">queueInit</span><span class="hljs-params">()</span> </span>{
+            puts(<span class="hljs-string">"QUEUE START MyService"</span>);
+        }
+
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">sendHi</span><span class="hljs-params">(String hi)</span> </span>{
+            serviceContext().send(<span class="hljs-string">"rick"</span>, <span class="hljs-string">"hello rick "</span> + hi);
+        }
+    }
+
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyServiceConsumer</span> </span>{
+
+        <span class="hljs-keyword">int</span> callCount = <span class="hljs-number">0</span>;
+
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">MyServiceConsumer</span><span class="hljs-params">()</span> </span>{
+            puts(<span class="hljs-string">"MyService created"</span>);
+        }
+
+
+
+        <span class="hljs-annotation">@Listen</span>(<span class="hljs-string">"rick"</span>)
+        <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">listen</span><span class="hljs-params">(String message)</span> </span>{
+
+            puts(message);
+            callCount++;
+        }
+
+
+        <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> <span class="hljs-title">callCount</span><span class="hljs-params">()</span> </span>{
+            <span class="hljs-keyword">return</span> callCount;
+        }
+
+
+    }
+
+
+}
+</code></pre>
+<h2 id="random-thoughts">Random thoughts</h2>
+<p>Vetx and qbit have the concept of high-speed inproc services that may not know anything about other high-speed in services. Vertx calls this Verticles and they are loaded in different Verticles. QBit just has Java objects that might not know anything about the other services running in the same JVM but still be able to communicate via the event bus. QBit has Services where Vertx has Verticles.</p>
+<p>Messaging like this has to be somewhat untyped. Or you have to agree on what objects you have in common. I can see sending common objects, but I also see sending maps, and JSON.</p>
+<p>But if we agree on some common objects and events. Then we never have to know about the other systems that we add later is why we have the event bus concept.</p>
+<p>We can keep adding stuff that keeps listening.. but it is loose... some things like to be tight and should be tight.. some things need to be loose. You can do tight or loose.</p>
+<p>You can create an event bus and make it work with JSON and Maps (it is a flag)... so literally you can implement micro-service tolerant readers and writers in the same JVM.</p>
+<p>You can have more than one event bus btw... An event bus is just another QBit service... There is a system one but it is easy to create more. Really easy. It takes three lines of code to create a high-speed event bus. So each module could have its own event bus.. And then use the system event bus to send messages between modules.</p>
+<p>So it is very different than
+<a href="https://code.google.com/p/guava-libraries/wiki/EventBusExplained" target="_blank">https://code.google.com/p/guava-libraries/wiki/EventBusExplained</a>, but more like <a href="http://vertx.io/core_manual_java.html#the-event-bus" target="_blank">http://vertx.io/core_manual_java.html#the-event-bus</a>. This does not mean that Guava is wrong. It just means that this is different.</p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../tutorials_and_examples/[doc]_using_qbit_microservice_libs_httpclient_get,_post,_et_al,_json,_java_8_lambda.html" class="navigation navigation-prev " aria-label="Previous page: [Doc] Using QBit microservice lib&#39;s HttpClient GET, POST, et al, JSON, Java 8 Lambda"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../tutorials_and_examples/[rough_cut]_working_with_private_event_bus_for_inproc_microservices.html" class="navigation navigation-next " aria-label="Next page: [Rough Cut] Working with private event bus for inproc microservices"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="https://cdn.mathjax.org/mathjax/2.4-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-mathjax/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"fontSettings":{"theme":null,"family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>
